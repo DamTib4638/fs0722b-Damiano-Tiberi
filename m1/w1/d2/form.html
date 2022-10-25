@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="Percorso e nome file esistente su cui spostarsi">
+        <!-- se manca method di default è get, se manca action di default ricarica la pagina in cui sei -->
+        <input required name="nome" type="text" placeholder="Nome">
+        <input name="email" type="email" placeholder="Email">
+        <input name="password" type="password" placeholder="Inserisci password">
+        <input name="numero" type="number" placeholder="Inserisci numero">
+        <!-- importante cambiare il tipo giusto, anche per smartphone -->
+        <input name="consenso" id="consenso" type="checkbox"> <label for="consenso">Acconsento al trattamento dei dati</label>
+        <!-- id e for devono fare scopa, perchè la for va a cercare un id di valore uguale. Importante perchè se clicchi sulla label, checki la checkbox ugualmente.  -->
+        <hr>
+        <label for="m">Maschio</label>
+        <input type="radio" name="gender" value="m">
+        <label for="f">Femmina</label>
+        <input type="radio" name="gender" value="f">
+        <label for="d">Altro</label>
+        <input type="radio" checked name="gender" value="d">
+        <!-- devi avere lo steso attributo name per selezionare solo una in modo esclusivo dalle altre -->
+        <hr>
+        <select name="city">
+            <option value="">--</option>
+            <option value="milano">Milano</option>
+            <option selected value="roma">Roma</option>
+            <option value="napoli">Napoli</option>
+        </select>
+        <hr>
+        <!-- select per campi di input con scelta limitata...ad esempio le città italiane -->
+        <textarea name="messaggio" cols="30" rows="10" placeholder="Testo"></textarea> 
+        <!-- cols è il numero di caratteri visibili su riga, rows sono le righe -->
+        <button>Invia</button>
+        <!-- Il bottone funziona solo se è all'interno del form. Inoltre deve essere di tipo submit per inviare il form. Vedi slide bottoni per capire bene le tipologie. -->
+        <input type="submit" value="Invia informazioni">
+    </form>
+</body>
+</html>

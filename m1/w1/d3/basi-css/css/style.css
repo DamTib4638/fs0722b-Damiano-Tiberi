@@ -1,0 +1,63 @@
+/*  Anatomia di un blocco css
+    selettore {
+        proprietà/regole : valore proprietà;
+    }
+
+    Se due regole applicate allo stesso elemento hanno stessa specificità, vince quella scritta più in basso.
+    Ci sono diverse specificità, cioè diverse priorità.
+    Mettere attributo style in html, quello style ha specificità 1000, cioè il file css perde il controllo.
+    Assegnare '!important' ad un valore di una proprietà css, vince su tutto, anche su attributo style usato inline. In questo caso la specificità di '!important' è sempre uno zero in più del massimo trovato. Non va mai usato, tranne quando si usano tool di terze parti.
+*/
+
+div { /* Peso: 1 */
+    color: red;
+}
+
+.colore-blu { /* Peso: 10 */
+    color: blue;
+}
+
+.bordo-sotto { /* Peso: 10 */
+    border-bottom: 1px solid black;
+}
+
+#sfondo-verde { /* Peso: 100 */
+    background-color: green;
+}
+
+div { /* Peso: 1 */
+    color: aqua;
+}
+
+/*  selettori gerarchici 
+
+*/
+
+div div { /* Peso: 1+1 */
+    color: green;
+}
+
+.testo-grigio div { /* Peso: 10+1 */
+    color: gray;
+}
+
+.testo-grigio div span { /* Peso: 10+1+1 */
+    text-decoration: underline;
+}
+
+.testo-grigio > span { /* Peso: 10+1 */
+    text-transform: uppercase;
+}
+
+/* selettori multipli */
+
+h1, h2, h3 { /* Peso: 1, 1, 1 */
+    color: #808080;
+}
+
+/* selezionare un singolo elemento aumentando la specificità */
+
+div#test.classe1.classe2 { /* Peso: 100+10+10 +1 (del div, che va all'inizio, se no non ha senso) */
+    height: 100px;
+    background-color: yellow;
+}

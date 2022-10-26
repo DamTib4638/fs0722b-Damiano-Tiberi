@@ -1,0 +1,6 @@
+.primo-p + span {
+    color: red;
+}
+
+/* con il +, si intende il primo span dopo la classe primo-p. Se metti 'tilde' significa tutti gli span dopo la classe primo-p
+after e before sono pseudo elementi in cui si deve specificare la proprietà content, in cui mettere icone, testi, ... */

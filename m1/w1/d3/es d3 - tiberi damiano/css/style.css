@@ -1,0 +1,145 @@
+body {
+    font-family: 'Lora', serif;
+    margin: 0%;
+}
+
+.figure-content {
+    margin: 0;
+    padding: 0;
+}
+
+.immagine {
+    height: 100%;
+}
+
+.div-logo {
+    background: linear-gradient(240deg, lightyellow, darkgoldenrod);
+    text-align: center;
+}
+
+#p1 {
+    margin: 0%;
+    text-align: center;
+    color: black;
+}
+
+#p1 span {
+    color: white;
+    text-transform: uppercase;
+}
+
+#p1 span:hover {
+    transition: color 0.5s;
+    color: red;
+}
+
+.div-head {
+    background: linear-gradient(120deg, lightyellow, darkgoldenrod);
+    border-top: 2px solid darkgoldenrod;
+}
+
+.first-section {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.div-first-section {
+    text-align: center;
+}
+
+.intestazione {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.focaccia-content {
+    margin: 0%;
+}
+
+#focaccia {
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #dedede;
+    width: 100%;
+}
+
+#didascalia {
+    margin: 20px;
+    color: grey;
+    font-weight: 700;
+}
+
+#feature-div {
+    text-align: left;
+    border-left: 2px solid darkgoldenrod;
+}
+
+#p2 {
+    text-align: left;
+    font-weight: 400;
+}
+
+#p3 {
+    padding-left: 15px;
+    padding-top: 0%;
+    text-transform: uppercase;
+    color: red;
+    font-weight: 400;
+}
+
+#p3 + a {
+    padding-left: 15px;
+    text-decoration: none;
+    color: darkgreen;
+}
+
+#p3 + a:visited {
+    color: darkgoldenrod;
+}
+
+.div-second-section {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border-bottom: 2px solid aqua;
+}
+
+.preparazione {
+    font-weight: 700;
+}
+
+.p4 {
+    font-weight: 700;
+}
+
+.li-content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#li-content {
+    font-weight: 700;
+}
+
+#p5 {
+    padding-left: 40px;
+    margin-top: 0%;
+}
+
+ol {
+    margin-bottom: 0%;
+}
+
+.link-content {
+    text-decoration: none;
+    color: red;
+}
+
+.link-content:visited {
+    color: darkgoldenrod;
+}
+
+.link-content:hover {
+    color: blue;
+    transition: color 0.5s;
+}

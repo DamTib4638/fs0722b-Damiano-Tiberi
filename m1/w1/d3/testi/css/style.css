@@ -1,0 +1,54 @@
+:root {
+    font-size: 25px; /* di default è 16, se root non c'è scritto */
+    /* root è lo stile di default di tutti i tipi di stile di un foglio */
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap'); */
+/* SI USA O LA MODALITà IMPORT QUI, OPPURE I LINK REL IN HTML. UNO ESCLUDE L'ALTRO, SE NO CARICHI DUE VOLTE, ERRORE!!! */
+
+@font-face {
+    font-family: FontPersonale;
+    src: url('../font/Roboto-Regular.ttf') format('truetype'); /* Ci va il percorso di dove sta il font che vuoi, occhio ad uscire dalla cartella dove sei con il file style.css */
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* molto importante da fare per venerdì */
+}
+
+#p1 {
+    font-size: 16px;
+    color: #000000; /* se a coppie sono uguali, posso dividere a metà e considerarli esadecimali. */
+    font-family: FontPersonale;
+}
+
+#p2 {
+    font-size: 1rem; /* fa riferimento a root, dichiarato o no */
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+}
+
+#p3 {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+#p3 span {
+    font-size: 1em; /* prende l'unità di misura del parent. QUI VALE 20 */
+}
+
+#p4 {
+    font-size: 10px;
+}
+
+#p4 span {
+    font-size: 1em; /* prende l'unità di misura del parent. QUI VALE 10 */
+}
+
+/*  em, rem per i font.
+    vh, vw, % per i blocchi. */
+
+.line {
+    background-color: green;
+    line-height: 100px;
+}

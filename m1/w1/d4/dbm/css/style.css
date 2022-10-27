@@ -1,0 +1,78 @@
+.quadrato {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#q1 {
+    overflow: visible;
+}
+
+#q2 {
+    overflow: hidden;
+}
+
+#q3 {
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+#q4 {
+    width: auto;
+    max-width: 600px;
+    max-height: 50px;
+}
+
+#q5 {
+    padding: 15px;
+    /* area subito esterna al cuore, cioè al contenuto. Da usare per far rientrare il contenuto dal bordo. */
+    box-sizing: border-box;
+    /* molto importante, per il responsive */
+    margin: 100px;
+    /* serve per distanziare i tag, usare sempre questo per distanziare i tag tra loro, anche perchè non viene colorato dal background Nel dubbio usali in modo puntuale, usando top bottom right left.
+    RICORDA: gli elementi cercano di stare più possibile in alto a sinistra */
+}
+
+#q6 {
+    margin: 0, auto;
+    /* per centrare gli elementi. */
+}
+
+#q7 {
+    border: 2px solid black;
+    /* spessore, stile, colore */
+    outline: 5px solid red;
+    /* funziona come il bordo ma non fa parte del box model */
+    border-bottom: none;
+    border-radius: 5px;
+}
+
+#q8 {
+    background-color: green;
+    height: 100vh;
+    /* è una percentuale che si adatta */
+}
+
+/* pagina layout */
+
+.colonna {
+    width: 30%;
+
+    height: 200px;
+    background-color: bisque;
+    float: left;
+    /* si userà flex, che va meglio. */
+    border: 1px solid black;
+}
+
+.colonna.no-float {
+    float: none;
+    /* eredito tutte le proprietà di colonna, ma annullo float. */
+    display: inline-block;
+    /* esistono tag inline e block, che posso modificare così. Quindi float non si usa. Si usano solo per far scorrere del testo intorno ad un'immagine. */
+}
+
+img {
+    max-width: 100%;
+    /* regola generale, fondamentale */
+}

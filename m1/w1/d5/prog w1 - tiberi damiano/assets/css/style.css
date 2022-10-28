@@ -147,6 +147,10 @@ aside {
     border-bottom-right-radius: 5px;
 }
 
+.article-aside:hover {
+    outline: 2px solid #25a2c3;
+}
+
 .p-aside {
     padding: 0px 20px 40px 20px;
 }
@@ -178,11 +182,6 @@ footer {
     color: white;
 }
 
-.p-footer:hover {
-    color: blue;
-    transition: 0.8s;
-}
-
 #link-footer-finale {
     color: #c8e7f0;
 }
@@ -191,6 +190,11 @@ footer {
 #link-footer-finale:hover {
     color: blue;
     transition: color 0.8s;
+}
+
+.p-footer:hover {
+    color: blue;
+    transition: 0.8s;
 }
 
 #div-footer {

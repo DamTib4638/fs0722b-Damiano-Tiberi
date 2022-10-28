@@ -10,7 +10,7 @@ body {
 
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
-    color: #25a2c3; /* da modificare in bianco solo quelli del footer e del riquadro rosso */
+    color: #25a2c3;
     font-size: 1.2rem;
     line-height: 1.5;
 }
@@ -20,11 +20,12 @@ h2 {
     color: white;
     padding: 70px 0px 40px 0px;
 }
-
+/* ridefinisco, a cascata, alcune proprietà specifiche di h2 e h3. */
 h3 {
     padding: 30px 0px 20px 0px;
 }
 
+/* definisco l'interlinea tra i paragrafi */
 p {
     line-height: 1.65;
 }
@@ -54,6 +55,7 @@ figure {
     text-align: center;
 }
 
+/* ridefinisco proprietà specifiche di h1 */
 h1 {
     font-size: 2.4rem;
     padding: 55px 50px 20px 60px;
@@ -70,6 +72,11 @@ h1 {
     padding: 15px 25px;
     margin-bottom: 40px;
     border-radius: 5px;
+}
+
+#fake-button:hover {
+    transition: color 0.8s;
+    color: orange;
 }
 
 #p-section-1 {
@@ -95,6 +102,10 @@ h1 {
 #img-section-2 {
     border-radius: 50%;
     width: 70%;
+}
+
+#p-fine-section-2 {
+    padding-bottom: 70px;
 }
 
 #section-3 {
@@ -128,8 +139,6 @@ aside {
 
 .article-aside {
     width: 85%;
-    /* margin-left: auto;
-    margin-right: auto; */
     margin: 40px auto;
     border-bottom: 2px solid #dee1e3;
     border-left: 2px solid #dee1e3;
@@ -166,13 +175,41 @@ footer {
 }
 
 .p-footer {
+    color: white;
+}
+
+.p-footer:hover {
+    color: blue;
+    transition: 0.8s;
+}
+
+#link-footer-finale {
     color: #c8e7f0;
 }
 
-/* h1 {
-    font-size: 2rem;
-    color: #f04c2f; /* colore pulsante partiamo 
-    color: #e22d0e; /* colore riquadro epicode garantisce 
-    color: #c8e7f0; /* colore font footer tranne heading 
-    color: #dee1e3; /* colore bordo schede 
-} */
+.link-footer:hover,
+#link-footer-finale:hover {
+    color: blue;
+    transition: color 0.8s;
+}
+
+#div-footer {
+    width: 50%;
+    margin: 0 auto;
+    border-top: 2px solid #c8e7f0;
+}
+
+#span-footer-finale {
+    color: white;
+}
+
+#p-indirizzo {
+    padding: 0px 0px 35px 0px;
+    color: #c8e7f0;
+}
+
+.p-footer-2 {
+    font-size: 1rem;
+    padding: 35px 0px 70px 0px;
+    color: #c8e7f0;
+}

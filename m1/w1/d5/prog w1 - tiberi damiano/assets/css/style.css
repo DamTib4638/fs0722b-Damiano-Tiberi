@@ -1,0 +1,178 @@
+/* Your styles here */
+
+/* MODIFICHE VALIDE IN PIù SEZIONI DELLA PAGINA */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #393d41;
+    font-size: 1.2rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #25a2c3; /* da modificare in bianco solo quelli del footer e del riquadro rosso */
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: white;
+    padding: 70px 0px 40px 0px;
+}
+
+h3 {
+    padding: 30px 0px 20px 0px;
+}
+
+p {
+    line-height: 1.65;
+}
+
+/* MODIFICHE VALIDE NELLA SEZIONE HEADER DELLA PAGINA */
+
+header {
+    background-color: black;
+}
+
+figure {
+    text-align: center;
+}
+
+#logo {
+    width: 30%;
+    margin: 40px 0px;
+}
+
+/* MODIFICHE VALIDE NELLA SEZIONE MAIN DELLA PAGINA */
+
+#section-1 {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.4rem;
+    padding: 55px 50px 20px 60px;
+}
+
+#fake-button {
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+    display: inline-block;
+    text-align: center;
+    background-color: #f04c2f;
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px 25px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+#p-section-1 {
+    padding: 0px 50px 30px 50px;
+}
+
+#section-2 {
+    text-align: center;
+}
+
+#header-section-2 {
+    padding: 50px 0px 20px 0px;
+}
+
+.p-section-2 {
+    padding: 0px 60px;
+}
+
+#p-section-2 {
+    margin-bottom: 30px;
+}
+
+#img-section-2 {
+    border-radius: 50%;
+    width: 70%;
+}
+
+#section-3 {
+    background-color: #e22d0e;
+    text-align: center;
+}
+
+#header-section-3 {
+    padding: 70px 0px 40px 0px;
+}
+
+#p-italic {
+    font-style: italic;
+    padding-bottom: 40px;
+}
+
+.p-section-3 {
+    color: white;
+}
+
+#p-small-section-3 {
+    font-size: 0.9rem;
+    padding-bottom: 40px;
+}
+
+/* MODIFICHE VALIDE NELLA SEZIONE ASIDE DELLA PAGINA */
+
+aside {
+    text-align: center;
+}
+
+.article-aside {
+    width: 85%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 40px auto;
+    border-bottom: 2px solid #dee1e3;
+    border-left: 2px solid #dee1e3;
+    border-right: 2px solid #dee1e3;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.p-aside {
+    padding: 0px 20px 40px 20px;
+}
+
+.img-aside {
+    width: 100%;
+}
+
+#article-1 {
+    margin-top: 70px;
+}
+
+#article-3 {
+    margin-bottom: 70px;
+}
+
+/* MODIFICHE VALIDE NELLA SEZIONE FOOTER DELLA PAGINA */
+
+footer {
+    background-color: #25a2c3;
+    text-align: center;
+}
+
+.link-footer {
+    color: #c8e7f0;
+}
+
+.p-footer {
+    color: #c8e7f0;
+}
+
+/* h1 {
+    font-size: 2rem;
+    color: #f04c2f; /* colore pulsante partiamo 
+    color: #e22d0e; /* colore riquadro epicode garantisce 
+    color: #c8e7f0; /* colore font footer tranne heading 
+    color: #dee1e3; /* colore bordo schede 
+} */

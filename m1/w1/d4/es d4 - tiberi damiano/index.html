@@ -29,17 +29,17 @@
     <main>
         <div class="div-esterno">
             <h2>Come creare un template per i post</h2>
-            <h4> <i class="fas fa-pen"></i> di Mario Rossi - <i class="fas fa-clock"></i> pubblicato il 25-10-2020</h4>
+            <h4 id="h4-trasparent"> <i class="fas fa-pen"></i> di Mario Rossi - <i class="fas fa-clock"></i> pubblicato il 25-10-2020</h4>
             <p>
                 La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le parti comuni da applicare a tutte le pagine
             </p>
             <p>
                 Le varie aree saranno quindi suddivise in:
             </p>
-            <ul>
-                <li>Contenuti di intestazione del tag </li>
-                <li>Contenuti centrali variabili del tag (corpo principale)</li>
-                <li>Contenuti di fine pagina comuni, da inserire nel tag </li>
+            <ul class="ul-content-main">
+                <li class="li-content-main">Contenuti di intestazione del tag <span class="span-grey">&lt;header&gt;</span></li>
+                <li class="li-content-main">Contenuti centrali variabili del tag <span class="span-grey">&lt;main&gt;</span> (corpo principale)</li>
+                <li class="li-content-main">Contenuti di fine pagina comuni, da inserire nel tag <span class="span-grey">&lt;footer&gt;</span></li>
             </ul>
             <br>
             <p>
@@ -48,16 +48,16 @@
             <p>
                 Il testo dell'articolo dovrà essere formattato per identificare tutte le parti da selezionare con i CSS. Perciò i passi saranno:
             </p>
-            <ol>
-                <li>Progettare su carta il markup finale, assegnando ad ogni specifico testo il tag appropriato</li>
-                <li>Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso</li>
-                <li>Applicare gli stili CSS</li>
+            <ol class="ol-content-main">
+                <li class="li-content-main">Progettare su carta il markup finale, assegnando ad ogni specifico testo il tag appropriato</li>
+                <li class="li-content-main">Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso</li>
+                <li class="li-content-main">Applicare gli stili CSS</li>
             </ol>
             <p>
                 L'applicazione di stili CSS è cresciuta negli anni fino a raggiungere la diffusione pressoché totale.
             </p>
             <table>
-                <caption>Risultati Fantacalcio Damiano</caption>
+                <caption>Diffusione dei CSS</caption>
                 <thead>
                     <tr>
                         <th>Anno</th>

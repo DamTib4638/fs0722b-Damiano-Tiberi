@@ -27,10 +27,12 @@ li {
     transition: color 0.5s;
 }
 
-iframe {
-    width: 350px;
-    border-radius: 15px;
-    margin: 20px;
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 10px;
 }
 
 /* HEADER */
@@ -70,17 +72,15 @@ iframe {
 }
 
 .li-content::before {
-    content: "=>";
+    content: "\21D2";
     color: white;
     margin-right: 5px;
-    font-weight: bold;
 }
 
 .li-content::after {
-    content: "<=";
+    content: "\21D0";
     color: white;
     margin-left: 5px;
-    font-weight: bold;
 }
 
 #menu-header + ul {
@@ -88,6 +88,35 @@ iframe {
 }
 
 /* MAIN */
+
+.span-grey {
+    background-color: lightgrey;
+    border-radius: 5px;
+    border: 1px solid gray;
+    
+}
+
+.ul-content-main li {
+    list-style: disc;
+    list-style-position: inside;
+    text-align: left;
+    padding: 0px 10px;
+    margin: 15px 0px;
+}
+
+.ol-content-main li {
+    list-style: decimal;
+    list-style-position: inside;
+    text-align: left;
+    padding: 0px 10px;
+    margin: 15px 0px;
+}
+
+iframe {
+    width: 350px;
+    border-radius: 15px;
+    margin: 20px;
+}
 
 /* ELEMENTI NEL MAIN - ARTICLE */
 

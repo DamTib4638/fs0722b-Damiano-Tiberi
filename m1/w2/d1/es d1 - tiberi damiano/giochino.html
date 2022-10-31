@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-giochino.css">
+    <title>Gioca Ora</title>
+</head>
+<body>
+    <h1>Per le ultime funzionalità JS del giorno, completa il gioco!</h1>
+    <h3>Suggerimento: Inserisci in modo ordinato i numeri.</h3>
+    <div id="sudoku">
+        <table>
+            <caption>SUDOKU</caption>
+            <tbody>
+                <tr>
+                    <td>8</td>
+                    <td>2</td>
+                    <td class="td-settore-destro">7</td>
+                    <td><input id="n1" class="num" type="text"></td>
+                    <td>5</td>
+                    <td class="td-settore-destro">4</td>
+                    <td>3</td>
+                    <td>9</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>6</td>
+                    <td class="td-settore-destro">5</td>
+                    <td>3</td>
+                    <td><input id="n2" class="num" type="text"></td>
+                    <td class="td-settore-destro">7</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td class="td-settore-basso"><input id="n3" class="num" type="text"></td>
+                    <td class="td-settore-basso">4</td>
+                    <td class="td-settore-basso td-settore-destro">1</td>
+                    <td class="td-settore-basso">6</td>
+                    <td class="td-settore-basso">8</td>
+                    <td class="td-settore-basso td-settore-destro">9</td>
+                    <td class="td-settore-basso">7</td>
+                    <td class="td-settore-basso">5</td>
+                    <td class="td-settore-basso">2</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>9</td>
+                    <td class="td-settore-destro">3</td>
+                    <td><input id="n4" class="num" type="text"></td>
+                    <td>6</td>
+                    <td class="td-settore-destro">8</td>
+                    <td>2</td>
+                    <td>7</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>7</td>
+                    <td class="td-settore-destro">2</td>
+                    <td><input id="n5" class="num" type="text"></td>
+                    <td>1</td>
+                    <td class="td-settore-destro">3</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td class="td-settore-basso"><input id="n6" class="num" type="text"></td>
+                    <td class="td-settore-basso">1</td>
+                    <td class="td-settore-basso td-settore-destro">8</td>
+                    <td class="td-settore-basso">9</td>
+                    <td class="td-settore-basso">7</td>
+                    <td class="td-settore-basso td-settore-destro">2</td>
+                    <td class="td-settore-basso">4</td>
+                    <td class="td-settore-basso">3</td>
+                    <td class="td-settore-basso">5</td>
+                </tr>
+                <tr>
+                    <td><input id="n7" class="num" type="text"></td>
+                    <td>8</td>
+                    <td class="td-settore-destro">6</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td class="td-settore-destro">5</td>
+                    <td>9</td>
+                    <td>1</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>5</td>
+                    <td class="td-settore-destro">4</td>
+                    <td>7</td>
+                    <td>9</td>
+                    <td class="td-settore-destro">6</td>
+                    <td><input id="n8" class="num" type="text"></td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>3</td>
+                    <td class="td-settore-destro"><input id="n9" class="num" type="text"></td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td class="td-settore-destro">1</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="pulsantone">
+        <input class="pulsante" type="submit" value="VERIFICA INSERIMENTO" onclick="verifica()">
+    </div>
+    <script src="js/giochino.js">
+        // function verifica() {
+        //     var n1 = document.getElementById('n1').value;
+        //     var n2 = document.getElementById('n2').value;
+        //     var n3 = document.getElementById('n3').value;
+        //     var n4 = document.getElementById('n4').value;
+        //     var n5 = document.getElementById('n5').value;
+        //     var n6 = document.getElementById('n6').value;
+        //     var n7 = document.getElementById('n7').value;
+        //     var n8 = document.getElementById('n8').value;
+        //     var n9 = document.getElementById('n9').value;
+        //     if (n1!=1 || n2!=2 || n3!=3 || n4!=4 || n5!=5 || n6!=6 || n7!=7 || n8!=8 || n9!=9 ) {
+        //         alert('HAI SBAGLIATO!!! RICOMINCIA');
+        //     } else {
+        //         alert('HAI VINTO!!! Puoi proseguire');
+        //         location.href = "naming.html";
+        //     }
+        // }
+    </script>
+</body>
+</html>

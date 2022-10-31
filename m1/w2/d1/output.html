@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="testo"></div>
+    <div id="prova"></div>
+
+    <script>
+
+        /* DIRETTIVE DI OUTPUT */
+
+        console.log('Ciao'); // posso mettere n valori in una riga di console, divisi da virgola
+
+        console.log('%c Testo colorato', 'color: red; background-color: blue'); // non si usa, è solo per curiosità
+
+        document.write('ciao<br>'); // direttiva di output non buona e scrive sempre dopo lo script. Annienta la pagina...verrà VIETATO
+        document.write('<b>Ciao</b>'); // direttiva di output non buona e scrive sempre dopo lo script. Annienta la pagina...verrà VIETATO
+
+        //alert('messaggio');
+
+        /* è LA MIGLIORE DIRETTIVA DI OUTPUT DA USARE */
+        document.getElementById('testo').innerHTML = 'Prova'; //innerHTML inserisce il contenuto che gli viene assegnato e lo sovrappone dove trova l'id
+        document.getElementById('prova').innerHTML = 3+4; // da come risultato 7
+
+    </script>
+</body>
+</html>

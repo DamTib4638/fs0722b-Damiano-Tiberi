@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var anni = prompt('Quanti anni hai?');
+        // document.write(anni);
+        // document.write(prompt('Quanti anni hai?'));
+        if (anni>=18 && anni < 110) {
+            document.write('Sei Maggiorenne, puoi visitare il sito');
+        } else if (anni >= 110) {
+            document.write('Sei Antico, ma puoi visitare il sito');
+        } else {
+            location.href = 'https://www.peppapig.com/it-it';
+        } // CON IF DOPO ELSE ITERI LE DOMANDE CHE TI FAI
+    </script>
+
+</body>
+</html>

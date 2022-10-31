@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var stringa1 = 'Ciao';
+        var stringa2 = "Ciao"; // è equivalente come sintassi. Puoi avere problemi con stringhe di stringhe, usa l'escape \ così eviti problemi. ` --> questo carattere (alt+96) è un carattere jolly che ti evita di usare escape per non avere problemi.
+
+        /* TEMPLATE STRING --> interpolazione di stringhe, novità in JS */
+        document.write(`qui dentro posso usare sia apici che virgolette`);
+        
+
+        /* concatenamento */
+        var nome = 'Mario';
+        var saluto = 'Benvenuto';
+        document.write(saluto + ' ' + nome + '!!!'); // siconcatenano le stringhe con +
+        document.write(`${saluto} ${nome}, come stai?`); 
+
+        /* operazioni matematiche */
+
+        console.log(4 + 3); // qui il + da 7
+        console.log(4 * 3); // qui il + da 12
+        console.log(4 / 3); // qui il + da 1.3 periodico
+        console.log(4 - 3); // qui il + da 1
+
+        /* operazioni miste */
+
+        var numero = 5; // è un numero
+        var numeroStringa = '5'; // è una stringa
+        console.log(numero + numeroStringa); // il numero viene convertito in stringa, perchè il + è l'operatore di concatenazione
+        console.log(numero * numeroStringa); // la stringa viene convertita in numero ed avviene la moltiplicazione, ma solo perchè la stringa contiene solo numeri
+        console.log(numero * '5a'); // ottengo NaN --> Not a Number
+
+    </script>
+</body>
+</html>

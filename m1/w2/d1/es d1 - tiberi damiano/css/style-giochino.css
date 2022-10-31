@@ -1,0 +1,61 @@
+h1, h3 {
+    text-align: center;
+}
+
+.num {
+    width: 22px;
+    height: 32px;
+    font-size: 26px;
+    color: blue;
+    text-align: center;
+}
+
+#sudoku {
+    width: 25%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.pulsante {
+    background-color: yellowgreen;
+    color: red;
+    width: 250px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.pulsante:hover {
+    background-color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#pulsantone {
+    margin: 0 auto;
+    text-align: center;
+}
+
+table {
+    border: 4px solid black;
+}
+
+.td-settore-basso {
+    border-bottom: 4px solid black;
+}
+
+.td-settore-destro {
+    border-right: 4px solid black;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    font-size: 26px;
+    border: 2px solid black;
+}
+
+caption {
+    font-size: 26px;
+}

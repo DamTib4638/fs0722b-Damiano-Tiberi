@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  commento singola riga
+        /* 
+            commento multi riga
+        */
+
+        /* una variabile può iniziare con trattobasso (_) o dollaro ($) oppure lettera minuscola */
+
+        var nomeVariabile; // variabile dichiarata ma non inizializzata (di default è UNDEFINED)
+        console.log(nomeVariabile);
+        // console.log(pippo)
+
+        var x = 1; // variabile dichiarata ed inizializzata
+        console.log(x); // è una delle direttive di output
+
+        x = 2; // una var già dichiarata non deve essere ri-dichiarata (non devo riscrivere 'var')
+        console.log(x);
+
+        /* tipi di dato in JS.
+            JS usa la tipizzazione debole o non ha tipizzazione, cioè rispettando la sintassi, JS capisce il tipo di dato. Cosa che non avviene in Java o Typescript.
+        */
+       var numero = 5; //variabile numerica
+       var stringa = 'ciao'; // variabile di testo, perchè ci sono le virgolette o apici => stringa
+       var booleana = true; // variabile booleana (true o false)
+       var array = [1, 5, 8, 0, 'ciao', []] // è una lista di elementi
+       //console.log(array);
+       var oggetto = {
+            nome: 'Damiano', // in un oggetto, le proprietà sono sempre formati da 'chiave: valore'
+            cognome: 'Tiberi' // all'interno di un oggetto, i ':' sono operatori di assegnamento
+       };
+
+       console.log(typeof numero); //restituisce il tipo di dato della variabile => qui è number
+       numero = 'ciaone';
+       console.log(typeof numero); // qui numero è una stringa... FAI ATTENZIONE
+       
+
+    </script>
+</body>
+</html>

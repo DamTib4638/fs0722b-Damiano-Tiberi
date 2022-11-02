@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        var a = 0; // variabile globali
+        {
+            var b = 1;
+            console.log(a); // le variabili globali sono visibili da dentro un blocco di codice
+
+        }
+        console.log(b); // è visibile, perchè le variabili var ignorano il blockscope
+
+        let c = 2; // variabile globale
+        {
+            let d = 3; // nasce e muore in questo blocco
+            console.log(c); // c è visibile, perchè c è globale
+        }
+
+        // console.log(d); // non è visibile, perchè le variabili let sono soggette a blockscope
+
+        {
+            let d = 4;
+            console.log(d);
+        }
+
+        let f; // lo scope di una variabile viene assegnato al momento della sua dichiarazione e non dell'inizializzazione. 
+        {
+            f = 5;
+        }
+        console.log(f);
+
+        var test = 6;
+        {
+            console.log(test); // da errore, perchè si rende conto che nel blocco, viene definita successivamente una variabile di nome test e quindi ignora la var globale fuori dal blocco
+            let test = 7;
+            console.log(test);
+        }
+        console.log(test);
+
+        /* scope delle funzioni */
+        var t = 9;
+        function prova() {
+            console.log(t); // la vede, ma meglio evitare
+            var h = 8;
+        }
+        console.log(h); // non la vede, perchè le variabili nate in funzioni non escono, anche se sono var
+
+        /* variabili COSTANTI const */
+
+        // le const hanno lo stesso blockscope delle let, ma non possono essere riassegnate. Si scrivono i nomi in MAIUSCOLO.
+        const NOME_COSTANTE = 'prova'; // devono essere inizializzate per forza. Se 
+
+        const OGGETTO = {
+            nome: 'Mario'
+        }
+
+        const OGGETTO2 = {
+            nome: 'Roberta'
+        }
+
+        OGGETTO = OGGETTO2; // questo non posso farlo perchè devo risettare gli attributi ma non l'intero oggetto come se fosse una variabile
+
+        /* usare const migliora la leggibilità del codice, lo uso quando il dato è da considerare fisso */
+
+        console.log(OGGETTO.nome);
+
+        Object.freeze(OGGETTO); // così non posso riassegnare nemmeno le proprietà
+
+        OGGETTO.nome = 'Roberta';
+
+        console.log(OGGETTO.nome);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let testo = 'Ciao';
+        testo = 'Benvenuto'; // testo ora vale Benvenuto
+        testo += ' Mario'; // Benvenuto Mario
+        console.log(testo);
+
+        let a = 2;
+        a += 2;
+        console.log(a); // 4
+        a -= 2;
+        console.log(a); // 2
+        a *= 3;
+        console.log(a); // 6
+        a /= 2;
+        console.log(a); // 3
+
+        a++;
+        console.log(a); //4
+        a--;
+        console.log(a); //3
+
+        // operatori di confronto
+
+        let b = 10;
+        console.log(b < 10); //false
+        console.log(b == 10);//true
+        console.log(b > 10); //false
+        console.log(b >= 10); //true
+        console.log(b <= 10); //true
+        console.log(b != 10); //false
+
+        console.log(b === 10); //   true, perchè
+        console.log(b == '10'); //  true, perchè
+        console.log(b === '10'); // false, perchè 
+
+        console.log(b !== 10); //   false, perchè 
+        console.log(b != '10'); //  false, perchè 
+        console.log(b !== '10'); // true, perchè 
+
+        let c = 15;
+
+        console.log(b < 10 && c == 15); // false
+        console.log(b < 10 || c == 15); // true
+
+        console.log(!(b==10)); // il not usato davanti ad una condizione, inverte il risultato della condizione. --> FALSE
+        console.log((b==10)); // il not usato davanti ad una condizione, inverte il risultato della condizione. --> TRUE
+
+        // MAI FARE !true o !false --> morte certa
+
+        /* UTILIZZANDO typeof nomeVariabili CI VIENE RESTITUITO IL TIPO DI VARIABILE */
+
+        /* OPERATORE TERNARIO */
+
+        let anni = 30;
+        let anni2 = prompt('Quanti anni hai?');
+        let consenso = (anni >= 18) ? 'Puoi accedere' : 'Accesso negato'; // operatore ternaio di if
+        let consenso2 = (anni2 >= 18) ? 'Puoi accedere' : 'Accesso negato'; // qui l'else è obbligatorio ma non posso fare if-else
+        
+
+    </script>
+</body>
+</html>

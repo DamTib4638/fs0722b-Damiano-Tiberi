@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            proprietà: 'valore'
+        }
+        let margherita = {
+            gusto: 'Margherita',
+            prezzo: 5,
+            aggiunte: [
+                {
+                    nome: 'Mozzarella',
+                    prezzo: 1
+                },
+                {
+                    nome: 'Origano',
+                    prezzo: 2
+                },
+                {
+                    nome: 'Bufala',
+                    prezzo: 3
+                }
+            ],
+            mostraPrezzo: function(){ // è un metodo dell'oggetto margherita. Solo le funzioni all'interno di oggetti sono metodi, altrimenti si chiamano funzioni
+                console.log('Il prezzo della pizza margherita è pari a 5€');
+            }
+        }
+
+        console.log(margherita.gusto);
+        console.log(margherita.prezzo); // 5
+        console.log(margherita.aggiunte[0].prezzo); // 1
+        margherita.mostraPrezzo();
+    </script>
+</body>
+</html>

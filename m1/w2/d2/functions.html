@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="testo"></div>
+
+    <input type="number" name="a" id="a">
+    <input type="number" name="b" id="b">
+    <button onclick="elabora()">Moltiplica</button>
+
+    <script>
+        // Hoisting
+        saluta(); // posso lanciare una funzione prima della dichiarazione
+        function saluta() {
+            document.write('Benvenuto');
+        }
+
+        function restituisciSaluto() {
+            return 'Benvenuto';
+        }
+
+        console.log(restituisciSaluto());
+        let saluto = restituisciSaluto();
+        alert(saluto);
+
+        /* funzioni parametriche */
+
+        function aggiungiTesto(t) { // t = 'ciao, come va?'
+            let testo = document.getElementById('testo');
+            testo.innerHTML = t;
+        }
+
+        aggiungiTesto('ciao, come va?');
+
+        function moltiplica (a,b) {
+            return a*b;
+        }
+
+        console.log(moltiplica(2,5));
+
+        function elabora () {
+            let a = getElementById('a');
+            let b = getElementById('b');
+            let risultato = moltiplica(a.value,b.value);
+            alert(risultato);
+            a.value = '';
+            b.value = '';
+        }
+
+    </script>
+</body>
+</html>

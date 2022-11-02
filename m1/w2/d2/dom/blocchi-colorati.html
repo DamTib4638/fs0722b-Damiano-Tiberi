@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .blocco {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+    </style>
+    <!-- this, in questo caso, è tutto l'elemento div -->
+    <div class="blocco" data-colore="red" onclick="colora(this)">1</div>
+    <div class="blocco" data-colore="yellow" onclick="colora(this)">2</div>
+    <div class="blocco" data-colore="green" onclick="colora(this)">3</div>
+    <div class="blocco" data-colore="blue" onclick="colora(this)">4</div>
+    <div class="blocco" data-colore="orange" onclick="colora(this)">5</div>
+
+    <script>
+        function colora(elementoCliccato) {
+            // elementoCliccato.style.backgroundColor = 'red';
+            
+            elementoCliccato.style.backgroundColor = elementoCliccato.getAttribute('data-colore');
+        }
+    </script>
+</body>
+</html>

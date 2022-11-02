@@ -11,6 +11,9 @@ console.log($pet);
 var _pet = 'Non si guarda la console delle pagine web!!!';
 console.log(_pet);
 var _pet2 = 'IL TUO VIAGGIO FINISCE QUI';
-document.write(_pet2);
+document.writeln(_pet2);
+document.writeln('benvenuto');
+document.writeln("Ciao");
+document.writeln("Damiano");
 
 //var 12 = 'numero';

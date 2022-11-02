@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="testo" type="number">
+    <button onclick="elabora()">Controllo Pari/Dispari</button>
+    <!-- quando clicchi, il document.write sovrascrive l'intera pagina e spariscono bottone e campo input -->
+    <script>
+        function elabora() {
+            let input = document.getElementById("testo");
+            let result = input.value % 2 == 0; // % è il modulo...restituisce il resto della divisione
+            let messaggio = result ? 'è pari' : 'è dispari';
+            alert(messaggio);
+            if (result) {
+                alert('PARI');
+            } else {
+                alert('DISPARI');
+            }
+            // console.log(input);
+            // console.dir(input.style.color);
+            console.log(input.value);
+            input.value = ''; // svuota il campo di input
+        }
+
+    </script>
+</body>
+</html>

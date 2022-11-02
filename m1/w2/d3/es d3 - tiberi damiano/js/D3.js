@@ -174,6 +174,13 @@ let variabile2 = 55;
 console.log('La variabile ' + variabile2 + ' è di tipo ' + typeof(variabile2));
 let variabile3 = true;
 console.log('La variabile ' + variabile3 + ' è di tipo ' + typeof(variabile3));
+if (typeof(variabile) === 'string') {
+  console.log('è una stringa');
+} else if (typeof(variabile) === 'number') {
+  console.log('è un numero');
+} else if (typeof(variabile) === 'boolean') {
+  console.log('è un booleano');
+}
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)

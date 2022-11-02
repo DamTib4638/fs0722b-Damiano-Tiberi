@@ -95,3 +95,9 @@ if (name1 == name2) {
 } else {
   console.log('Le due variabili sono diverse, perchè JS è Case-Sensitive');
 }
+
+if (name1.toLowerCase == name2.toLowerCase) {
+  console.log('Variabili uguali');
+} else {
+  console.log('non uguali');
+}

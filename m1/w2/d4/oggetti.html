@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        {
+            // creazione manuale degli oggetti
+            let obj = {
+
+            }; // creazione oggetto a mano (rara)
+            let pizza = {
+                gusto: 'margherita',
+                prezzo: 5
+            };
+
+            console.log(pizza.gusto); // lettura di un oggetto (delle sue proprietà)
+
+            pizza.gusto = 'Capricciosa'; // scrittura su un oggetto (delle sue proprietà)
+            console.log(pizza);
+        }
+
+        {
+            // costruttore di oggetti (devono avere la prima lettera maiuscola, come in Java)
+            function Pizza(g, p) {
+                this.gusto = g; // proprietà
+                this.prezzo = p;
+                // this è un oggetto contestuale, cambia il suo significato in base al contesto in cui viene usato
+                // utilizzato nel costruttore punta all'oggetto che verrà generato (con new).
+                this.mostraPrezzo = function(valuta = '$'){ // se ci si dimentica di mettere la valuta durante l'invocazione, di default sarà $. MA SOLO SE CI SI DIMENTICA. mostraPrezzo è un metodo.
+                    console.log(`Il prezzo della pizza ${this.gusto} è di ${this.prezzo} ${valuta}`);
+                } // funzione anonima che può essere assegnata ad una proprietà
+            }
+
+            let diavola = new Pizza('Diavola', 8); // generazione di oggetti
+            let hawaii = new Pizza('Ananas', 20);
+            console.log(diavola, hawaii);
+            hawaii.mostraPrezzo('€');
+            diavola.mostraPrezzo();
+
+            Pizza.prototype.tipo = 'Napoletana'; // proprietà per modificare tutti gli oggetti della classe presa in esame. Accede alla classe
+        }
+
+    </script>
+</body>
+</html>

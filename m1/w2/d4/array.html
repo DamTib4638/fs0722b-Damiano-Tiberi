@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = []; // array vuoto. Contenitore di dati che non devono essere dichiarati come in oggetti
+        let animali = ['Tigre', 'Leone', 'Gatto', 'Cane'];
+        console.log(animali[0]); // stampa Tigre --> Lettura da array
+        console.log(animali.length-1); // legge l'ultimo elemento dell'array
+        console.log(animali.length); // ritorna la lunghezza dell'array
+
+
+        // lenght esiste anche sulle stringhe
+        let stringa = 'ciao';
+        console.log(stringa.length); // restituisce la lunghezza della stringa
+        console.log(stringa[0]); // visualizza la prima lettera della stringa
+        console.log(stringa.replace('c', 'a')); // sostituisce la prima c della stringa con la lettera a
+        console.log(stringa.replaceAll('c', 'a')); //sotituisce tutte le c della stringa con la lettera a
+
+        animali[0] = 'Alce';
+        console.log(animali[0]); // stampa Alce
+        console.log(animali); // stampa tutto l'array
+
+        /* EVITARE I BUCHI NEGLI ARRAY. Accertarsi di rispettare la sequenza. */
+        if (animali[6]) { // se campo 6 non c'è, è undefined e per l'if è false, se c'è il valore è true
+            animali[6] = 'Daino';
+            console.log(animali);
+        }
+
+        // rilevare correttamente il tipo di dato
+
+        console.log(typeof animali); // risponde oggetto e non array --> INEFFICACE
+        console.log(Array.isArray(animali)); // è un metodo. cioè funzione dentro la classe Array. Restituisce true se animali è array, altrimenti false
+
+        // metodi degli array
+        let numeri = [10, 20, 800, 60, 233];
+        numeri.sort();
+        console.log(numeri); // da errore, perchè sort fa un ordine alfabetico non di grandezza numerica
+        numeri.sort(function(a,b){ // questa funzione di callback serve ad ordinare numeri usando sort.
+            return a-b; // ordine crescente (se fai b-a ordina decrescente). 
+        })
+        console.log(numeri); // ora ordina bene i numeri in modo crescente
+
+        // aggiungere/rimuovere alla fine
+
+        numeri = [10, 20, 800, 60, 233];
+        console.log(numeri.push(500)); //aggiunge alla fine. In console vedi anche la nuova lunghezza
+        let eliminato = numeri.pop(500); //rimuove alla fine
+
+        // aggiungere/rimuovere all'inizio (sconsigliato)
+
+        numeri.unshift(500);
+        numeri.shift(500);
+
+        // rimozione o sostituzione a partire da un indice
+
+        let start = 2;
+        let quantità = 1;
+        numeri.splice(start, quantità); // a partire dall'indice dell'array 2, elimino una quantita, cioè solo quello di indice 2.
+        console.log(numeri);
+        numeri.splice(2, 1, 88); // 88 verrà inserito in sostituzione degli elementi eliminati
+        console.log(numeri);
+
+        // algoritmo trova e distruggi
+
+        function trovaDistruggi(array, valore) {
+            let index = array.indexOf(valore);
+            array.splice(index, 1);
+            return array;
+        }
+
+    </script>
+</body>
+</html>

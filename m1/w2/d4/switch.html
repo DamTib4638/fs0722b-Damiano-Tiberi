@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select id="frutta">
+        <option value=""></option>
+        <option value="Mela"></option>
+        <option value="Banana"></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+    </select>
+
+    <script>
+        let frutto = 'Fragola';
+        switch(frutto) { // da usare con select...così fai scopa meglio
+            case 'Mela':
+                console.log('Mela');
+                break;
+            case 'Banana':
+                console.log('Banana');
+                break;
+            case 'Mango':
+            case 'Ananas':
+                console.log('Mango ed Ananas');
+                break;
+            default:
+                console.log('Non abbiamo trovato '+ frutto);
+                // non serve il break perchè è sempre ultimo
+        }
+    </script>
+</body>
+</html>

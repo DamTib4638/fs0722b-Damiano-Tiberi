@@ -26,32 +26,16 @@ main {
     width: 100%;
 }
 
-#simboli {
-    width: 97%;
-    height: 40px;
-    text-align: right;
-    font-size: 36px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-color: darkgoldenrod;
-    background-color: lightyellow;
-    margin-bottom: 0;
-    border-bottom: none;
-    color: grey;
-}
-
 #numeri {
     width: 97%;
     height: 40px;
     text-align: right;
     font-size: 36px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-radius: 8px;
     border-color: darkgoldenrod;
     background-color: lightyellow;
     margin-top: 0;
     margin-bottom: 2px;
-    border-top: none;
 }
 
 .btn-tastiera {
@@ -61,11 +45,12 @@ main {
     margin: 2px 0;
     font-size: 48px;
     border-radius: 50%;
-    background-color: lightyellow;
+    /* background-color: lightyellow; */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(lightyellow), to(darkgoldenrod), color-stop(0.3, yellow));
 }
 
 .btn-tastiera:active {
-    transform: translateY(3px);
+    transform: translateY(5px);
 }
 
 #reset {
@@ -74,7 +59,7 @@ main {
 
 #uguale {
     background-color: darkgoldenrod;
-    color: whitesmoke;
+    color: orangered;
     width: 424px;
     border-radius: 30px;
     font-size: 72px;

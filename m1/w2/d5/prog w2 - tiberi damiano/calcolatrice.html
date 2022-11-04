@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calcolatrice.css">
+    <title>Calcolatrice Semplice</title>
+</head>
+<body>
+    <header>
+        <button id="indietro" onclick="indietro()">&#8678;</button id="indietro"><h1>Calcolatrice Ordinaria</h1>
+    </header>
+    <main>
+        <div class="contenitore">
+            <input id="simboli" type="text">
+            <input id="numeri" placeholder="0" type="text">
+            <button class="btn-tastiera" data-simbolo="7" onclick="aggiungiCifra(this)">7</button>
+            <button class="btn-tastiera" data-simbolo="8" onclick="aggiungiCifra(this)">8</button>
+            <button class="btn-tastiera" data-simbolo="9" onclick="aggiungiCifra(this)">9</button>
+            <button class="btn-tastiera" data-simbolo="/" onclick="aggiungiCifra(this)">/</button>
+            <button class="btn-tastiera" data-simbolo="4" onclick="aggiungiCifra(this)">4</button>
+            <button  class="btn-tastiera" data-simbolo="5" onclick="aggiungiCifra(this)">5</button>
+            <button  class="btn-tastiera" data-simbolo="6" onclick="aggiungiCifra(this)">6</button>
+            <button  class="btn-tastiera" data-simbolo="*" onclick="aggiungiCifra(this)">X</button>
+            <button  class="btn-tastiera" data-simbolo="1" onclick="aggiungiCifra(this)">1</button>
+            <button  class="btn-tastiera" data-simbolo="2" onclick="aggiungiCifra(this)">2</button>
+            <button  class="btn-tastiera" data-simbolo="3" onclick="aggiungiCifra(this)">3</button>
+            <button  class="btn-tastiera" data-simbolo="-" onclick="aggiungiCifra(this)">-</button>
+            <button id="reset" class="btn-tastiera" onclick="reset()">C</button>
+            <button class="btn-tastiera" data-simbolo="0" onclick="aggiungiCifra(this)">0</button>
+            <button class="btn-tastiera" data-simbolo="." onclick="aggiungiCifra(this)">.</button>
+            <button class="btn-tastiera" data-simbolo="+" onclick="aggiungiCifra(this)">+</button>
+            <button id="uguale" class="btn-tastiera" onclick="tot()">=</button>
+        </div>
+    </main>
+
+    <script src="js/calcolatrice.js"></script>
+</body>
+</html>

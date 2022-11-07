@@ -76,6 +76,14 @@ function aggiungiCifra(bottone) {
                 }
             }
         }
+        /* non inserisco più volte il punto in una singola operazione */
+        // if(array.findIndex(trovaPunto) > 0) {
+        //     for (let i = array.findIndex(trovaPunto)+1; i < array.length; i++) {
+        //         if (array[i] == '.') {
+        //             array.splice(i,1);
+        //         }
+        //     }
+        // }
         
         if (array[0] == '+' || array[0] == '*' || array[0] == '/' || array[0] == '.') {
             array.shift();
@@ -112,6 +120,16 @@ function aggiungiCifra(bottone) {
                     }
                 }
             }
+
+            /* non inserisco più volte il punto in una singola operazione */
+            // if(array.findIndex(trovaPunto) > 0) {
+            //     for (let i = array.findIndex(trovaPunto)+1; i < array.length; i++) {
+            //         if (array[i] == '.') {
+            //             array.splice(i,1);
+            //         }
+            //     }
+            // }
+
             if (array[0] == '+' || array[0] == '*' || array[0] == '/' || array[0] == '.') {
                 array.shift();
             }
@@ -144,6 +162,16 @@ function aggiungiCifra(bottone) {
                     }
                 }
             }
+
+            /* non inserisco più volte il punto in una singola operazione */
+            // if(array.findIndex(trovaPunto) > 0) {
+            //     for (let i = array.findIndex(trovaPunto)+1; i < array.length; i++) {
+            //         if (array[i] == '.') {
+            //             array.splice(i,1);
+            //         }
+            //     }
+            // }
+
             if (array[0] == '+' || array[0] == '*' || array[0] == '/' || array[0] == '.') {
                 array.shift();
             }
@@ -185,4 +213,8 @@ function reset() {
 function indietro() {
     /* Esci dall'app */
     location.href = 'index.html';
+}
+
+function trovaPunto(valore) {
+    return valore == '.';
 }

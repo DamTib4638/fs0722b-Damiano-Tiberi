@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="commento">
+        <b>Andrea Di Santo</b>
+        <p>Auguri</p>
+        <input type="text">
+    </div>
+    <div class="commento">
+        <b>Giada Cossu</b>
+        <p>Tanti auguri</p>
+        <input type="text">
+    </div>
+    <div class="commento">
+        <b>Matteo Marino</b>
+        <p>Augurissimi</p>
+        <input type="text">
+    </div>
+    <div class="commento">
+        <b>Roberta Cavalli</b>
+        <p>Ciao auguri!</p>
+        <input type="text">
+    </div>
+
+    <button id="rispondi">Rispondi a tutti</button>
+
+    <script>
+
+        let bottone = document.querySelector('rispondi');
+        bottone.addEventListener('click', function () {
+            let commenti = document.querySelectorAll('.commento');
+            for (let c of commenti) {
+                let nome = c.querySelector('b').innerText.split(' ')[0];
+                c.querySelector('input').value = 'grazie ' + nome;
+            }
+        })
+
+    </script>
+</body>
+</html>

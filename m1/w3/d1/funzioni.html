@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        nomeFunzione2(); // le funzioni sono soggette ad hoisting (sollevamento), quindi vale anche qui, prima di essere definita. Questa cosa vale con le funzioni, ma non con le variabili.
+
+        function nomeFunzione() {
+            console.log('Test'); // esegue il compito....
+        }
+
+        function nomeFunzione2() {
+            return'Test'; // restituisce un dato....ma non esegue nessun compito
+        }
+        /* RICORDA DI LANCIARE LA FUNZIONE. */
+        console.log(nomeFunzione()); //...ma non restituisce nessun dato --> UNDEFINED
+        console.log(nomeFunzione2()); // restituisce 'test'
+
+        /* funzioni parametriche */
+        function somma (a, b) {
+            return a + b;
+        }
+        console.log(somma(21, 42)); // se non metti uno dei parametri che deve avere una funzione, si ha undefined come valore preso di default dalla funzione stessa.
+
+    </script>
+</body>
+</html>

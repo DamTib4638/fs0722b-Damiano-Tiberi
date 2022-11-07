@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="test">Testo ID</div>
+    <div class="giallo">Testo class</div>
+    <div class="giallo">Testo class</div>
+    <div class="giallo">Testo class</div>
+    <div class="giallo">Testo class</div>
+    <div>Testo Tag</div>
+
+    <script>
+        let test = document.querySelector('#test');
+        console.dir(test); // vedi come è fatto l'elemento html a cui fa riferimento
+
+        test.style.color = 'red';
+
+        // let giallo1 = document.getElementsByClassName('giallo');
+        // console.log(giallo1); // non è un array, cioè non è iterabile
+        /* quello qui sopra vale anche per getElementsByTagName */
+
+        let giallo1 = document.querySelectorAll('.giallo');
+        console.log(giallo1); // qui è ciclabile perchè è come un array; ottieni tutti gli elementi di classe giallo.
+
+        let div = document.querySelectorAll('div'); // tutti gli elementi div
+    </script>
+</body>
+</html>

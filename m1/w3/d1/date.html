@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #orologio {
+            position: relative;
+        }
+        .lancetta {
+            position: absolute;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="time"></div>
+    <div id="orologio">
+        <hr class="lancetta">
+    </div>
+    <script>
+        let now = new Date(); //quando viene letta in runtime questa riga, qui si fissa l'orario.
+        let anno = now.getFullYear();
+        let mese = now.getMonth(); // numeri dei mesi da 0 a 11 (gennaio - dicembre)
+        let giornoSettimana = now.getDay(); // numeri che vanno da 0 a 6 (domenica - sabato), perchè prende primo giorno della settimana domenica.
+        let giornoMese = now.getDate(); // ottieni il giorno del mese in corso.
+        let orario = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+        console.log(now);
+        console.log(anno, mese, giornoSettimana, giornoMese);
+        /* prende la data del nostro browser, perchè non comunica con il server, quindi comunica solo con il browser del pc da cui scrivi */
+
+        let passato = new Date('2/2/2022 22:22:22');
+
+        if (passato < now) {
+            console.log('ok');
+        }
+
+        setInterval(function(){
+
+            let time = new Date();
+            document.getElementById('time').textContent = time.toLocaleTimeString();
+            //time.toLocaleDateString()
+            let lancetta = document.querySelector('#orologio, .lancetta');
+            lancetta.style.transform = `rotate(${time.getSeconds() * 6}deg`;
+
+        }, 1000);
+        /* PER VEDERE DOCUMENTAZIONE JS APRI MOZILLA-DEVELOPER */
+    </script>
+</body>
+</html>

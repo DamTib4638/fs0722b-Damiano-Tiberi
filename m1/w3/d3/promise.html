@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let p = new Promise(function(successo, errore){
+            let password = 'password';
+            if(password == 'password'){
+                successo('Accesso consentito');//eseguo la prima callback di then
+            }else{
+                errore('Errore nella richiesta');//eseguo la seconda callback di then
+            }
+        });
+
+        p.then(
+            (risultato)=>console.log(risultato),
+            (err)=> console.log(err)
+            )
+            
+        p.then(
+            (risultato)=>document.write(risultato),
+            (err)=> console.log(err)
+            )
+
+        //promise con solo successo
+        let promise = new Promise(function(successo){
+            setTimeout(function(){
+                successo('Fatto');
+            },3000);
+        })
+
+
+        promise.then((data)=>console.log(data))
+
+        console.log(1);//è una riga sincrona, viene eseguita per prima
+
+    </script>
+</body>
+</html>

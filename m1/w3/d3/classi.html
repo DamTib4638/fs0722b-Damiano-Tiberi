@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+        class Persona{
+
+            constructor(_nome, _cognome){
+                this.nome = _nome;
+                this.cognome = _cognome;
+                this.presentazione();
+            }
+
+            presentazione(){
+                console.log(`Ciao, mi chiamo ${this.nome} ${this.cognome}`);
+            }
+
+            static spiegazione(){
+                console.log('Questa classe serve a descrivere le persone');
+            }
+
+        }
+
+        //Persona.presentazione() => non posso, la funzione presentazione verrà creata ed inserita in un oggetto istanziato
+        Persona.spiegazione()//metodo statico, posso chiamarlo partendo dal nome della classe
+
+        
+        let mario = new Persona('Mario','Rossi');//sto istanziando un oggetto
+        console.log(mario);
+        
+        //posso anche modificare le proprietà dopo la creazione dell'oggetto
+        let andrea = new Persona();
+        andrea.nome = 'Andrea';
+        andrea.cognome = 'Ancona';
+        console.log(andrea);
+
+
+        Persona.prototype.anni = null;//aggiungo una proprietà con valore zero
+        
+        andrea.anni = 30;
+        console.log(andrea)
+        
+        
+
+
+    </script>
+</body>
+</html>

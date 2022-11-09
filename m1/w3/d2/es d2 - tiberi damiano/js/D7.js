@@ -162,6 +162,32 @@ const createRandomWithoutDuplicate = function () {
 console.log('esercizio 10');
 console.log(createRandomWithoutDuplicate());
 
+function arrayRandom () {
+  let arrayNato = [];
+  let numeroCasuale;
+  let nonDoppione = true;
+  let contatore = 0;
+  while (contatore < 10) {
+    numeroCasuale = Math.round(Math.random()*10);
+    for (let i=0; i<10; i++) {
+      if (arrayNato[i] === numeroCasuale) {
+        nonDoppione = false;
+        break;
+      }
+    }
+    if (nonDoppione) {
+      arrayNato.unshift(numeroCasuale);
+      contatore++;
+    } else {
+      nonDoppione = true;
+    }
+  }
+  return arrayNato;
+}
+
+console.log('esercizio 10');
+console.log(arrayRandom());
+
 /* ESERCIZIO 11 (EXTRA)
   Scrivi un algoritmo in grado di invertire un array.
   es: [1, 3, 5] ==> [5, 3, 1]
@@ -175,7 +201,7 @@ const inverso = function (arrayDaInvertire) {
   }
   return arrayInverso;
 }
-
+/* PUOI USARE IL METODO REVERSE */
 console.log('esercizio 11');
 console.log('Risultato: ' + inverso(nuovoArray));
 

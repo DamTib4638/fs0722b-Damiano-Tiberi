@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        class Veicolo {//superclasse
+
+            constructor(_maxVel = null,_nruote = 2){
+                this.nruote = _nruote;
+                this.maxVel = _maxVel;
+                this.vel = 0;
+                console.log("Classe istanziata");
+            }
+
+            accelera(vel = 1){
+                this.vel += vel;
+            }
+
+            frena(vel = 1){
+                this.vel -= vel;
+            }
+
+        }
+
+        let veicolo = new Veicolo();
+        console.log(veicolo);
+
+        class Bicicletta extends Veicolo{
+            constructor(){
+                super(40);
+            }
+
+            hasCasters(bool){
+                if(bool){
+                    this.nruote += 2;
+                }else{
+                    this.nruote -= 2;
+                }
+            }
+        }
+
+        let biciAdulto = new Bicicletta();//ha 2 ruote
+        console.log('Numero ruote bici adulto:' + biciAdulto.nruote)
+
+        let biciBimbo = new Bicicletta();//ha 2 ruote
+        biciBimbo.hasCasters(true)//monto le rotelle
+        console.log('Numero ruote bici bimbo:' + biciBimbo.nruote)
+
+        class Automobile extends Veicolo {
+            constructor(_marca,_porte,_maxVel){
+                super(_maxVel,4);//richiama il costruttore della superclasse
+                this.marca = _marca
+                this.porte = _porte
+            }
+
+        }
+
+        let automobile = new Automobile('Mini',3,280);
+        automobile.accelera(5);
+        automobile.frena(2);
+        console.log(automobile);
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

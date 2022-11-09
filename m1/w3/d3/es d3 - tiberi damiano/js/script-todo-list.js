@@ -1,54 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .todo{
-            padding:15px;
-            background-color: bisque;
-            margin-bottom: 15px;
-            border: 1px solid brown;
-        }
-        .todo.completato{
-            background-color: green;
-        }
-        .todo button{
-            background-color: green;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            margin-left: 50px;
-        }
-        .todo.completato button{
-            background-color: grey;
-        }
-    </style>
-</head>
-<body>
-    
-    <input type="text" id="text"><button id="salva">Salva</button>
-
-    <hr>
-
-    <input type="search" id="cerca" placeholder="Cerca task">
-
-    <div id="lista">
-        <h3>Da Fare</h3>
-        
-    </div>
-    
-    <div id="lista-completati">
-        <h3>Completati</h3>
-       
-    </div>
-
-
-    <script>
-
-        document.querySelector('#salva')
+document.querySelector('#aggiungi')
         .addEventListener('click', function(){
 
             let testo = document.querySelector('#text');
@@ -58,22 +8,24 @@
             
             let span = document.createElement('span');
             span.textContent = testo.value;
+            
 
             let completato = document.createElement('button');
-            completato.textContent = 'Completato';
+            completato.textContent = '✓';
 
             completato.addEventListener('click', ()=> {
                 div.classList.add('completato');//assegno una classe aggiuntiva
                 document.querySelector('#lista-completati')
                 .append(div);//sposto il div nella lista completati
+                completato.textContent = 'X';
             })
 
             div.append(span, completato);
             document.querySelector('#lista').append(div);
-        
 
-            testo.value = '';            
+            testo.value = '';  
         });
+
 
 
         let cerca = document.querySelector('#cerca');
@@ -93,10 +45,3 @@
             }
 
         })
-
-               
-        
-
-    </script>
-</body>
-</html>

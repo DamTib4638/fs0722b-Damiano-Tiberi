@@ -5,22 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #scacchiera{
+            width: 450px;
+            height: 450px;
+        }
+
+        .casella{
+            height: calc(100% / 8 - 2px);
+            width: calc(100% / 8 - 2px);
+            border: 1px solid #000;
+            display: inline-block;
+            margin-left:-0.1rem;
+            margin-bottom:-0.3rem;
+            color: red;
+        }
+    </style>
 </head>
 <body>
-
+    
     <div id="scacchiera"></div>
 
     <script>
-        let scacchiera = document.querySelector('#scacchiera');
-        for (let i=1; i<=8; i++) {
-            for (let j=1; j<=8; j++) {
-                let colore = (i+j) % 2 ? 'gold' : 'brown';
-                let div = document.createElement('div');
-                div.classList.add('casella');
+
+        let scacchiera = document.querySelector('#scacchiera');//oggetto        
+
+        for(let i = 0; i < 8; i++){
+            for(let j = 0; j < 8; j++){
+                let colore =  (i + j) % 2 ? '#000' : '#fff';
+
+                let div = document.createElement('div');//<div></div> => creo l'elemento e lo tengo in memoria, non appare finchè non lo dico io
+                div.classList.add('casella')//accedi alla lista di classi e a questa aggiungi la classe casella
                 div.style.backgroundColor = colore;
-                scacchiera.append(div);
+                scacchiera.append(div);//prendi il div creato precedentemente e mettilo dentro scacchiera
+                
+
+                //scacchiera.innerHTML += `<div class="casella" style="background-color:${colore}">${i} - ${j}</div>`;
             }
         }
+
     </script>
+
 </body>
 </html>

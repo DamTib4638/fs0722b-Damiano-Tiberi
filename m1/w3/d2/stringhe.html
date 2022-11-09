@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let stringa = 'ggg,jjj,ooo,GGG,ppp,gGg';
+        let str1 = stringa.replace(/,/g,'.');//g trova tutte le occorrenze
+        let str2 = stringa.replace(/ggg/gi,'###');//i = ricerca case unsensitive
+        document.write( str1 );
+        document.write( '<br>' );
+        document.write( str2 );
+
+        console.log(stringa.split(','))
+        console.log(stringa.split(',').join('#'))//spezzo la stringa in corrispondenza delle virgole, creando un array. Poi riunisco gli elementi dell'array in una stringa usando il simbolo # come separatore
+
+    </script>
+</body>
+</html>

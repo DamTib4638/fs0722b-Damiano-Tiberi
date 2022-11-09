@@ -51,26 +51,45 @@ body {
     width: 65%;
     margin: auto;
     padding:15px;
-    font-size: 18px;
+    font-size: 20px;
     background-color: lightcoral;
     margin-bottom: 15px;
     border: 1px solid brown;
     border-radius: 20px;
     text-align: left;
 }
-.todo.completato{
+/* .todo.completato{
     background-color: lightblue;
     text-decoration: line-through;
-}
-.todo button{
-    background-color: rgba(0, 128, 0, 0.584);
+} */
+.todo .button-fatto{
+    background-color: green;
     color: #fff;
     border: none;
     border-radius: 3px;
     float: right;
     font-size: 18px;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    cursor: pointer;
+    /* color: steelblue; */
 }
 
-.todo.completato button{
+.todo .button-elimina{
     background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    float: right;
+    font-size: 18px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }
+
+/* .todo.completato button{
+    background-color: red;
+} */
+
+

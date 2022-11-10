@@ -88,8 +88,21 @@ body {
     cursor: pointer;
 }
 
-/* .todo.completato button{
-    background-color: red;
+/* #canvas {
+    position: fixed;
+    height: 100vh;
+    width: 90%;
+    background-color:lightblue;
+    left: -90%;
+    transition: all 0.3s;
+}
+
+#canvas.open{
+    left: 0;
+}
+
+#area-bottone{
+    float: right;
+    border-radius: 10px;
+    background-color: lightcoral;
 } */
-
-

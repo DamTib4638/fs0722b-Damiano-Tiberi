@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="lista">
+
+    </div>
+    <button id="crea">Crea</button>
+
+    <script>
+
+        let crea = document.querySelector('#crea');
+        crea.addEventListener('click', function () {
+            let div = document.createElement('div');
+            let divText = document.createTextNode('Div Creato'); // altro modo sostitutivo dell' innerhtml e textContent per scrivere del testo in un area con tag apri e tag chiudi. L'innerhtml, a differenza degli altri due, può avere dentro anche tag html.
+            div.append(divText);
+            document.querySelector('#lista').append(div);
+        });
+
+        
+
+    </script>
+</body>
+</html>

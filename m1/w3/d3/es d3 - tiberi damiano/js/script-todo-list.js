@@ -1,5 +1,5 @@
 let pulsanteAggiungi = document.querySelector('#aggiungi');
-pulsanteAggiungi.addEventListener('click', aggiungiCompito);
+pulsanteAggiungi.addEventListener('click', aggiungiCompito); //la funzione va senza () se no la esegue a priori.
 
 function aggiungiCompito() {
 
@@ -64,22 +64,35 @@ function svolgiCompito(bottoneFatto, div) {
     })
 }
 
+let cerca = document.querySelector('#cerca');
+cerca.addEventListener('keyup', ricerca);
 
+function ricerca() {
+    let todos = document.querySelectorAll('.todo');
+    for (let compito of todos) {
+        let testo = compito.querySelector('span').textContent.toUpperCase();
+        if(testo.search(cerca.value.toUpperCase()) == -1) {
+            compito.style.display = 'none';
+        } else {
+            compito.style.display = 'block';
+        }
+    }
+}
 
-        // let cerca = document.querySelector('#cerca');
+// let btnDecisione = document.querySelector('#area-bottone');
+// btnDecisione.addEventListener('click', apriChiudi);
 
-        // cerca.addEventListener('keyup', ()=> {
-            
-        //     let todos = document.querySelectorAll('.todo');
-            
-        //     for(let task of todos){
-        //         let testo = task.querySelector('span').textContent.toUpperCase();
-                
-        //         if(testo.search(cerca.value.toUpperCase()) == -1){
-        //             task.style.display = 'none';
-        //         }else{
-        //             task.style.display = 'block';
-        //         }
-        //     }
+// function apriChiudi() {
+//     let canvas = document.querySelector('#canvas');
+//     canvas.classList.toggle('open');
+// }
 
-        // })
+// let sceltaLista = document.querySelector('#sceltaLista');
+// sceltaLista.addEventListener('click', scriviLista);
+
+// function scriviLista() {
+//     let lista = document.querySelector('.seleziona');
+//     if (lista.value > 0) {
+//         document.getElementById('#titolo').innerHTML = lista.textContent;
+//     }
+// }

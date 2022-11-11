@@ -595,6 +595,13 @@ console.log(removeIndex(movies, 12));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
+
+
+/*
+    NOTA: HO INSERITO L'HTML COLLEGATO AGLI ESERCIZI 20-26 IN MODO CHE, DECOMMENTANDO LA CHIAMATA ALLA FUNZIONE CORRISPONDENTE, LI PUOI VEDERE AL VOLO. IN PARTICOLARE: IL 20, 21 E 22 LI HO LASCIATI DECOMMENTATI PERCHè CHIEDONO LA STAMPA IN CONSOLE
+*/
+
+
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
@@ -604,8 +611,9 @@ const selezionaElemento = function() {
   let div = document.getElementById('container'); //USO IL METODO GETELEMENTBYID DELL'OGGETTO DOCUMENT PER PRENDERE L'ELEMENTO HTML
   return div;
 }
-
-console.log('Esercizio 20 - VEDI CODICE');
+/* SUCCESSIVAMENTE STAMPO IL RISULTATO IN CONSOLE */
+console.log('Esercizio 20');
+console.log(selezionaElemento());
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
@@ -616,8 +624,9 @@ const selezionaTD = function() {
   let tds = document.querySelectorAll('td');
   return tds;
 }
-
-console.log('Esercizio 21 - VEDI CODICE');
+/* SUCCESSIVAMENTE STAMPO IL RISULTATO IN CONSOLE */
+console.log('Esercizio 21');
+console.log(selezionaTD());
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
@@ -630,7 +639,8 @@ const stampaTDs = function() {
   }
 }
 
-console.log('Esercizio 22 - VEDI CODICE');
+console.log('Esercizio 22');
+stampaTDs(); // ESEGUO LA FUNZIONE
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
@@ -644,15 +654,18 @@ const coloreRosso = function () {
 }
 
 console.log('Esercizio 23 - VEDI CODICE');
+// ESEGUO LA FUNZIONE
+//coloreRosso(); 
+
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
 const nuovoElem = function () {
-  let lista = document.getElementById('myList'); //SELEZIONO L'UNICO ELEMENTO CON ID 'myList' DEL FOGLIO
+  let lista = document.querySelectorAll('#myList > li'); //SELEZIONO TUTTI GLI 'li' FIGLI DIRETTI DELLA LISTA CON ID 'myList' DEL FOGLIO
   let nuovaRiga = document.createElement('li'); // CREO UN NUOVO ELEMENTO li (CHE NON VEDO NEL FOGLIO IN QUESTA RIGA)
-  nuovaRiga.textContent = 'nuova riga aggiunta'; //SCRIVO IL SUO CONTENUTO
+  nuovaRiga.textContent = 'Quarta riga aggiunta'; //SCRIVO IL SUO CONTENUTO
   let ultimo;
   for (let elemento of lista) {
     ultimo = elemento; //MI PORTO ALL'ULTIMO POSTO DEGLI 'li' GIà PRESENTI
@@ -661,6 +674,8 @@ const nuovoElem = function () {
 }
 
 console.log('Esercizio 24 - VEDI CODICE');
+// ESEGUO LA FUNZIONE
+//nuovoElem();
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
@@ -674,6 +689,8 @@ const svuotaLista = function() {
 }
 
 console.log('Esercizio 25 - VEDI CODICE');
+// ESEGUO LA FUNZIONE
+//svuotaLista();
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
@@ -687,6 +704,8 @@ const aggiungiClasse = function() {
 }
 
 console.log('Esercizio 26 - VEDI CODICE');
+// ESEGUO LA FUNZIONE
+//aggiungiClasse();
 
 // [EXTRA] JS Avanzato
 

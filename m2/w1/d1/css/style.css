@@ -1,0 +1,62 @@
+/* Foglio di stile connesso al file html dei breakpoint, per le media queryes. */
+
+body{
+    background-color: red; /* istruzione mobile first, cioè generica, che andrà rivista per le versioni successive */
+}
+
+@media screen and (min-width: 480px) {
+    body {background-color: yellow;} /* modalità landscape, cioè smartphone in orizzontale */
+}
+
+@media screen and (min-width: 768px) {
+    body {background-color: green;} /* modalità monitor tablet, cioè con larghezza di almeno 768px */
+}
+
+@media screen and (min-width: 1024px) {
+    body {background-color: blue;} /* modalità monitor laptop */
+}
+
+@media screen and (min-width: 1200px) {
+    body {background-color: grey;} /* modalità monitor desktop */
+}
+
+
+
+article {
+    width: 100%;
+}
+
+article img {
+    max-width: 100%; /* se l'immagine è più piccola, resta della sua dimensione, se è più grande si adatta alla larghezza del suo contenitore */
+}
+
+#logo {
+    background: url(../images/logo.png) no-repeat; width: 267px; height: 70px; background-color: #666;
+    /* usando background generico, posso applicare più proprietà insieme */
+}
+
+@media 
+    only screen and (-webkit-min-device-pixel-ratio:2),
+    only screen and (min-resolution: 192dpi) {
+        #logo {
+            background: url(../images/logo-2x.png) no-repeat; background-size: 534px 140px; width: 534px; height: 140px;
+        }
+    }
+
+    /* NON CORRETTA, PERCHè NON è MOBILE-FIRST --> METTO COSE PER SCHERMI PIù GRANDI E POI LE TOLGO, MA CMQ USO LE RISORSE */
+/* #testata {
+    background: url(../images/beach-2.jpg); background-size: cover; width: 100%; height: 300px;
+}
+
+@media only screen and (max-width: 488px) {
+    #testata {display: none;}
+} */
+
+    /* QUI DI SEGUITO LA SOLUZIONE CORRETTA */
+#testata {
+    background: none;
+}
+
+@media only screen and (min-width: 768px) {
+    #testata {background: url(../images/beach-2.jpg); background-size: cover; width: 100%; height: 300px;}
+}

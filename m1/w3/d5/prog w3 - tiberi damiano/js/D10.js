@@ -721,6 +721,25 @@ console.log('Esercizio 26 - VEDI CODICE');
 
 */
 
+// function halfTree(num) {
+//   let p = document.createElement('p');
+//   for (let i=1; i<=num; i++) {
+//     p.textContent += '*';
+//     p.appendChild(p);
+//   }
+// }
+
+
+// function halfTree(num) {
+//   let prova = '';
+//   for (let i=1; i<=num; i++) {
+//     prova += '*';
+//     console.log(prova);
+//   }
+// }
+
+//halfTree(5);
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 

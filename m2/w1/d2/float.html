@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/float.css">
+    <title>Float</title>
+</head>
+<body>
+    <div class="container">
+        <!-- intestazione -->
+        <header>
+            <h1>Epicode</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Typescript</a></li>
+                    <li><a href="#">Angular</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- corpo centrale -->
+        <main>
+            <aside>
+                <img src="images/beach-2.jpg" alt="#">
+                <img src="images/newyork-1.jpg" alt="#">
+            </aside>
+            <aside id="right">
+                <img src="images/beach-2.jpg" alt="#">
+                <img src="images/newyork-1.jpg" alt="#">
+            </aside>
+            <!-- Gli elementi che godono del float devono essere definiti prima di ciò che non fluttua, in modo da disporre gli elementi che non fluttuano intorno a quelli che fluttuano -->
+            <section>
+                <img class="sx" src="images/img_orange_flowers.jpeg" alt="#">
+                <p>Oat cake lollipop gummies liquorice sweet sweet roll chocolate dragée bear claw. Jujubes jelly-o apple pie croissant halvah. Chupa chups macaroon cheesecake danish fruitcake marshmallow pudding bonbon. Candy toffee cake croissant donut. Ice cream chupa chups marzipan bonbon marzipan jelly. Dessert wafer brownie lemon drops dragée brownie. Donut tart lollipop marzipan liquorice halvah gummi bears. Topping jelly-o donut topping chocolate. Tootsie roll gummi bears brownie sweet sweet roll halvah muffin wafer. Icing jujubes lollipop muffin bonbon tootsie roll candy. Sweet tootsie roll dragée cotton candy chocolate bar cotton candy jelly. Sugar plum gummies chocolate cake tootsie roll dessert candy canes biscuit macaroon.</p>
+                <img class="dx" src="images/img_orange_flowers.jpeg" alt="#">
+                <p>Tart icing lollipop muffin sweet roll oat cake. Pastry wafer powder jelly toffee gingerbread pudding. Pudding topping caramels caramels gummi bears. Gummi bears candy jelly-o tart tiramisu. Cotton candy gummies tiramisu chocolate cake carrot cake lemon drops toffee topping. Lollipop cake wafer gingerbread tart. Icing pudding jujubes candy shortbread danish. Lemon drops apple pie sweet roll dragée jelly bonbon. Gummies apple pie danish cookie ice cream tart brownie. Bonbon wafer toffee dragée jelly ice cream caramels apple pie tootsie roll. Cupcake icing pie gummi bears marzipan danish. Gingerbread tart cotton candy topping carrot cake pastry bonbon. Chupa chups tart cake shortbread chocolate cake sweet roll wafer. Muffin powder candy jelly beans chocolate bar.</p>
+                <img class="sx" src="images/img_orange_flowers.jpeg" alt="#">
+                <p>Apple pie cupcake caramels dessert tiramisu apple pie dragée fruitcake. Cake sesame snaps dessert jelly beans marshmallow lemon drops sweet roll chocolate cake. Gummies pie cookie tiramisu wafer. Sweet bonbon cake chupa chups danish fruitcake. Ice cream cheesecake cake cake jujubes sugar plum macaroon croissant fruitcake. Pudding cupcake fruitcake pie oat cake wafer jelly. Dragée topping danish cupcake pastry fruitcake halvah. Candy canes jujubes halvah marshmallow pastry. Macaroon dragée jujubes fruitcake marzipan halvah. Cookie soufflé chocolate cake tiramisu toffee chocolate bar bear claw. Sesame snaps bonbon apple pie bonbon toffee dragée wafer jujubes. Sweet roll lollipop donut liquorice sweet roll jelly beans bear claw tart sweet. Jelly sweet roll jujubes caramels cotton candy chocolate bar cheesecake halvah.</p>
+                <img class="dx" src="images/img_orange_flowers.jpeg" alt="#">
+                <p>Muffin tiramisu jelly beans gummi bears danish danish gummi bears. Lemon drops cake sugar plum caramels donut marshmallow. Jelly-o chocolate bar candy sweet roll gummi bears topping jelly-o fruitcake. Macaroon lollipop cupcake marzipan jelly danish tiramisu bear claw. Bear claw powder donut fruitcake halvah sugar plum. Chocolate toffee lollipop shortbread lemon drops sweet chocolate. Halvah chocolate bar wafer marshmallow shortbread cotton candy tiramisu biscuit. Caramels pastry chupa chups chupa chups dragée cotton candy dragée ice cream. Topping jujubes oat cake biscuit tiramisu. Dessert ice cream halvah cotton candy dragée. Candy candy canes cupcake bonbon dessert soufflé. Shortbread icing danish jelly-o marzipan marshmallow brownie.</p>
+            </section>
+        </main>
+        <!-- Utilizza float sugli elementi che hanno meno contenuto, perchè il footer, qui, si posiziona alla fine dei paragrafi e non alla fine delle immagini, perchè float non contribuisce all'altezza -->
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+header {
+    background-color: navy;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+}
+
+nav {
+    background-color: blueviolet;
+    height: 20px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+/* SI è PASSATI AD USARE FLOAT DOPO AVER VISTO CHE USARE IL TAG a BLOCK DENTRO IL TAG li INLINE */
+nav li {
+    /* display: inline; non accetta width, height; se li volessi usare, userei inline-block. Mentre margin e padding vengono accettati anche da display inline*/
+    float: left;
+    /* float rompe la caratteristica di display:block e fa fluttuare gli elementi a sinistra e a destra;
+    I tag a cui assegnamo float NON contribuiscono all'altezza del contenitore!! */
+    /* GLI ELEMENTI A CUI ATTRIBUIAMO FLOAT NON CONTRIBUISCONO ALL'ALTEZZA DEGLI ELEMENTI; L'ALTEZZA GLIELA DEVI DARE TU. */
+    border-right: 1px solid #fff;
+    padding: 0 90px;
+}
+
+nav li#ultimo {
+    border-right: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover {
+    background-color: white;
+    color: blueviolet;
+}
+
+/* main */
+aside {
+    float: left;
+    width: 300px;
+}
+
+#right {
+    float: right;
+    width: 300px;
+}
+
+aside img {
+    width: 300px;
+    height: 200px;
+}
+
+section {
+    margin-left: 300px;
+    margin-right: 300px;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+section .sx {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+section .dx {
+    float: right;
+    width: 100px;
+    height: 100px;
+}
+
+/* footer */
+footer {
+    background-color: blueviolet;
+    color: #fff;
+    text-align: center;
+    clear: both; /* così facendo, il footer si posizione in fonso al maggiore contenuto che ha superiormente, sia se ha float sia se no */
+}
+
+footer p {
+    margin: 0;
+}

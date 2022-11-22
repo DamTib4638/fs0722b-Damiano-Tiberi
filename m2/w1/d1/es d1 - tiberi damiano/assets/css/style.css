@@ -198,7 +198,7 @@ footer a {
     }
     header div, header nav {
         display: flex;
-        align-items: center;
+        align-items: center; /* senza usare flex puoi usare vertical align center */
     }
     header div img, header div p {
         margin-bottom: 0;
@@ -239,7 +239,7 @@ footer a {
 
 @media only print {
     body{
-        background: white;
+        background: none;
     }
     header, footer, aside {
         display: none;

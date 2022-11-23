@@ -1,0 +1,29 @@
+.testo-articolo {
+    flex: 0 0 250px;
+    display: flex;
+    background: lightgoldenrodyellow;
+    border-radius: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1em;
+    color: rgb(131, 94, 0);
+    flex-wrap: wrap;
+}
+
+.testo-articolo img {
+    max-width: 100%;
+}
+
+.testo-articolo h3 {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+    .testo-articolo {
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+    }
+    .testo-articolo img {
+        margin-right: 10px;
+    }
+}

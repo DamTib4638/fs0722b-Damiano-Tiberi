@@ -8,6 +8,7 @@ body {
   background-position: center center;
 }
 
+/* punto 5, 6, 7, 8 */
 .icona-plus {
   position: fixed;
   bottom: 140px;
@@ -98,6 +99,8 @@ body {
   }
 }
 
+/* fine punto 5, 6, 7, 8 */
+
 * {
   box-sizing: border-box;
 }
@@ -117,9 +120,11 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
-  position: sticky;
+  /* punto 3 */
+  position: sticky; /* FUNZIONA SU ELEMENTI FRATELLI */
   top: 0;
   z-index: 1;
+  /* fine punto 3 */
 }
 
 @media screen and (min-width: 800px) {
@@ -190,6 +195,8 @@ main {
   }
 }
 
+/* punto 2 */
+
 #underline {
   position: relative;
   left: 0px;
@@ -256,10 +263,13 @@ main {
     width: 510px;
   }
 }
+/* fine punto 2 */
 
+/* punto 1 */
 .imgLeft {
   float: left;
 }
+/* fine punto 1 */
 
 section {
   background-color: #e3e3e3;
@@ -277,10 +287,12 @@ section h2 {
   background-color: #a3a3a3;
   padding: 0px 1em;
   width: 160px;
+  /* punto 4 */
   text-transform: uppercase;
   position: relative;
   left: 15px;
   bottom: 40px;
+  /* fine punto 4 */
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -495,11 +507,13 @@ aside div p:last-child {
   text-align: right;
 }
 
+/* punto 9 */
 .fa-tag {
   float: right;
   font-size: 70px;
   color: #ccc;
 }
+/* fine punto 9 */
 
 /* FOOTER */
 footer {

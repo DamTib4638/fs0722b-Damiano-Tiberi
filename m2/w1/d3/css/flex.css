@@ -1,0 +1,50 @@
+.main-nav {
+    display: flex; /* Gli elementi in esso contenuti si comportano in modo flessibile. */
+    background: orangered;
+    color: white;
+    border-radius: 3px;
+    padding: 1em;
+    font-family: sans-serif;
+}
+
+.main-nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Diciamo, qui, che è 'ul' il contenitore che deve rendere flessibili gli elementi al suo interno. */
+    flex: 3; /* 'ul' non è solo il contenitore di elementi flessibili, ma è lui stesso un elemento flessibile, poichè il padre ha la proprietà dichiarata 'display:flex'. */
+}
+
+.main-nav li {
+    margin-right: 1em;
+}
+
+.main-nav form {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1; /* grandezza tra form e ul */
+}
+
+.main-nav input {
+    flex: 1; /* grandezza tra input e button */
+}
+
+.main-nav button {
+    background-color: white;
+    border: 0;
+    border-radius: 1em;
+    color: orangered;
+    padding: 0 1em;
+    margin-left: 0.3em;
+}
+
+@media screen and (max-width: 575px) {
+    .main-nav {
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+}

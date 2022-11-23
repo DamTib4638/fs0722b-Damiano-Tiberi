@@ -1,0 +1,56 @@
+.contenitore {
+    display: grid; /* altri valori: inline-grid, sub-grid */
+    grid-template-columns: 10% 15% auto 15% 10%; /* possiamo dare anche un nome alle colonne */
+    grid-template-rows: 25% 10% auto;
+    grid-template-columns: [inizio-col] 10% [col-2] 15% [col-3] auto [col-4] 15% [col-5] 10% [fine-col];
+    grid-template-rows: [inizio-riga] 35% [riga-1-fine riga-2-inizio] 35% [fine-riga-2] auto [fine-tutto];
+    margin-bottom: 20px;
+    border: 1px solid red;
+}
+
+.contenitore div {
+    border: 1px solid blue;
+}
+
+.contenitore2 {
+    display: grid;
+    grid-template-columns: 15% repeat(3, 25% [col-start]) 10%;
+    grid-template-rows: [inizio-riga] 35% [riga-1-fine riga-2-inizio] 35% [fine-riga-2] auto [fine-tutto];
+    border: 1px solid red;
+}
+
+.contenitore2 div {
+    border: 1px solid blue;
+}
+
+#template-area {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: 
+    'header header header header'
+    'main main main sidebar'
+    'footer footer footer footer';
+    border: 1px solid red;
+    text-align: center;
+}
+
+#header {
+    grid-area: header;
+    border: 1px solid blue;
+}
+
+#main {
+    grid-area: main;
+    border: 1px solid blue;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    border: 1px solid blue;
+}
+
+#footer {
+    grid-area: footer;
+    border: 1px solid blue;
+}

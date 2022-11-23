@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/grid.css">
+    <title>Grid</title>
+</head>
+<body>
+    <div class="contenitore">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+    <div class="contenitore2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+    <div id="template-area">
+        <div id="header">header</div>
+        <div id="main">main</div>
+        <div id="sidebar">sidebar</div>
+        <div id="footer">footer</div>
+    </div>
+    <br><br>
+    <div style="text-align: center; display: grid; grid-template-columns: 25% auto 25%; grid-template-rows: 20% 30% auto; grid-row-gap: 5px; grid-column-gap: 15px">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <br><br>
+    <div style="display: grid; grid-template-columns: auto auto; grid-template-rows: auto auto; justify-items: center;">
+        <!-- stretch riempie la width dell'elemento; altri valori: start, end, center -->
+        <!-- align-items -> allinea verticalmente (anzichè orizzontalmente). I valori sono: stretch, start, end, center -->
+        <!-- justify content -> posiziona rispetto ai margini verticali del contenitore. Valori: stretch, start, end, center, space around, space between. -->
+        <!-- align-content -> posiziona rispetto ai margini orizzontali del contenitore. Valori: stretch, start, end, center,  -->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

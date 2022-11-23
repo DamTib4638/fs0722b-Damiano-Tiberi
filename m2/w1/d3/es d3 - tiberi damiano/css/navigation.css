@@ -1,0 +1,37 @@
+.menu {
+    display: flex;
+    background: rgb(253, 239, 159);
+    border-radius: 60px;
+    padding: 1em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.menu > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    color: rgb(131, 94, 0);
+    background-color: rgb(248, 226, 99);
+    margin-right: 1em;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 40px;
+    font-weight: bold;
+    
+}
+
+.div-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 2em;
+}

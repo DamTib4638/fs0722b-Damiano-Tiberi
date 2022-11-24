@@ -1,0 +1,18 @@
+#div1 {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 100px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+#div2 {
+    position: absolute;
+    padding: 50px;
+    border: 1px solid #000;
+    background-color: red;
+    transform: rotate(5deg);
+    transform-origin: left bottom; /* x -> left, center, right, % | y -> top, center, bottom, % */
+    /* possibile anche l'asse z inserendo un terzo valore */
+}

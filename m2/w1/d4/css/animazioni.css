@@ -1,0 +1,20 @@
+#myDiv {
+    margin: auto;
+    border: 1px solid #000;
+    width: 200px;
+    height: 100px;
+    background-color: coral;
+    color: white;
+    animation: myMove linear 5s infinite; /* nome animazione, timing-function, delay, iteration count, [direction], [fill mode] */
+}
+
+@keyframes myMove {
+    /* from */
+    50% {
+        transform: rotate(180deg); /* step intermedio dell'animazione */
+    }
+    /* to */
+    100% {
+        transform: rotate(360deg);
+    }
+}

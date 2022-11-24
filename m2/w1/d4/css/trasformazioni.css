@@ -1,0 +1,28 @@
+.a {
+    width: 150px;
+    height: 80px;
+    background-color: yellow;
+    transform: rotate(30deg); /* valore in gradi da inserire come parametro di rotate */
+}
+
+.b {
+    width: 150px;
+    height: 80px;
+    background-color: yellow;
+    transform: skew(20deg, 20deg); /* skewX | skewY */ /* con valori negativi prende i lati opposti rispetto a quelli che prende con i valori deg positivi. */
+}
+
+.c {
+    width: 150px;
+    height: 80px;
+    background-color: yellow;
+    transform: scale(0.5, 0.5); /* scaleX | scaleY */ /* in questo caso dimezza le dimensioni su asse X e asse Y. Per rimpicciolimenti, prendo valori tra 0.1 e 0.9. Se le trasformazioni escono fuori dalla viewport, si possono spostare gli elementi utilizzando position relative. */
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transform: rotate(45deg) scale(0.5);
+    margin: 100px;
+}

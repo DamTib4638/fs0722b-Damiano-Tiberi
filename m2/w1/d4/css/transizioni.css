@@ -1,0 +1,25 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: width 6s, height 3s, background-color 10s; /* puoi usare all per intendere tutte le proprietà da cambiare */
+    transition-delay: 3s; /* ritarda 3 secondi l'inizio della trasformazione sia quando passi sopra, sia quando deve tornare indietro */
+}
+
+div:hover {
+    width: 300px;
+    height: 500px;
+    background-color: blue;
+}
+
+.a {
+    width: 150px;
+    height: 150px;
+    background: red;
+    transition: width 2s, height 2s, transform 2s;
+}
+.a:hover {
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+}

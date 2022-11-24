@@ -1,0 +1,55 @@
+#box {
+    margin: 20px auto;
+    padding: 5px;
+    width: 400px;
+    background-color: #999;
+    border: 1px solid #000;
+}
+
+#box h1 {
+    margin: 0;
+    padding: 5px;
+    animation-name: animazione_testo_01, animazione_testo_02;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@-webkit-keyframes animazione_testo_01 {
+    20% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes animazione_testo_02 {
+    20% {transform: translate(0,0);}
+    100% {transform: translate(180px,0);}
+}
+
+/* PER TENERE FERMO ALLA FINE dell'animazione
+<style>
+    #box{
+        margin:20px auto;
+        padding:5px;
+        background-color: #999;
+        border: 1px solid black;
+    }
+    #box h1{
+        margin:0;
+        padding-left: 180px;
+        animation-name: animazione_testo_02;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+    }
+    @keyframes animazione_testo_01{
+        0%{opacity:0;}
+        100%{opacity:1;}
+    }
+    @keyframes animazione_testo_02{
+        0%{transform: translate(-180px,0);}
+        100% {transform: translate(0,0);}
+    }
+</style>
+*/

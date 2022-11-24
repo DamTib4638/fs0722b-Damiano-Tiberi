@@ -1,0 +1,36 @@
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition-property: width, height, opacity;
+    transition-duration: 5s, 10s;
+    transition-timing-function: linear;
+    transition-delay: 3s;
+    /* transition: width 6s linear 2s; l'ordine è importante: PROPERTY, DURATION, TIMING-FUNCTION, DELAY */
+    /* O METTO QUELLA SINGOLA, OPPURE QUELLE DETTAGLIATE... */
+    /* Variando più proprietà, meglio usare le singole voci di transition, più che quella singola.
+    NOTA: SE METTI PIù PROPRIETà E PIù SECONDI, LE VOCI FANNO SCOPA. INFATTI: LA LARGHEZZA IMPIEGA 5s E L'ALTEZZA 10s. L'OPACITà, INVECE, CI METTE 5s. */
+}
+
+/* div {
+    width: 100px;
+    height: 100px;
+    margin-left: 200px;
+    background-color: #f00;
+    transition-property: background-color, width, height, transform, opacity;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+div:hover {
+    background-color: #00f;
+    width: 300px;
+    height: 300px;
+    transform: rotate(540deg);
+    opacity: 0.5;
+} */
+
+div:hover {
+    width: 300px;
+    height: 300px;
+    opacity: 0.5;
+}

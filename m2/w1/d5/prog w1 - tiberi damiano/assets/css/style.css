@@ -299,6 +299,7 @@ nav button {
 
     #fisso {
         z-index: 0;
+        margin-left: 0;
     }
 
     /* aside {

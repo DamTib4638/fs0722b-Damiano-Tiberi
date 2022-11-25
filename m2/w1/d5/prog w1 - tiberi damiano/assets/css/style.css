@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Spectral:wght@400;700&display=swap');
+
+/* GENERALI */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Spectral';
+}
+
+/* HEADER */
+
+header, #section-gialla {
+    background-color: #ffc017;
+    border-bottom: 2px solid black;
+    padding: 20px 100px;
+}
+header {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #191919;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+nav button {
+    background-color: #191919;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+/* MAIN */
+
+#section-gialla {
+    display: flex;
+}
+
+#sinistra h1 {
+    font-size: 96px;
+    font-weight: 400;
+    letter-spacing: -6px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#sinistra p {
+    font-size: 18px;
+}
+
+#sinistra button {
+    background-color: #191919;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    margin: 30px 0;
+}
+
+#section-bianca-unica {
+    padding: 0px 100px 20px 100px;
+    border-bottom: 1px solid #e5e6e6;
+}
+
+#section-bianca-unica p {
+    vertical-align: middle;
+}
+
+.treading {
+    padding: 20px 100px 0px 100px;
+}
+
+.treading p {
+    display: flex;
+    align-items: center;
+}
+
+.treading p span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.contenitore-sezione-unica {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contenitore-sezione-unica .numeri {
+    width: 25vw;
+    padding: 10px 0;
+    display: flex;
+}
+
+.num {
+    color: #e5e6e6;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+#img-piccola {
+    width: 8%;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+#img-standard {
+    width: 5%;
+    margin-right: 10px;
+}
+
+.img-num {
+    width: 5%;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.notizia h5, .scritto h5 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.notizia h4, .scritto h4 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.notizia p {
+    color: #757575;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+
+#section-bianca-doppia {
+    display: flex;
+    padding: 20px 100px;
+    margin-top: 40px;
+}
+
+#scorrevole {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.articolo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.scritto {
+    margin-right: 40px;
+}
+
+.scritto div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scritto p {
+    color: #757575;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.scritto div p {
+    font-size: 12px;
+}
+
+.scritto span {
+    background-color: whitesmoke;
+    padding: 4px 8px;
+    border-radius: 30px;
+}
+
+.p-margin {
+    margin-bottom: 15px;
+}
+
+#img07, #img09, #img11, #img13, #img15, #img19 {
+    width: 4%;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+#img17 {
+    width: 4%;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.img-art {
+    width: 25%;
+}
+
+#fisso {
+    position: sticky;
+    z-index: 2;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 70px;
+}
+
+#fisso h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.bottoni-discover {
+    border-bottom: 1px solid #e5e6e6;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bottoni-discover button {
+    background-color: white;
+    border: 1px solid #e5e6e6;
+    color: #757575;
+    padding: 8px 14px;
+    margin: 5px;
+}
+
+.link-discover {
+    padding-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.link-discover ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.link-discover ul li {
+    list-style-type: none;
+}
+
+.link-discover ul li a {
+    text-decoration: none;
+    color: #757575;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 2rem;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+
+    header, #section-gialla, #section-bianca-doppia, .treading {
+        padding: 20px 50px;
+    }
+
+    #section-bianca-unica {
+        padding: 0px 50px 20px 50px;
+    }
+
+    .img-num, #img-piccola, #img-standard {
+        width: 15%;
+    }
+
+    #section-bianca-doppia {
+        flex-direction: column-reverse;
+    }
+
+    .link-discover {
+        margin-bottom: 10px;
+    }
+
+    #fisso {
+        z-index: 0;
+    }
+
+    /* aside {
+        position: sticky;
+        z-index: 0;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+    } */
+
+    .img-art {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+
+    header, #section-gialla, #section-bianca-doppia, .treading {
+        padding: 5px 10px;
+    }
+
+    nav .link-desk {
+        display: none;
+    }
+
+    #section-bianca-unica {
+        padding: 0px 10px 10px 10px;
+    }
+
+    .contenitore-sezione-unica {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #fisso {
+        z-index: 0;
+        margin-left: 0;
+    }
+
+    .numeri {
+        display: flex;
+        flex-direction: row;
+        padding: 10px 0;
+    }
+
+    #scorrevole {
+        margin-right: 0;
+    }
+
+    .contenitore-sezione-unica .numeri {
+        width: 100%;
+    }
+
+    .img-num, #img-piccola, #img-standard {
+        width: 10%;
+    }
+
+    #section-bianca-doppia {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    .link-discover {
+        margin-bottom: 10px;
+    }
+
+    #img07, #img09, #img11, #img13, #img15, #img19 {
+        width: 15%;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+
+    #img17 {
+        border-radius: 5px;
+        width: 15%;
+    }
+
+    .img-art {
+        width: 40%;
+        height: 100px;
+    }
+
+    .scritto {
+        margin-right: 10px;
+    }
+
+    .scritto h4 {
+        font-size: 1rem;
+    }
+
+    .scritto > p {
+        font-size: 14px;
+    }
+
+}

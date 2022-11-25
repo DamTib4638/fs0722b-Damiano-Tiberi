@@ -138,6 +138,8 @@ p {
     animation-iteration-count: 1;
 }
 
+/* backwards per gestire fine animazione */
+
 @-webkit-keyframes animazione1 {
     80% {opacity: 0;}
     90% {transform: scale(1.5);}

@@ -1,0 +1,11 @@
+.contenitore {
+    width: 100%;
+    font-size: 12px;
+}
+
+@media (min-width: 576px) {.container {width: 540px; font-size: 13px;}}
+@media (min-width: 768px) {.container {width: 740px; font-size: 14px;}}
+@media (min-width: 992px) {.container {width: 960px; font-size: 16px;}}
+@media (min-width: 1200px) {.container {width: 1140px; font-size: 18px;}}
+
+/* LAVORANDO IN MOBILE-FIRST, EVITA DI SCRIVERE LE MEDIA QUERY CON MAX-WIDTH, PERCHè SI USA MIN-WIDTH, IN MODO CHE TUTTO PARTE DA MOBILE E ARRIVA AL DESKTOP IN MODO COERENTE */

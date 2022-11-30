@@ -90,10 +90,10 @@ nav ul li a:hover {
 body {
   box-sizing: border-box;
   margin: 0;
+  background-color: #5b17bd;
 }
 
 header {
-  background-color: #5b17bd;
   padding: 3rem 10rem;
 }
 
@@ -109,7 +109,7 @@ nav ul li {
   list-style-type: none;
 }
 
-.container {
+.contenitore {
   display: flex;
   margin-top: 3rem;
   justify-content: space-between;

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass prima lezione</title>
+    <link rel="stylesheet" href="scss/app.css">
+</head>
+<body class="firefox">
+    <!-- Problemi moderni di css:
+        1. organizzazione del codice;
+        2. mantenibilità;
+        3. rischi di duplicazioni.
+        Cosa è cambiato:
+        1. La qualità e quantità di dettagli richiesti da una moderna produzione web;
+        2. l'ecosistema in cui si sviluppa -> responsive;
+        3. tema della modularità -> porzioni di pagine che devono poter essere replicate;
+        -> problemi di lunghezza del codice, selettori troppo nidificati, mancata modularità, necessità di usare !important;
+        -> si introduce il preprocessore css che ci serve a mantenere il foglio di stile + modulare, + qualitativo, + leggibile;
+        -> la descrizione di riga sopra è definita SASS (syntatically awesome style sheet);
+        -> preprocessore? nasce con l'intento di potenziare gli strumenti per definire i fogli di stile
+        -> preprocessore? si occupa di generare un file .css (pre-processando e aggregando la struttura di file sass);
+        diverse sintassi di sass: nel corso si usa la .scss, usata anche da bootstrap.
+        /* Esempio sintassi css */
+        body { margin:0; padding:10px }
+        /* Esempio prima sintassi sass */ -> senza graffe e senza ;
+        body margin:0 padding:10px
+        /* primo step di sintassi .scss */ -> sassify cascading style sheet -> estendere le funzionalità del css standard
+                                            -> è un css con cose in più (css con i superpoteri).
+    -->
+
+    <nav>
+        <ul>
+            <li>Primo</li>
+            <li>Secondo</li>
+            <li>Terzo</li>
+        </ul>
+    </nav>
+    <!-- selettori nidificati -->
+    <div id="main">
+        <p>Paragrafo di main</p>
+        <span>Span di main</span>
+        <a href="#">Link di main</a>
+    </div>
+    <!-- selettori nidificati 2 -->
+    <div id="main2">
+        <div>Testo 
+            <p class="red">con con <a href="#">Link</a></p>
+        </div>
+    </div>
+    <!-- nesting -->
+    <div class="esempio">
+        <h1 class="titolo">Titolo child</h1>
+        <p class="para">Paragrafo child</p>
+        <button class="bottone">Clicca qui</button>
+    </div>
+    <!-- keyword & -->
+    <a href="#" id="pippo">link pippo</a>
+    <div class="esempio2">
+        <h1>Keyword &</h1>
+        <button class="bottone">Prova</button>
+    </div>
+    <div id="main3">
+        <p>testo main3</p>
+        <div id="main3-sidebar">
+            <p>testo contenuto in <code>main3-sidebar</code></p>
+        </div>
+    </div>
+    <!-- proprietà nidificate -->
+    <!-- proprietà css che hanno un prefisso comune -->
+    <div id="main4">
+        <p>testo con proprietà nidificate</p>
+    </div>
+</body>
+</html>

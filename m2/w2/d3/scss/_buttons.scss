@@ -1,0 +1,8 @@
+.btn {
+    display: inline;
+    cursor: pointer;
+    padding: $padding-base;
+    &:hover {
+        transform: scale(1.2);
+    }
+}

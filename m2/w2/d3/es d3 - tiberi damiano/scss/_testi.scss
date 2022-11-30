@@ -1,0 +1,62 @@
+nav {
+    h2 {
+        text-transform: uppercase;
+        font: {
+            size: $grandezzaH2;
+            weight: bold;
+        }
+        &:hover {
+            animation: myMove linear 0.3s 1;
+            color: orange;
+        }
+    }
+    ul {
+        li {
+            a {
+                text-decoration: none;
+                padding: $paddingY $paddingX;
+                color: $coloreLink;
+                cursor: pointer;
+                font: {
+                    size: $grandezzaTestiSemplici;
+                }
+                &:hover {
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    color: orange;
+                }
+            }
+        }
+    }
+}
+
+.testuale {
+    h1 {
+        font: {
+            size: $grandezzaH1;
+            weight: bold;
+        }
+        &:hover {
+            animation: myMove linear 0.5s 1;
+        }
+    }
+    p {
+        font: {
+            size: $grandezzaTestiSemplici;
+        }
+        &:hover {
+            animation: myMove linear 0.5s 1;
+        }
+    }
+}
+
+@keyframes myMove {
+    /* from */
+    50% {
+        transform: rotate(180deg); /* step intermedio dell'animazione */
+    }
+    /* to */
+    100% {
+        transform: rotate(360deg);
+    }
+}

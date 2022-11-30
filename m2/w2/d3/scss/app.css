@@ -1,0 +1,92 @@
+nav {
+  display: block;
+}
+nav ul {
+  display: inline;
+  background: yellow;
+  border: 1px solid black;
+}
+
+/* selettori nidificati */
+#main p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+#main span {
+  font-size: 1.2rem;
+  padding-left: 10px;
+}
+#main a {
+  color: red;
+  text-decoration: none;
+}
+
+/* selettori nidificati 2 */
+#main2 {
+  background-color: red;
+}
+#main2 div {
+  color: blue;
+}
+#main2 div .red {
+  color: green;
+}
+#main2 div .red a {
+  text-decoration: none;
+}
+
+/* nesting */
+.esempio {
+  background-color: green;
+}
+.esempio h1 {
+  color: gray;
+}
+.esempio .titolo {
+  font-size: 52px;
+}
+.esempio .bottone {
+  background-color: black;
+  color: white;
+}
+
+/* keyword & */
+#pippo {
+  color: red;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+#pippo:hover {
+  text-decoration: underline;
+}
+
+.esempio2 {
+  background-color: blue;
+}
+.esempio2 h1 {
+  color: grey;
+  cursor: pointer;
+}
+.esempio2 h1:hover {
+  font-size: 52px;
+}
+.esempio2 .bottone {
+  background-color: grey;
+}
+
+#main3 {
+  color: coral;
+}
+#main3-sidebar {
+  border: 1px solid black;
+  padding: 10px;
+}
+body.firefox #main3 {
+  line-height: 1.5rem;
+}
+
+#main4 {
+  font-family: Georgia;
+  font-size: 1.5rem;
+  font-weight: bold;
+}/*# sourceMappingURL=app.css.map */

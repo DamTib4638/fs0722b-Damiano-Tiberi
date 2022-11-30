@@ -1,0 +1,22 @@
+button {
+    cursor: pointer;
+    color: $testoPulsante;
+    padding: $paddingY $paddingX;
+    border: none;
+    margin: 10px 10px 10px 0;
+    font-size: $grandezzaTestiSemplici;
+    border-radius: $radius;
+    &:hover {
+        transform: scale(1.1);
+        font-size: $grandezzaTestiSemplici + 4;
+        color: #000;
+    }
+}
+
+.pulsante-sx {
+    background-color: $sfondoPulsanteBlu;
+}
+
+.pulsante-dx {
+    background-color: $sfondoPulsanteArancio;
+}

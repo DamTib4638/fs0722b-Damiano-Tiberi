@@ -1,0 +1,25 @@
+.btn {
+  display: inline;
+  cursor: pointer;
+  padding: 20px;
+}
+.btn:hover {
+  transform: scale(1.2);
+}
+
+body {
+  width: 90%;
+  color: #4f4f4f;
+  background-color: yellowgreen;
+}
+
+.container {
+  width: 90%;
+  padding: 20px;
+  background-color: blue;
+}
+
+h1 {
+  display: inline;
+  margin-right: 20px;
+}/*# sourceMappingURL=main.css.map */

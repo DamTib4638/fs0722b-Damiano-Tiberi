@@ -1,0 +1,111 @@
+button {
+  cursor: pointer;
+  color: #fff;
+  padding: 27px 18px;
+  border: none;
+  margin: 10px 10px 10px 0;
+  font-size: 18px;
+  border-radius: 8px;
+}
+button:hover {
+  transform: scale(1.1);
+  font-size: 22px;
+  color: #000;
+}
+
+.pulsante-sx {
+  background-color: #3269f7;
+}
+
+.pulsante-dx {
+  background-color: #f08d37;
+}
+
+nav h2 {
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: bold;
+}
+nav h2:hover {
+  -webkit-animation: myMove linear 0.3s 1;
+          animation: myMove linear 0.3s 1;
+  color: orange;
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 27px 18px;
+  color: #e5c7f7;
+  cursor: pointer;
+  font-size: 18px;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: orange;
+}
+
+.testuale h1 {
+  font-size: 52px;
+  font-weight: bold;
+}
+.testuale h1:hover {
+  -webkit-animation: myMove linear 0.5s 1;
+          animation: myMove linear 0.5s 1;
+}
+.testuale p {
+  font-size: 18px;
+}
+.testuale p:hover {
+  -webkit-animation: myMove linear 0.5s 1;
+          animation: myMove linear 0.5s 1;
+}
+
+@-webkit-keyframes myMove {
+  /* from */
+  50% {
+    transform: rotate(180deg); /* step intermedio dell'animazione */
+  }
+  /* to */
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes myMove {
+  /* from */
+  50% {
+    transform: rotate(180deg); /* step intermedio dell'animazione */
+  }
+  /* to */
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+header {
+  background-color: #5b17bd;
+  padding: 3rem 10rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  list-style-type: none;
+}
+
+.container {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,18 @@
+@import 'variables';
+@import 'buttons';
+body {
+    width: $main-width;
+    color: $colore-primario;
+    background-color: $background-color;
+}
+
+.container {
+    width: $main-width;
+    padding: $padding-base;
+    background-color: $background-color-div;
+}
+
+h1 {
+    display: inline;
+    margin-right: 20px;
+}

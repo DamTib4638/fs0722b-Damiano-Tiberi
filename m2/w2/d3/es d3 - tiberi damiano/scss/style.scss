@@ -1,0 +1,32 @@
+@import 'variabili';
+@import 'pulsanti';
+@import 'testi';
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header {
+    background-color: $coloreHeader;
+    padding: $paddingVerticaleGenerale $paddingOrizzontaleGenerale;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+        display: flex;
+        li {
+            list-style-type: none;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -5,6 +5,8 @@ button {
   border: none;
   margin: 10px 10px 10px 0;
   font-size: 18px;
+  font-family: Courier;
+  font-weight: bold;
   border-radius: 8px;
 }
 button:hover {
@@ -25,6 +27,7 @@ nav h2 {
   text-transform: uppercase;
   font-size: 36px;
   font-weight: bold;
+  font-family: "Tahoma";
 }
 nav h2:hover {
   -webkit-animation: myMove linear 0.3s 1;
@@ -37,6 +40,7 @@ nav ul li a {
   color: #e5c7f7;
   cursor: pointer;
   font-size: 18px;
+  font-family: "Helvetica";
 }
 nav ul li a:hover {
   text-decoration: underline;
@@ -45,8 +49,9 @@ nav ul li a:hover {
 }
 
 .testuale h1 {
-  font-size: 52px;
+  font-size: 48px;
   font-weight: bold;
+  font-family: Arial;
 }
 .testuale h1:hover {
   -webkit-animation: myMove linear 0.5s 1;
@@ -55,6 +60,7 @@ nav ul li a:hover {
 }
 .testuale p {
   font-size: 18px;
+  font-family: Arial;
 }
 .testuale p:hover {
   color: yellowgreen;

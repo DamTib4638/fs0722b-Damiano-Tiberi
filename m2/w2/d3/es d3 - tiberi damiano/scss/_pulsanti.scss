@@ -4,7 +4,11 @@ button {
     padding: $paddingY $paddingX;
     border: none;
     margin: 10px 10px 10px 0;
-    font-size: $grandezzaTestiSemplici;
+    font: {
+        size: $grandezzaTestiSemplici;
+        family: Courier;
+        weight: bold;
+    }
     border-radius: $radius;
     &:hover {
         transform: scale(1.1);

@@ -30,3 +30,15 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+
+.immagine {
+    img {
+        border-radius: 25%;
+        margin-left: 20px;
+        &:hover {
+            box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+            transform: scale(1.1);
+        }
+    }
+    
+}

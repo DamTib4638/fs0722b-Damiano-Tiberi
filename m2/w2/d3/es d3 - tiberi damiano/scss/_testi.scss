@@ -38,6 +38,7 @@ nav {
         }
         &:hover {
             animation: myMove linear 0.5s 1;
+            color: red;
         }
     }
     p {
@@ -45,7 +46,7 @@ nav {
             size: $grandezzaTestiSemplici;
         }
         &:hover {
-            animation: myMove linear 0.5s 1;
+            color: yellowgreen;
         }
     }
 }

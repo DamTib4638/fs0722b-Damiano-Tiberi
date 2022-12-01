@@ -1,0 +1,71 @@
+/* EXTEND */
+
+.box {
+    border: 1px solid #000;
+    background-color: green;
+    color: red;
+    margin-bottom: 10px;
+    width: 200px;
+    text-align: center;
+}
+.mybox {
+    @extend .box;
+    font-size: 10px;
+}
+
+/* KEYWORD % */
+
+%box2 {
+    border: 1px solid #000;
+    background-color: blue;
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.myfirstbox {
+    @extend %box2;
+    font-size: 15px;
+}
+.mysecondbox {
+    @extend %box2;
+    font-size: 20px;
+}
+
+/* MIXIN */
+@mixin baseButton($bgColor) {
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+
+    background: $bgColor;
+    outline: 1px solid $bgColor;
+    box-shadow: 0 0 10px $bgColor;
+
+    color: white;
+    border: 1px solid white;
+
+    &:hover {
+        color: $bgColor;
+        background: white;
+        box-shadow: none;
+    }
+}
+button.green {
+    @include baseButton (green);
+}
+button.red {
+    @include baseButton (red);
+}
+button.blue {
+    @include baseButton (blue);
+}
+button.yellow {
+    @include baseButton (gold);
+}
+button.violet {
+    @include baseButton (violet);
+}
+button.grey {
+    @include baseButton (grey);
+}

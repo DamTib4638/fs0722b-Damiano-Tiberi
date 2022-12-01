@@ -1,0 +1,137 @@
+/* colori */
+/* grandezze */
+/* spazi */
+/* altre grafiche */
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+@media only screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 540px) {
+  body aside {
+    display: none;
+  }
+  body header {
+    display: flex;
+    justify-content: center;
+  }
+  body header nav ul {
+    padding: 0;
+  }
+  body main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+body {
+  font-family: "Nerko One", cursive;
+  box-sizing: border-box;
+}
+body header {
+  background-color: #170a48;
+  border: 1px solid white;
+  outline: 3px solid #e7bfac;
+  box-shadow: 0 0 20px #e7bfac;
+  border-radius: 20px;
+}
+body header nav ul {
+  display: flex;
+}
+body header nav ul li {
+  list-style-type: none;
+  padding: 20px 20px;
+}
+body header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+body header nav ul li a:hover {
+  color: #f00;
+}
+body header nav ul li a:active {
+  color: #f00;
+  -webkit-text-decoration: underline #f00;
+          text-decoration: underline #f00;
+}
+body main {
+  display: flex;
+  justify-content: space-between;
+  margin: 2vw 10vw;
+}
+body main .sinistra {
+  width: 60%;
+}
+body main .sinistra button {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: #ffa500;
+  outline: 1px solid #ffa500;
+  box-shadow: 0 0 10px #ffa500;
+  color: #000;
+  border: 1px solid white;
+}
+body main .sinistra button:hover {
+  color: #ffa500;
+  background: white;
+  box-shadow: none;
+}
+body main .sinistra div {
+  padding: 0 40px;
+}
+body main .sinistra div .corsivo {
+  font-style: italic;
+}
+body main .sinistra .rel {
+  display: inline;
+  position: relative;
+  top: 15px;
+  left: 10px;
+  background-color: #fff;
+  padding: 0 5px;
+}
+body main .sinistra form {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid gray;
+}
+body main .sinistra form input {
+  margin: 15px;
+  width: 50%;
+}
+body main .sinistra form textarea {
+  margin: 15px;
+  width: 50%;
+}
+body main aside {
+  width: 30%;
+}
+body main aside ul li {
+  list-style-type: none;
+  padding: 20px 0;
+}
+body main aside ul li a {
+  color: gray;
+  text-decoration: none;
+  padding-bottom: 20px;
+  border-bottom: dashed;
+}
+body main aside ul li a:hover {
+  color: #0f0;
+}
+body main aside ul li a:active {
+  color: #0f0;
+  -webkit-text-decoration: underline #0f0;
+          text-decoration: underline #0f0;
+}
+body footer {
+  height: 70px;
+  background-color: #6285f9;
+  border-radius: 20px;
+}
+
+i {
+  color: #f27934;
+}/*# sourceMappingURL=style.css.map */

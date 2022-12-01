@@ -1,0 +1,89 @@
+@import 'variabili';
+@import 'mixin';
+@import 'funzioni';
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+body {
+    font-family: 'Nerko One', cursive;
+    box-sizing: border-box;
+    header {
+        background-color: $coloreHeader;
+        border: 1px solid white;
+        outline: 3px solid $coloreOutlineHeader;
+        box-shadow: 0 0 20px $coloreOutlineHeader;
+        border-radius: $radius;
+        nav {
+            ul {
+                display: flex;
+                li {
+                    list-style-type: none;
+                    padding: $paddingY/2 $paddingX;
+                    a {
+                        @include links(#f00);
+                    }
+                }
+            }
+        }
+    }
+    main {
+        display: flex;
+        justify-content: space-between;
+        margin: $margineXGenerale $margineXGenerale*5;
+        .sinistra {
+            width: 60%;
+            button {
+                @include baseButton($colorePulsanteErrore);
+            }
+            div {
+                padding: 0 $paddingX*2;
+                .corsivo {
+                    font-style: italic;
+                }
+            }
+            .rel {
+                display: inline;
+                position: relative;
+                top: 15px;
+                left: 10px;
+                background-color: $bianco;
+                padding: 0 5px;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                border: 3px solid gray;
+                input {
+                    margin: 15px;
+                    width: 50%;
+                }
+                textarea {
+                    margin: 15px;
+                    width: 50%;
+                }
+            }
+        }
+        aside {
+            width: 30%;
+            ul {
+                li {
+                    list-style-type: none;
+                    padding: $paddingY/2 0;
+                    a {
+                        @include links(#0f0);
+                        padding-bottom: $paddingY/2;
+                        border-bottom: dashed;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        height: $altezzaFooter;
+        background-color: $coloreFooter;
+        border-radius: $radius;
+    }
+}
+
+i {
+    color: $coloreParole;
+}

@@ -1,0 +1,72 @@
+@mixin links($coloreLinkAttivo) {
+    @if $coloreLinkAttivo == #f00 {
+        color: $bianco;
+    } @else {
+        color: $grigio;
+    }
+    
+    text-decoration: none;
+    &:hover {
+        color: $coloreLinkAttivo;
+    }
+    &:active {
+        color: $coloreLinkAttivo;
+        text-decoration: underline $coloreLinkAttivo;
+    }
+}
+
+@mixin baseButton($bgColor) {
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+
+    background: $bgColor;
+    outline: 1px solid $bgColor;
+    box-shadow: 0 0 10px $bgColor;
+
+    color: #000;
+    border: 1px solid white;
+
+    &:hover {
+        color: $bgColor;
+        background: white;
+        box-shadow: none;
+    }
+}
+
+@mixin devices ($breakpoint) {
+    @if $breakpoint == tablet {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    }
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: 540px) {
+            @content;
+        }
+    }
+}
+
+body {
+    @include devices(tablet) {
+        text-align: center;
+    }
+    @include devices(mobile) {
+        aside {
+            display: none;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            nav {
+                ul {
+                    padding: 0;
+                }
+            }
+        }
+        main {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

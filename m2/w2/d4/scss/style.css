@@ -1,0 +1,127 @@
+/* EXTEND */
+.box, .mybox {
+  border: 1px solid #000;
+  background-color: green;
+  color: red;
+  margin-bottom: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.mybox {
+  font-size: 10px;
+}
+
+/* KEYWORD % */
+.mysecondbox, .myfirstbox {
+  border: 1px solid #000;
+  background-color: blue;
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.myfirstbox {
+  font-size: 15px;
+}
+
+.mysecondbox {
+  font-size: 20px;
+}
+
+/* MIXIN */
+button.green {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: green;
+  outline: 1px solid green;
+  box-shadow: 0 0 10px green;
+  color: white;
+  border: 1px solid white;
+}
+button.green:hover {
+  color: green;
+  background: white;
+  box-shadow: none;
+}
+
+button.red {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: red;
+  outline: 1px solid red;
+  box-shadow: 0 0 10px red;
+  color: white;
+  border: 1px solid white;
+}
+button.red:hover {
+  color: red;
+  background: white;
+  box-shadow: none;
+}
+
+button.blue {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: blue;
+  outline: 1px solid blue;
+  box-shadow: 0 0 10px blue;
+  color: white;
+  border: 1px solid white;
+}
+button.blue:hover {
+  color: blue;
+  background: white;
+  box-shadow: none;
+}
+
+button.yellow {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: gold;
+  outline: 1px solid gold;
+  box-shadow: 0 0 10px gold;
+  color: white;
+  border: 1px solid white;
+}
+button.yellow:hover {
+  color: gold;
+  background: white;
+  box-shadow: none;
+}
+
+button.violet {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: violet;
+  outline: 1px solid violet;
+  box-shadow: 0 0 10px violet;
+  color: white;
+  border: 1px solid white;
+}
+button.violet:hover {
+  color: violet;
+  background: white;
+  box-shadow: none;
+}
+
+button.grey {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: grey;
+  outline: 1px solid grey;
+  box-shadow: 0 0 10px grey;
+  color: white;
+  border: 1px solid white;
+}
+button.grey:hover {
+  color: grey;
+  background: white;
+  box-shadow: none;
+}/*# sourceMappingURL=style.css.map */

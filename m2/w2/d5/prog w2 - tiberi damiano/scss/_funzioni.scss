@@ -1,0 +1,17 @@
+$template: bianco;
+
+$bg-dark: #000;
+$fg-dark: #00f;
+$bg-bright: #fff;
+$fg-bright: #f00;
+
+body{
+    @if $template == scuro {
+        background-color: $bg-dark;
+        color: $fg-bright;
+    }
+    @if $template == chiaro{
+        background-color: $bg-bright;
+        color: $fg-dark;
+    }
+}

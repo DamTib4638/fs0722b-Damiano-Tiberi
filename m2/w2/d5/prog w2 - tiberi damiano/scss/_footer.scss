@@ -1,0 +1,9 @@
+footer {
+    background: linear-gradient(180deg, $gradienteChiaro, $gradienteScuro);
+    .testiH {
+        @extend %fontTitoli;
+    }
+    .testiP {
+        @extend %fontPar;
+    }
+}

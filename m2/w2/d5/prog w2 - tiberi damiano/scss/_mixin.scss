@@ -1,0 +1,14 @@
+@mixin baseButton($bgColor) {
+    padding: $paddingY $paddingX;
+    display: inline-block;
+    border: none;
+    border-radius: $radius;
+    background: $bgColor;
+    color: #fff;
+    &:hover {
+        color: $bgColor;
+        background: transparent;
+        box-shadow: none;
+        outline: 1px solid $bgColor;
+    }
+}

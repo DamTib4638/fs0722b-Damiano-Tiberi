@@ -1,13 +1,12 @@
-function Persona () {
-    this.nome = '';
-    this.cognome = '';
-    this.annoCompl = '';
+function Persona (nomeF, cognomeF, dataNascitaF) {
+    this.nome = nomeF;
+    this.cognome = cognomeF;
+    this.dataNascita = dataNascitaF;
 }
 
 let nomeForm = document.getElementById('nome');
 let cognomeForm = document.getElementById('cognome');
 let dataNascitaForm = document.getElementById('dataNascita');
-let nuovoUtente = new Persona();
 let salvaUtente = document.getElementById('salva');
 let tBody = document.getElementById('cuoreTabella');
 
@@ -34,14 +33,15 @@ function calcoloEta (dataUtente) {
 salvaUtente.addEventListener('click', inserisciUtente);
 
 function inserisciUtente(e) {
-    if ((nomeForm.value || cognomeForm.value) && dataNascitaForm) {
+    let nuovoUtente = new Persona(nomeForm.value, cognomeForm.value, dataNascitaForm.value);
+    if ((nuovoUtente.nome || nuovoUtente.cognome) && nuovoUtente.dataNascita) {
         let nuovaRiga = document.createElement('tr');
         let nuovaColonnaNominativo = document.createElement('td');
         let nuovaColonnaEta = document.createElement('td');
         nuovaColonnaNominativo.classList.add('col-6');
-        nuovaColonnaNominativo.textContent += nomeForm.value + ' ' + cognomeForm.value;
+        nuovaColonnaNominativo.textContent += nuovoUtente.nome + ' ' + nuovoUtente.cognome;
         nuovaColonnaEta.classList.add('col-6');
-        nuovaColonnaEta.textContent += calcoloEta(dataNascitaForm.value);
+        nuovaColonnaEta.textContent += calcoloEta(nuovoUtente.dataNascita);
         nuovaRiga.appendChild(nuovaColonnaNominativo);
         nuovaRiga.appendChild(nuovaColonnaEta);
         tBody.appendChild(nuovaRiga);

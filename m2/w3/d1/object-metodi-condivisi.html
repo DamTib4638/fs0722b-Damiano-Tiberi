@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object metodi condivisi</title>
+</head>
+<body>
+    <!-- tipi di dato primitivi -> strutture semplici -> assegno un valore ad una variabile -->
+    <!-- gli oggetti sono strutture complesse -> quando assegno un oggetto ad una variabile, non fa in modo che la variabile contenga davvero l'oggetto, ma solo il riferimento ad esso. -->
+    <script>
+        var x = 10; // x è 10
+        var y = x;
+        y = y + 1; // y è 11 -> incrementare di 1, non ha influito sul valore di x
+        /* Nei dati primitivi, ciascuna variabile contiene il valore assegnato */
+        var persona = {nome: 'Mario', cognome: 'Rossi'};
+        var altraPersona = persona;
+        altraPersona.nome = 'Giuseppe';
+        /* se provo ad accedere alla proprietà nome di persona, anch'essa ha valore Giuseppe, perchè sia persona che altraPersona contengono un riferimento allo stesso oggetto. Quindi, ogni modifica effettuata alla variabile persona, si riflette anche su altraPersona. */
+        
+        /* metodi toString() e valueOf() sono metodi condivisi da tutti gli oggetti
+            toString() -> restituisce una versione stringa dell'oggetto
+        */
+       var x = new Object(32);
+       x.toString(); // restituisce '32' -> cioè, in modalità stringa
+       // questo funziona se l'oggetto è riconducibile ad un tipo di dato primitivo, altrimenti restituirà [object Object].
+       var persona = new Object({nome: 'Mario', cognome: 'Rossi'});
+       persona.toString(); // restituisce [object Object]
+
+       /* metodi toString() e valueOf() sono metodi condivisi da tutti gli oggetti
+            valueOf() -> restituisce il valore di un oggetto
+       */
+      var x = new Object(32);
+      x.valueOf(); // restituisce 32 -> in modalità numerica
+      
+    </script>
+</body>
+</html>

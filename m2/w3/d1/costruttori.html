@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costruttori</title>
+</head>
+<body>
+    <!-- con la notazione letterale possiamo costruire degli oggetti rapidamente -->
+    <!-- 
+        immaginiamo di avere bisogno di più oggetti dello stesso tipo. Ad esempio: più oggetti persona che condividono la stessa struttura
+     -->
+     <script>
+        var persona = {
+            nome: 'Mario',
+            cognome: 'Rossi',
+            indirizzo: 'Via Garibaldi 58 - Roma',
+            email: 'mariorossi@gmail.com',
+            mostraNomeCompleto: function() {},
+            calcoloCodiceFiscale: function() {}
+        }
+        /* 
+            Se usassimo solo la notazione letterale saremmo costretti a ripetere la definizione per ogni oggetto, ottenendo un codice che non è riutilizzabile.
+            Per ridefinire oggetti da zero che hanno la stessa struttura esiste un costruttore.
+            Un costruttore è una funzione JS che invochiamo con l'operatore new
+        */
+       function Persona() {
+        this.nome = '';
+        this.cognome = '';
+        this.indirizzo = '';
+        this.email = '';
+        this.mostraNomeCompleto = function() {};
+        this.calcoloCodiceFiscale = function() {};
+       }
+       /* per creare un oggetto di tipo persona invoco la funzione premettendo l'operatore new */
+       var marioRossi = new Persona();
+       // new è fondamentale perchè altrimenti eseguiamo una funzione
+       marioRossi.nome = 'Mario';
+       marioRossi.cognome = 'Rossi';
+       var giuseppeVerdi = new Persona();
+       giuseppeVerdi.nome = 'Giuseppe';
+       giuseppeVerdi.cognome = 'Verdi';
+       // creo N oggetti con la stessa struttura e imposto solo i valori specifici
+
+       /* il costruttore può anche essere parametrizzato */
+       function Persona(nome, cognome) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.indirizzo = '';
+        this.email = '';
+        this.mostraNomeCompleto = function() {};
+        this.calcoloCodiceFiscale = function() {};
+       }
+       var marioRossi = new Persona('Mario', 'Rossi');
+       var giuseppeVerdi = new Persona('Giuseppe', 'Verdi');
+     </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ereditarietà</title>
+</head>
+<body>
+    <!-- 
+        Possiamo modificare la struttura degli oggetti anche dopo la creazione
+     -->
+     <script>
+        // var marioRossi = new Persona('Mario', 'Rossi');
+        // marioRossi.telefono = '0123456789' // posso aggiungere all'oggetto qualcosa
+        // questa proprietà modifica solo l'istanza marioRossi e non altre istanze dell'oggetto in generale
+        // quando creo oggetti posso partire da una struttura di dati comune, definita da un costruttore e poi la possiamo personalizzare in base alle nostre esigenze. Si usa:
+        // prototype -> persona.prototype.telefono = '0123456789'
+        // tutte le istanze create con il costruttore Persona() avranno anche la proprietà telefono
+        function Studente (nome, eta) {
+            this.nome = nome;
+            this.eta = eta;
+        }
+        var studente1 = new Studente('Luigi Bianchi', 43);
+        var studente2 = new Studente('Mario Rossi', 32);
+        console.log(studente1, studente2);
+
+        Studente.prototype.skills = []; // skills è accessibile come se fosse una proprietà dell'oggetto
+        // il prototipo ha un riferimento ad un altro oggetto
+        //console.log(studente1, studente2);
+
+        studente1.skills = ['html', 'css', 'js'];
+        studente2.skills = ['ballare', 'suonare', 'suonare'];
+        console.log(studente1, studente2);
+
+        /* Eredità prototipale -> prototypal inheritance
+            Se una proprietà non sta nell'oggetto, viene cercata nel prototipo.
+            Il prototipo di un oggetto può essere a sua volta un altro prototipo -> sirisale la catena dei prototipi per cercare la proprietà.
+        */
+
+        /* USO DEL PROTOTYPE
+            base strettamente necessaria dell'oggetto, in modo da gestirlo meglio, e all'occorrenza correggo il tiro col prototype laddove serve.
+        */
+     </script>
+</body>
+</html>

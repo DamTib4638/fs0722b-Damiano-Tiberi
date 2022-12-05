@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggetti</title>
+</head>
+<body>
+    <!-- Tipi di dato primitivi (stringhe, numeri, ...). Ciò che non è primitivo è un oggetto contenitore di dati eterogenei che forma una struttura dati unica.
+    Oggetti -> dati denominati come proprietà -> coppie nome/valore
+    Funzioni -> azioni denominate metodi -> rappresentati da funzioni
+    -->
+    <script>
+        var oggettoVuoto = {};
+        var persona = {'nome': 'Mario', 'cognome': 'Rossi'} // inserisco delle proprietà, cioè coppie nome:valore
+        var persona = {'primo-nome': 'Mario', 'secondo-nome': 'Rossi'} // contravvengo alla regola di naming: quindi, devo usare ''
+        /* Una proprietà può avere come valore qualsiasi espressione derivante da un'espressione JS COMPRESO un altro oggetto */
+        var persona = {
+            nome: 'Mario',
+            cognome: 'Rossi',
+            indirizzo: {
+                via: 'Via Roma',
+                numero: 1,
+                cap: 00100
+            }
+        }
+        // accedere alle proprietà di un oggetto. Tipicamente:
+        // dot notation oggetto.proprietà
+        var nome = persona.nome; // approccio più usato, è più compatto, familiare con altri linguaggi di programmazione
+        var nome = persona['nome']; // altro approccio -> obbligatorio quando il nome della proprietà non segue le regole di naming
+        /* se provo ad accedere ad una proprietà non definita in un oggetto si restituirà il valore undefined (uno dei 5 tipi primitivi) */
+        var eta = persona.eta; // undefined
+
+        /* creazione per definizione.
+            Assegnando un valore ad una proprietà non definita -> creiamo una nuova proprietà inizializzandola con un valore
+        */
+       persona.eta = 42;
+       /* gli oggetti sono entità dinamiche, possono evolvere/modificarsi durante l'exe di uno script -> definizione incrementale. L'oggetto avrà una rappresentazione di base che può essere arricchita via via con le proprietà che vogliamo */
+
+       /* I metodi sono le attività che un oggetto può compiere */
+       function visualizzaNomeCognome () {
+        return 'Mario Rossi';
+       }
+       persona.nomeCognome = visualizzaNomeCognome; // assegnamo il nome della funzione ad una nuova proprietà dell'oggetto Persona.
+       /* Assegnamo alla proprietà la funzione tramite il suo nome (non il risultato della chiamata alla funzione).
+        La proprietà nomeCognome contiene una funzione ed è, quindi, un metodo.
+       */
+      var nomeCognome = persona.nomeCognome(); // per eseguirlo faccio riferimento ad essa con le () perchè è come una chiamata alla function (la invoco).
+      persona.nomeCognome = function() {return 'Mario Rossi'} // metodo alternativo per eseguire la funzione
+      // questo metodo stampa sempre 'Mario Rossi', anche se cambiasse il valore di nome e cognome all'interno dell'oggetto.
+      /* Un modo per visualizzare il valore corrente delle proprietà di un oggetto è quello di usare la keywords THIS */
+      persona.nomeCognome = function () {return this.nome + ' ' + this.cognome;} // restituisce i valori correnti delle proprietà.
+    </script>
+</body>
+</html>

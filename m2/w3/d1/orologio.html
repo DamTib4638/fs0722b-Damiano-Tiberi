@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orologio</title>
+</head>
+<body>
+    
+    <script>
+        function MyClock() {
+            this.dataAttuale = new Date();
+            this.ore = this.dataAttuale.getHours();
+            this.minuti = this.dataAttuale.getMinutes();
+            this.secondi = this.dataAttuale.getSeconds();
+        }
+        MyClock.prototype.run = function() {            // prototype con un metodo
+            setInterval(this.update.bind(this), 1000);  // .bind è un metodo che crea una nuova funzione, dove possiamo 'fissare' this, altrimenti nelle funzioni callback si perde
+        };
+        MyClock.prototype.update = function() {
+            this.updateTime(1);
+            console.log(this.ore + ':' + this.minuti + ':' + this.secondi);
+        };
+        MyClock.prototype.updateTime = function(sec) {
+            this.secondi += sec;
+            if (this.secondi >=60) {
+                this.minuti++;
+                this.secondi = 0;
+            }
+            if (this.minuti >= 60) {
+                this.ore++;
+                this.minuti = 0;
+            }
+            if (this.ore >= 24) {
+                this.ore = 0;
+            }
+        };
+        var orologio = new MyClock();
+        orologio.run();
+    </script>
+</body>
+</html>

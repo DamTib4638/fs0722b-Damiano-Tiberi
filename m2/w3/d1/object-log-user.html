@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object log user</title>
+</head>
+<body>
+    <input type="text" name="user" id="user">
+    <input type="password" name="pass" id="pass">
+    <button id="entra">Entra</button>
+    <div id="target1"></div>
+    <div id="target2"></div>
+    <script>
+        function User() {
+            this.nome = '';
+            this.accessId = -1;
+        }
+        User.prototype.userType = {} || null; // estende l'oggetto con prototype
+
+        function Admin() {
+            this.id = 'Admin';
+            this.access = 'unlimited';
+        }
+
+        var eventHundler = {
+            click: 'click',
+            mouseHover: 'mouseover',
+            mouseOut: 'mouseout'
+        }
+
+        var usr = new User();
+        var entra = document.querySelector('#entra');
+        var user = document.querySelector('#user');
+        var pass = document.querySelector('#pass');
+        var target1 = document.querySelector('#target1');
+        var target2 = document.querySelector('#target2');
+
+        entra.addEventListener(eventHundler.click, logIn); // al click sul bottone chiama la funzione login
+        user.addEventListener(eventHundler.mouseHover, onMouseOver);
+
+        function logIn (e) {
+            if (user.value == 'user' && pass.value == '123') {
+                usr.accessId = 0;
+                usr.userType = null; // se è user, setta la proprietà userType a null
+            } else if (user.value == 'admin' && pass.value == '123') {
+                usr.accessId = 1;
+                usr.userType = new Admin(); // se è admin, setta la proprietà userType con il nuovo oggetto new Admin
+            } else {
+                usr.accessId = -1;
+                usr.userType = null; // se è user, setta la proprietà userType a null
+            }
+            usr.nome = user.value;
+            if (usr.accessId > -1) {
+                target1.innerHTML = 'Benvenuto ' + usr.nome;
+                target2.innerHTML = '';
+            } else {
+                target1.innerHTML = 'User o pass errate';
+                target2.innerHTML = '';
+            }
+            if (usr && usr.userType) {
+                if (usr.userType.id == 'Admin') {
+                    target2.innerHTML = '<h2>Ruolo Admin</h2>';
+                }
+                else {
+                    target2.innerHTML = '';
+                }
+            }
+        }
+
+        function onMouseOver(e) {
+            e.target.title = 'Inserisci il valore corretto';
+        }
+    </script>
+</body>
+</html>

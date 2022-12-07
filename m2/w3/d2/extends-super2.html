@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extends super 2</title>
+</head>
+<body>
+    <script>
+        class Animale {
+            constructor(nome, peso) {
+                this.nome = nome;
+                this.peso = peso;
+            }
+            mangia() {
+                return `${this.nome} sta mangiando`;
+            }
+            dorme() {
+                return `${this.nome} sta dormendo`;
+            }
+            siSveglia() {
+                return `${this.nome} si sta svegliando`;
+            }
+        }
+        class Gorilla extends Animale {
+            constructor (nome, peso) {
+                super(nome, peso);
+            }
+            saleSuAlberi() {
+                return `${this.nome} sta salendo sugli alberi`;
+            }
+            grida() {
+                return `${this.nome}, una bestia di ${this.peso}, sta gridando`;
+            }
+            vigoroso() {
+                return `${super.mangia()} ${this.grida()}`;
+            }
+            routine() {
+                return ` ${super.siSveglia()} ${this.grida()} ${super.mangia()} ${super.dorme()} `;
+            }
+        }
+
+        const gorilla = new Gorilla('Assergiooo', '160kg');
+        display(gorilla.mangia());
+        display(gorilla.dorme());
+        display(gorilla.siSveglia());
+        display(gorilla.saleSuAlberi());
+        display(gorilla.grida());
+        display(gorilla.vigoroso());
+        display(gorilla.routine());
+    </script>
+</body>
+</html>

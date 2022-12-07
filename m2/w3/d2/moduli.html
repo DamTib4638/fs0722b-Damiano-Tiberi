@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moduli</title>
+</head>
+<body>
+    <!-- 
+        DESIGN PATTERN.
+
+        Sono degli schemi che offrono soluzioni a problemi comuni quando si progetta il SW. Sono schemi logici di risoluzione di un problema (riusabili, indipendenti dai linguaggi di programmazione).
+        Sono modelli di riferimento per realizzare componenti di SW di facile manutenzione
+        Modelli progettuali.
+        Pattern creazionali -> singleton pattern
+        Pattern creazionali -> factory pattern
+        Pattern comportamentali -> observer pattern
+        Pattern strutturali -> module pattern
+        Pattern strutturali -> adapter pattern
+        Pattern strutturali -> facade pattern
+        Pattern strutturali -> MVC/MVVM pattern
+
+        MODULE PATTERN (da ecma 5).
+        Si basano su meccanismi di importazione ed esportazione (partials di sass, per esempio).
+        Avremo dei moduli che saranno contemporaneamente accessibili ed esportabili.
+        Si segue un pattern per risolvere problemi di organizzazione del codice -> facilita la gestione e la robustezza ed è più decifrabile.
+     -->
+     <script>
+        var modulo = (function() { // il nostro modulo a cui assegnamo una IIFE Immediately Invoke Function Expression
+            function metodoPrivato() {
+                //
+            }
+            return {                // restituisce un oggetto che ha un metodo pubblico
+                metodoPubblico: function() {
+                    metodoPrivato();
+                }
+            }
+        });
+        modulo.metodoPubblico();
+     </script>
+</body>
+</html>

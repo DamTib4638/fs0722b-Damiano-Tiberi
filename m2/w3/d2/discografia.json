@@ -1,0 +1,47 @@
+{
+    "gruppo": "Guns N' Roses",
+    "albums": [
+        {
+            "titolo": "Appetite for Destruction",
+            "anno": 1987,
+            "brani": [
+                {
+                    "id": 1,
+                    "titolo": "Welcome to the Jungle",
+                    "durata": "4:33"
+                },
+                {
+                    "id": 2,
+                    "titolo": "Sweet Child O' Mine",
+                    "durata": "5:56"
+                },
+                {
+                    "id": 3,
+                    "titolo": "Paradise City",
+                    "durata": "6:46"
+                }
+            ]
+        },
+        {
+            "titolo": "Use Your Illusion I",
+            "anno": 1991,
+            "brani": [
+                {
+                    "id": 1,
+                    "titolo": "Don't Cry",
+                    "durata": "4:58"
+                },
+                {
+                    "id": 2,
+                    "titolo": "November Rain",
+                    "durata": "8:57"
+                },
+                {
+                    "id": 3,
+                    "titolo": "Dead Horse",
+                    "durata": "4:18"
+                }
+            ]
+        }
+    ]
+}

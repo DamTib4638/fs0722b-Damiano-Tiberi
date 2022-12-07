@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+</head>
+<body>
+    <!-- 
+        NOVITà HTML 5
+        -> nuovi tag audio, video, svg
+        -> nuove api: geolocation, web workers, canvas, WEB STORAGE.
+
+        WEB STORAGE -> nasce per risolvere una serie di problemi
+        1. Problema dei cookie (4k);
+        2. Impossibile "storare" cookie differenziati tra due diverse sessioni di navigazione;
+        Per risolvere questi problemi -> web storage ->
+        A. sessionStorage -> persistenza di dati finchè c'è una finestra di navigazione aperta;
+        B. localStorage -> persistenza dei dati finchè vengono cancellati (anche se chiudo e riapro la finestra del browser, i dati restano li). I dati sono salvati nello storage del browser e quindi sono disponibili per tutte le pagine aperte del browser;
+        Nel localStorage si possono salvare molti più dati che sui cookie (5mb).
+
+        // Specifiche
+        singola interfaccia Storage -> sessionStorage e localStorage implementano lo stesso set di metodi;
+     -->
+     <script>
+        localStorage.nome = 'Federico';
+        localStorage.cognome = 'De Ambrosis';               // salvo i dati come in un normale array associativo
+        localStorage.setItem('nome', 'Federico');
+        localStorage.setItem('cognome', 'De Ambrosis');     // o salvo i dati con l'ausilio dei metodi dedicati
+        localStorage.getItem('nome');                          // restituisco il valore di nome, qui è Federico
+        localStorage.getItem('cognome');
+        localStorage.removeItem;
+        localStorage.clear;
+        // come posso inserire oggetti diversi da stringhe?
+        localStorage.ordini = Array('1', '2', '3');
+        localStorage.ordini; // ritorna 1,2,3
+        // se ho dati diversi da stringhe devo ricorrere alla serializzazione su JSON
+        localStorage.ordini = JSON.stringify(Array(1,2,3));
+        JSON.parse(localStorage.ordini);
+     </script>
+</body>
+</html>

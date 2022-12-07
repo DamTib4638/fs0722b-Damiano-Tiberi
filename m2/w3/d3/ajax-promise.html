@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempio funzionante</title>
+</head>
+<body>
+    <h2>Ajax + promise + moduli</h2>
+    <ul id="lista"></ul>
+    <script type="module">
+        import {AsyncCalls} from './moduli/asyncCalls.js';
+        let asyncCalls = new AsyncCalls();
+        asyncCalls.ajaxCall('https://jsonplaceholder.typicode.com/todos/', 'get')
+            .then((response) => {
+                let res = JSON.parse(response);
+                let li = '';
+                res.forEach(element => {
+                    li += `<li><b>${element.title}</b><b>[${element.completed}]</b></li>`;
+                });
+                document.querySelector('#lista').innerHTML = li;
+            })
+    </script>
+</body>
+</html>

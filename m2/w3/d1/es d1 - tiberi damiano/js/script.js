@@ -1,3 +1,6 @@
+/* 
+    Il costruttore Persona qui sotto definisce sia le proprietà di persona sia i metodi che possiede. In altre parole, sto definendo la classe Persona, più che l'istanza dell'oggetto Persona.
+*/
 function Persona (nomeF, cognomeF, dataNascitaF) {
     this.nome = nomeF;
     this.cognome = cognomeF;

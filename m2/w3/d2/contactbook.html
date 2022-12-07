@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="nuovoUtente">
+    <button id="aggiungi">Aggiungi</button>
+    <ul id="listaUtenti"></ul>
+    <script>
+        let lista = document.querySelector('#listaUtenti');
+        let inputUser = document.getElementById('nuovoUtente');
+        let aggiungiBtn = document.getElementById('aggiungi');
+        let utenti = [];                                            // array vuoto
+        aggiungiBtn.addEventListener ('click', ()=> {
+            let usr = new User(inputUser.value);                    // è l'oggetto che definisco a riga 34
+            utenti.push(usr);                                       // push nell'array
+            scriviInLista();                                        // lancio la funzione
+        })
+
+        function scriviInLista() {
+            lista.innerHTML = '';
+            for (let utente of utenti) {                            // parametri di for of
+                /* utente vede il metodo logUser() della classe User, perchè ho popolato l'array utenti di elementi istanziati al tipo User (alla riga 19). */
+                lista.innerHTML += (`<li>${utente.logUser()}</li>`);// uso metodo logUser della classe User
+            }
+            console.log(utenti);
+        }
+
+        /* CLASSE */
+        class User {
+            nome = '';
+            constructor(_nome) {
+                this.nome = _nome;
+            }
+            logUser() {
+                return `<b>${this.nome}</b>`
+            }
+        }
+    </script>
+</body>
+</html>

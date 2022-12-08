@@ -3,10 +3,6 @@ window.onload = function () {
     if (typeof (Storage) != undefined) {
         if (!sessionStorage.forward) {
             sessionStorage.forward = 1;
-            // setInterval(() => {
-            //     sessionStorage.forward = Number(sessionStorage.forward) + 1
-            //     p.innerHTML = `${sessionStorage.forward} seconds passed on this Session`
-            // }, 1000);
         }
         p.innerHTML = `${sessionStorage.forward} seconds passed on this Session`
         setInterval(() => {

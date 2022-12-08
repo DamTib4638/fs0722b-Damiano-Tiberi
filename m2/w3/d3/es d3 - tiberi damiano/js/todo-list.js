@@ -1,63 +1,97 @@
 let pulsanteAggiungi = document.querySelector('#aggiungi');
 pulsanteAggiungi.addEventListener('click', aggiungiCompito); //la funzione va senza () se no la esegue a priori.
 
+var arrayLocalStorage = [];
+
+window.addEventListener('load', ripristinaLista);
+
+function ripristinaLista() {
+    if (localStorage.tasks) {
+        arrayLocalStorage = localStorage.tasks.split(',');
+        componiLista(arrayLocalStorage);
+    }
+}
+
+function componiLista(array) {
+    for (let task of array) {
+
+        let div = document.createElement('div');
+        div.classList.add('todo');
+
+        let span = document.createElement('span');
+        span.textContent = task.toUpperCase();
+        span.classList.add('span-compito');
+
+        let bottoneFatto = document.createElement('button');
+        bottoneFatto.textContent = '✓';
+        bottoneFatto.classList.add('button-fatto');
+
+        let bottoneElimina = document.createElement('button');
+        bottoneElimina.textContent = 'X';
+        bottoneElimina.classList.add('button-elimina');
+
+        let principale = document.querySelector('#principale');
+
+        //testo.value = '';
+
+        div.append(span, bottoneElimina, bottoneFatto);
+
+        principale.append(div);
+
+        svolgiCompito(bottoneFatto, div);
+        eliminaCompito(bottoneElimina, div);
+    }
+}
 
 function aggiungiCompito() {
 
-    let tasks = localStorage.getItem('tasks');
-    if (!tasks) {
-        tasks = [];
-    }
     let testo = document.querySelector('#text');
-    tasks.push(testo.value);
-    localStorage.setItem('tasks', Array(tasks));
-    console.log(localStorage.getItem('tasks'));
+    if (testo.value != '' && testo.value != ' ') {
+        arrayLocalStorage.push(testo.value);
+        localStorage.tasks = arrayLocalStorage;
+        let div = document.createElement('div');
+        div.classList.add('todo');
 
-    if (localStorage.getItem('tasks')) {
+        let span = document.createElement('span');
+        span.textContent = testo.value.toUpperCase();
+        span.classList.add('span-compito');
 
-        // for (let task of localStorage.getItem('tasks')) {
-            let div = document.createElement('div');
-            div.classList.add('todo');
-            
-            
-            let span = document.createElement('span');
-            span.textContent = localStorage.getItem('tasks').toUpperCase();
-            span.classList.add('span-compito');
+        let bottoneFatto = document.createElement('button');
+        bottoneFatto.textContent = '✓';
+        bottoneFatto.classList.add('button-fatto');
 
-            let bottoneFatto = document.createElement('button');
-            bottoneFatto.textContent = '✓';
-            bottoneFatto.classList.add('button-fatto');
+        let bottoneElimina = document.createElement('button');
+        bottoneElimina.textContent = 'X';
+        bottoneElimina.classList.add('button-elimina');
 
-            let bottoneElimina = document.createElement('button');
-            bottoneElimina.textContent = 'X';
-            bottoneElimina.classList.add('button-elimina');
+        let principale = document.querySelector('#principale');
 
-            let principale = document.querySelector('#principale');
-            
-            // localStorage.clear();
+        testo.value = '';
 
-            div.append(span, bottoneElimina, bottoneFatto);
-            
-            principale.append(div);
+        div.append(span, bottoneElimina, bottoneFatto);
 
-            svolgiCompito(bottoneFatto, div);
-            eliminaCompito(bottoneElimina, div);
-        // }
-      
+        principale.append(div);
+
+        svolgiCompito(bottoneFatto, div);
+        eliminaCompito(bottoneElimina, div);
     } else {
-        alert ('Devi inserire una nuova attività per aggiungerla');
+        alert('Devi inserire una nuova attività per aggiungerla');
     }
 }
 
 function eliminaCompito(bottoneElimina, div) {
     bottoneElimina.addEventListener('click', function () {
         let lineaDaEliminare = document.querySelector('#principale');
+        let taskSelezionato = div.childNodes[0].outerText.toLowerCase();
+        console.log(taskSelezionato);
+        arrayLocalStorage.splice(arrayLocalStorage.indexOf(taskSelezionato), 1);
+        localStorage.tasks = arrayLocalStorage;
         lineaDaEliminare.removeChild(div);
     })
 }
 
 function svolgiCompito(bottoneFatto, div) {
-    bottoneFatto.addEventListener('click', function() {
+    bottoneFatto.addEventListener('click', function () {
         let compitoSvolto = div;
         if (compitoSvolto.style.backgroundColor != 'lightblue') {
             compitoSvolto.style.backgroundColor = 'lightblue';
@@ -72,7 +106,7 @@ function svolgiCompito(bottoneFatto, div) {
             bottoneSost.style.backgroundColor = 'green';
             bottoneSost.textContent = '✓';
         }
-        
+
     })
 }
 
@@ -83,7 +117,7 @@ function ricerca() {
     let todos = document.querySelectorAll('.todo');
     for (let compito of todos) {
         let testo = compito.querySelector('span').textContent.toUpperCase();
-        if(testo.search(cerca.value.toUpperCase()) == -1) {
+        if (testo.search(cerca.value.toUpperCase()) == -1) {
             compito.style.display = 'none';
         } else {
             compito.style.display = 'block';

@@ -12,7 +12,7 @@ var array = [
 
 var paginazione = new Paginazione(array, 2);
 
-mostraInfo();
+window.addEventListener('load', mostraInfo);
 let inizio = document.getElementById('prima');
 inizio.addEventListener('click', function () {
     paginazione.primaPagina();
@@ -33,7 +33,6 @@ succ.addEventListener('click', function () {
     paginazione.paginaSuccessiva();
     mostraInfo();
 })
-
 function mostraInfo() {
     let infos = paginazione.suddivisioneInPagine();
     let tBody = document.getElementById('contenuto');
@@ -41,9 +40,7 @@ function mostraInfo() {
     for (let riga of righe) {
         riga.remove();
     }
-    
     for (let elemento of infos) {
-
         let nuovaRiga = document.createElement('tr');
         let nuovaColonnaID = document.createElement('td');
         let nuovaColonnaNome = document.createElement('td');
@@ -57,12 +54,10 @@ function mostraInfo() {
         nuovaColonnaNome.textContent = elemento.nome;
         nuovaColonnaCognome.textContent = elemento.cognome;
         nuovaColonnaPagina.textContent = elemento.classe;
-
         nuovaRiga.appendChild(nuovaColonnaID);
         nuovaRiga.appendChild(nuovaColonnaNome);
         nuovaRiga.appendChild(nuovaColonnaCognome);
         nuovaRiga.appendChild(nuovaColonnaPagina);
-
         tBody.appendChild(nuovaRiga);
     }
 }

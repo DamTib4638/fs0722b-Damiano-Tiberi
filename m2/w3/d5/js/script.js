@@ -1,5 +1,5 @@
 /* HO CREATO UNA VARIABILE PER PROVARE UNA CHIAMATA ESTERNA CHE SPIEGO SOTTO */
-var opzione = true;
+var opzione = false;
 
 /* USARE LIVESERVER PER VEDERE IL RISULTATO */
 window.addEventListener('load', caricaContenuto);
@@ -10,7 +10,7 @@ function caricaContenuto() {
             return response.json();
         }).then(function (json) {
             let utenti = json;
-            for (let i = 0; i < 2; i++) {
+            for (let i = 0; i < utenti.length; i++) {
                 div.innerHTML += `
                     <div class="col-3 p-3">
                     <div class="card w-100 border border-dark shadow text-center">
@@ -36,7 +36,7 @@ function caricaContenuto() {
             let users = [json[0], json[1]];
             users[0].profileURL = 'img/male.png';
             users[1].profileURL = 'img/female.png';
-            for (let i = 0; i < 2; i++) {
+            for (let i = 0; i < users.length; i++) {
                 div.innerHTML += `
                     <div class="col-3 p-3">
                     <div class="card w-100 border border-dark shadow text-center">

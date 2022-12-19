@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        PROBLEMI JS:
+        1.  Tende a diventare disordinato (e quindi difficile fare manutenzione);
+        2.  Poca capacità di abbracciare le caratteristiche dell'orientamento ad oggetti;
+        3.  Il controllo del tipo di dato;
+        4.  non c'è controllo degli errori (non c'è debug in fase di compilazione)
+        -> entr in aiuto TYPESCRIPT -> Typescript è JS per lo sviluppo su scala di applicazioni
+        DIFFERENZE CON JS
+        1.  è un linguaggio fortemente tipizzato (dichiaro i tipi di dati)
+        2.  è OOP
+        3.  è contemporaneamente un linguaggio ed un insieme di strumenti
+        Typescript è JS più alcune funzionalità aggiuntive;
+        Typescript (.ts) è un superset tipizzato di JS (.js);
+        Typescript viene COMPILATO in JS (sono i file .js che aggancio poi al browser);
+        Delle conoscenze base di JS aggiunge sintassi dedicate di Typescript e poi compilo da .ts a .js
+        Il codice Typescript viene convertito nel suo equivalente javascript per essere eseguito
+        Il codice compilato è compatibile con qualsiasi framework, libreria, ecc di JS esistente;
+
+        Perchè usare TS.
+        - transpiler -> mentre interpreto il codice .ts per generare l'output .js ho il controllo degli errori;
+        - strong static typing -> sia il controllo del tipo di dato, sia una sintassi per dedurlo o modificarlo;
+        Componenti di TS.
+        - linguaggio (sintassi, keyword, annotazioni di tipo);
+        - Compiler (tsc) converte le istruzioni TS nell'equivalente JS;
+        - Typescript language service -> servizio che aiuta la compilazione del codice .ts;
+        lo trovi al seguente link: https://www.typescriptlang.org/play?#code/Q.
+        - qualsiasi script JS è anche codice TS valido (quindi posso fare il passaggio gradualmente)
+
+        PASSAGGI.
+        1.  salvo il file in formato .ts
+        2.  apro il terminale
+        3.  tsc + nome del file .ts (controllo di essere nella cartella del file ts)
+        4.  node + nome del file .js (eseguo nel terminale il console log)
+
+        FLAG DEL COMPILATORE
+        --help
+        --watch
+        --module
+        --target
+        --out
+        lista completa -> https://www.typescriptlang.org/docs/handbook/compiler-options.html
+
+        tsconfig.json
+        https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+        https://www.typescriptlang.org/tsconfig
+        watch -> https://www.typescriptlang.org/docs/handbook/configuring-watch.html
+
+        alternativa è usare tsc + nome del file.ts
+        posso compilare più file: tsc file1.ts, file2.ts, file3.ts
+
+        REGOLE SINTASSI
+        - nome variabili come per js;
+        COPIALE DAL FILE CHE METTE IL PROF
+
+        TIPI DI DATI
+        -> number, string, boolean, null, undefined;
+        -> void -> assenza di valore; utilizzato quando una funzione non restituisce valore (return assente);
+        -> any -> la variabile contiene qualsiasi tipo di dato (la variabile è trattata come in js e può essere riassegnata);
+     -->
+</body>
+</html>

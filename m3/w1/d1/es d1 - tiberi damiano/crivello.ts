@@ -28,8 +28,6 @@ function listaNumeriPrimi(arrayNumeri: number[], estremo: number) {
             }
         }
     }
-    console.log(risultato);
-    console.log(arrayNumeri);
+    
     return arrayNumeri;
 }
-// console.log(listaPrimi);

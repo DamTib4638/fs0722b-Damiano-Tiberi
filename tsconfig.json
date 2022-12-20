@@ -2,9 +2,10 @@
 {
     // Alcune opzioni tipiche del compilatore
     "compilerOptions": {
-        "target": "es2017",
+        "target": "ES6",
         "moduleResolution": "node",
-        "removeComments": true
+        "removeComments": true,
+
         // ...
     },
     // Opzioni per il watching

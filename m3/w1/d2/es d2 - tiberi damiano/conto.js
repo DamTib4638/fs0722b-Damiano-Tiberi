@@ -1,8 +1,6 @@
 class MotherAccount {
     constructor() {
         this.balanceInit = 0;
-        this.nome = '';
-        this.cognome = '';
     }
     twoDeposit(v) {
         this.balanceInit += v;
@@ -49,8 +47,6 @@ console.log('Il saldo attuale di ' + signora.nomeProprio + ' è di: ' + signora.
 class SonAccount {
     constructor() {
         this.balanceInit = 0;
-        this.nome = '';
-        this.cognome = '';
     }
     oneDeposit(v) {
         this.balanceInit += v;

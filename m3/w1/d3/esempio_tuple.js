@@ -1,0 +1,16 @@
+var myTupla = [10, 'Hello', 'World', 'TS'];
+console.log(myTupla[0]);
+console.log(myTupla[1]);
+console.log('numero elementi prima di push: ' + myTupla.length);
+myTupla.push(12);
+console.log('numero elementi dopo il push: ' + myTupla.length);
+console.log('numero elementi prima di pop: ' + myTupla.length);
+console.log(myTupla.pop() + 'pop dalla tupla');
+console.log('numero elementi dopo il pop: ' + myTupla.length);
+console.log('primo valore di tupla ' + myTupla[0]);
+myTupla[0] = 121;
+console.log('primo valore della tupla modificato al valore ' + myTupla[0]);
+var a = [10, 'Hallo'];
+var [b, c] = a;
+console.log(b);
+console.log(c);

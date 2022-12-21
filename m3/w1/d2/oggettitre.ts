@@ -1,5 +1,5 @@
 // get e set
-class Persona {
+class Persona2 {
     nome:string;
     cognome:string;
     constructor(nome,cognome) {
@@ -15,7 +15,7 @@ class Persona {
         this.cognome = parti[1] || '';
     }
 }
-var marioRossi = new Persona("Mario", "Rossi");
+var marioRossi = new Persona2("Mario", "Rossi");
 console.log(marioRossi.nomeCompleto);
 marioRossi.nomeCompleto = 'Giuseppe Verdi';
 console.log(marioRossi.nomeCompleto);

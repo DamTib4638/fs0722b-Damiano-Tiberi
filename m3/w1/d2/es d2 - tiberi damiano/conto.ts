@@ -2,8 +2,8 @@ class MotherAccount {
 
     /* Proprietà della classe MotherAccount */
     private balanceInit: number = 0;
-    private nome: string = '';
-    private cognome: string = '';
+    private nome: string;
+    private cognome: string;
 
     /* Costruttore della classe MotherAccount */
     // constructor(n: string, c: string) {
@@ -73,8 +73,8 @@ console.log('Il saldo attuale di ' + signora.nomeProprio + ' è di: ' + signora.
 class SonAccount {
     /* Proprietà della classe SonAccount */
     private balanceInit: number = 0;
-    private nome: string = '';
-    private cognome: string = '';
+    private nome: string;
+    private cognome: string;
 
     /* Costruttore della classe SonAccount */
     // constructor(n: string, c: string) {

@@ -1,3 +1,4 @@
+/* file json caricato in locale, aprire da Liveserver */
 interface IVestiti {
     id: number;
     codProd: number;

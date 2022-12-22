@@ -1,0 +1,33 @@
+button.blue {
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    background: blue;
+    outline: 1px solid blue;
+    box-shadow: 0 0 10px blue;
+    color: white;
+    border: 1px solid white;
+}
+
+button.blue:hover {
+    color: blue;
+    background: white;
+    box-shadow: none;
+}
+
+.sfondo-lightgreen {
+    background-color: lightgreen;
+}
+.sfondo-lightyellow {
+    background-color: lightyellow;
+}
+.sfondo-lightblue {
+    background-color: lightblue;
+}
+.sfondo-lightred {
+    background-color: lightcoral;
+}
+
+article:hover {
+    transform: scale(1.1);
+}

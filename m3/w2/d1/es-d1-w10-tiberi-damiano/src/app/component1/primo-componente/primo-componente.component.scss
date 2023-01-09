@@ -1,0 +1,95 @@
+button.green {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: green;
+  outline: 1px solid green;
+  box-shadow: 0 0 10px green;
+  color: white;
+  border: 1px solid white;
+}
+button.green:hover {
+  color: green;
+  background: white;
+  box-shadow: none;
+}
+
+button.red {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: red;
+  outline: 1px solid red;
+  box-shadow: 0 0 10px red;
+  color: white;
+  border: 1px solid white;
+}
+button.red:hover {
+  color: red;
+  background: white;
+  box-shadow: none;
+}
+
+button.blue {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: blue;
+  outline: 1px solid blue;
+  box-shadow: 0 0 10px blue;
+  color: white;
+  border: 1px solid white;
+}
+button.blue:hover {
+  color: blue;
+  background: white;
+  box-shadow: none;
+}
+
+button.yellow {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: gold;
+  outline: 1px solid gold;
+  box-shadow: 0 0 10px gold;
+  color: white;
+  border: 1px solid white;
+}
+button.yellow:hover {
+  color: gold;
+  background: white;
+  box-shadow: none;
+}
+
+button.violet {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: violet;
+  outline: 1px solid violet;
+  box-shadow: 0 0 10px violet;
+  color: white;
+  border: 1px solid white;
+}
+button.violet:hover {
+  color: violet;
+  background: white;
+  box-shadow: none;
+}
+
+button.grey {
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  background: black;
+  outline: 1px solid black;
+  box-shadow: 0 0 10px black;
+  color: white;
+  border: 1px solid white;
+}
+button.grey:hover {
+  color: black;
+  background: white;
+  box-shadow: none;
+}

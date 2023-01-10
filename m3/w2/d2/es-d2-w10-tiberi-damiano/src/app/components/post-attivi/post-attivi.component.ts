@@ -9,11 +9,14 @@ import { PostsService } from 'src/app/service/posts.service';
 })
 export class PostAttiviComponent implements OnInit {
 
-  articoli = this.postSrv.getPosts();
+  listaPostAttivi: Post[] = [];
 
   constructor(private postSrv: PostsService) { }
 
   ngOnInit(): void {
+    this.postSrv.getPostsFiltrati(true).then((result) => {
+      this.listaPostAttivi = result;
+    })
   }
 
 }

@@ -6,20 +6,18 @@ import { Post } from '../interface/post.interface';
 })
 export class PostsService {
 
-  posts: Post[] = [];
-
   constructor() { }
 
-  async getPosts() {
-    fetch('../../assets/db.json').then(data => {
+  /* In questo metodo faccio una fetch al file json ed assegno il contenuto del file della fetch alla variabile json, in formato json. */
+  getPostsFiltrati(a:boolean) {
+    let json = fetch('../../assets/db.json').then(data => {
       return data.json();
-    }).then((res) => {
-      console.log(res);
-      for (let post of res) {
-        this.posts.push(post);
-      }
-      return this.posts;
+    });
+    /* in lista (con il secondo then) ci metto l'array di oggetti che fanno parte dei dati json salvati dopo la fetch (nel primo then).*/
+    let lista = json.then((posts:Post[]) => {
+      return posts.filter(post => post.active==a);
     })
+    return lista;
   }
 
 }

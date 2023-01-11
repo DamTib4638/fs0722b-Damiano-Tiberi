@@ -21,7 +21,9 @@ export class PostAttiviComponent implements OnInit {
   }
   modificaStato(id:number) {
     this.postSrv.updatePost(id);
-    this.ngOnInit();
+    this.listaPostAttivi = this.listaPostAttivi.filter(p=>p.active==true);
+
+    // this.ngOnInit();
   }
 
 }

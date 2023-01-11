@@ -21,8 +21,10 @@ export class PostNonAttiviComponent implements OnInit {
   }
 
   modificaStato(id:number) {
+
     this.postSrv.updatePost(id);
-    this.ngOnInit();
+    this.listaPostNonAttivi = this.listaPostNonAttivi.filter(p=>p.active==false);
+    // this.ngOnInit();
   }
 
 }

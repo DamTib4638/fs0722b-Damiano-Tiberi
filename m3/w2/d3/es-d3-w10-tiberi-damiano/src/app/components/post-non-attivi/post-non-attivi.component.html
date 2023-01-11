@@ -1,0 +1,13 @@
+<div class="container">
+  <!-- <div class="card w-50 m-3" *ngFor="let post of listaPostAttivi">
+    <div class="card-header">Post</div>
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <p class="card-text">{{post.id}} {{post.body}}</p>
+    </div>
+    <button type="button" class="btn btn-primary me-2" (click)="updatePost({{post.id}})"></button>
+  </div> -->
+  <app-card-post [post]="articolo" *ngFor="let articolo of listaPostNonAttivi">
+    <button type="button" class="btn btn-primary me-2" (click)="modificaStato(articolo.id)">Attiva</button>
+  </app-card-post>
+</div>

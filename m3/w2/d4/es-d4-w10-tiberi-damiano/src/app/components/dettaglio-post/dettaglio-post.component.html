@@ -1,0 +1,20 @@
+<div
+    *ngIf="p"
+    class="card w-50 m-3"
+    [ngClass]="{
+        'bg-warning': p.type == 'news',
+        'bg-info': p.type == 'education',
+        'bg-dark': p.type == 'politic',
+        'text-white': p.type == 'politic'
+    }"
+>
+    <div class="card-header" appHighLight>Post</div>
+    <div class="card-body">
+        <h5 class="card-title">{{ p.title | maiuscolo }}</h5>
+        <p class="card-text">{{ p.body }}</p>
+        <div class="d-flex justify-content-around">
+            <p class="card-text">Categoria: {{ p.type | maiuscolo }}</p>
+            <p class="card-text">Autore: {{ p.author }}</p>
+        </div>
+    </div>
+</div>

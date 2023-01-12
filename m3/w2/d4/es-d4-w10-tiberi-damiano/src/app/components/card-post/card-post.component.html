@@ -1,0 +1,20 @@
+<div
+    class="card w-50 m-3"
+    [ngClass]="{
+        'bg-warning': post.type == 'news',
+        'bg-info': post.type == 'education',
+        'bg-dark': post.type == 'politic',
+        'text-white': post.type == 'politic'
+    }"
+>
+    <div class="card-header">POST</div>
+    <div class="card-body">
+        <h5 class="card-title">{{ post.title | maiuscolo }}</h5>
+        <p class="card-text">{{ post.id }} - {{ post.body }}</p>
+    </div>
+    <div class="d-flex justify-content-center m-2">
+        <ng-content></ng-content>
+        <h6 appHighLight>{{ post.author }}</h6>
+    </div>
+</div>
+<router-outlet></router-outlet>

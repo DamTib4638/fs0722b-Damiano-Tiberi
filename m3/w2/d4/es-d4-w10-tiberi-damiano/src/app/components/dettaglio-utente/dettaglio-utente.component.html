@@ -1,0 +1,11 @@
+<div class="card w-50 m-3">
+    <div *ngIf="user" class="card-header" appHighLight>
+        <h5>Utente {{ user.id }}</h5>
+    </div>
+    <div *ngIf="user" class="card-body">
+        <h6 class="card-title">
+            {{ user.cognome | maiuscolo }} {{ user.nome | maiuscolo }}
+        </h6>
+        <p class="card-text">Email: {{ user.email }}</p>
+    </div>
+</div>

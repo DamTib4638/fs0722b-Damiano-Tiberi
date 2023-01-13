@@ -1,0 +1,24 @@
+<div class="text-center my-2" *ngIf="!controllo"><label class="p-2 text-warning"> CARICAMENTO PROGRAMMI PER OGGI... </label></div>
+<div *ngIf="controllo && allTodos.length == 0">
+  <div class="container text-center my-3"><label class="text-success">NON HAI INSERITO COMPITI DA SVOLGERE !!!</label></div>
+  <div class="container d-flex justify-content-center align-items-center">
+    <input type="text" placeholder="Inserisci nuovo task" class="form-control me-2 w-25" [(ngModel)]="nuovoToDo"/>
+    <button type="button" class="btn btn-info me-2 text-white" (click)="aggiungi()">Inserisci</button>
+  </div>
+</div>
+
+<div *ngIf="controllo && allTodos.length > 0">
+  <div class="container w-50">
+    <div id="bordoRotondo" appSfondo class="container d-flex justify-content-between align-items-center p-2 my-2" *ngFor="let todo of allTodos">
+      <label appTestoTodo> {{todo.title | uppercase }} </label>
+      <div class="px-2">
+        <button type="button" class="btn btn-success me-2 text-white" (click)="aggiorna(todo.id)">Completa</button>
+        <button type="button" class="btn btn-danger text-white" (click)="elimina(todo.id)">Elimina</button>
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center">
+      <input type="text" placeholder="Inserisci nuovo task" class="form-control me-2 w-50" [(ngModel)]="nuovoToDo"/>
+      <button type="button" class="btn btn-info me-2 text-white" (click)="aggiungi()">Inserisci</button>
+    </div>
+  </div>
+</div>

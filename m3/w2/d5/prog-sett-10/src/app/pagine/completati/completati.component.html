@@ -1,0 +1,21 @@
+<div class="text-center my-2" *ngIf="!controllo"><label class="p-2 text-warning"> CARICAMENTO PROGRAMMI COMPLETATI DI OGGI... </label></div>
+<div *ngIf="controllo && allTodos.length == 0">
+  <div class="container text-center my-3"><label appTesto>NESSUN TASK COMPLETATO PRESENTE !!!</label></div>
+</div>
+
+<!-- <div *ngIf="controllo && todos.length > 0">
+  <div class="container" *ngFor="let todo of todos">
+    {{ todo.title }}
+    <div class="btn" (click)="elimina(todo.id)">elimina</div>
+  </div>
+</div> -->
+<div *ngIf="controllo && allTodos.length > 0">
+  <div class="container w-50">
+    <div id="bordoRotondo" appSfondo class="container d-flex justify-content-between align-items-center p-2 my-2" *ngFor="let todo of allTodos">
+      <label appTestoTodo> {{todo.title | uppercase }} </label>
+      <div class="px-2">
+        <button type="button" class="btn btn-danger text-white" (click)="elimina(todo.id)">Elimina</button>
+      </div>
+    </div>
+  </div>
+</div>

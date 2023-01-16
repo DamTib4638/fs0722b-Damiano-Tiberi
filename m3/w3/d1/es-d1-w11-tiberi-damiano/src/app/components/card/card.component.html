@@ -1,0 +1,24 @@
+<p>Foto piaciute: {{numeroMiPiace}} </p>
+<div class="container-fluid">
+        <div class="row">
+            <div class="card p-2 col-3 border border-0" *ngFor="let immagine of listaImmagini">
+                <img src="{{ immagine.url }}" class="card-img-top border border-dark border-bottom-0" alt="#" />
+                <div class="card-body border border-dark border-top-0">
+                    <h5 class="card-title">{{ immagine.id }}</h5>
+                    <button
+                        class="btn btn-danger mx-1"
+                        (click)="eliminaFoto(immagine.id)"
+                    >
+                        Elimina
+                    </button>
+                    <button class="btn btn-success mx-1" (click)="aggiungiMiPiace()">
+                        Mi Piace
+                    </button>
+                    <button class="btn btn-warning mx-1" (click)="rimuoviMiPiace()">
+                        Non Mi Piace
+                    </button>
+                </div>
+            </div>
+        </div>
+
+</div>

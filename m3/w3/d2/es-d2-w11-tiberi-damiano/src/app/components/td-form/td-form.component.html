@@ -1,0 +1,69 @@
+<div class="container">
+   <h1 class="text-center">Template Driven Form</h1>
+   <div class="container">
+      <div class="row">
+         <div class="col">
+            <div>
+               <form #form="ngForm" (ngSubmit)="submit()">
+                  <div ngModelGroup="heroInfo" id="heroInfo" #userGroup="ngModelGroup">
+                     <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" [ngModel]="hero.nome" class="form-control" required #nome="ngModel">
+                        <p *ngIf="nome.invalid && nome.touched" class="p-3 bg-danger bg-opacity-25"><strong class="text-danger">Questo campo è obbligatorio</strong></p>
+                     </div>
+                     <div class="form-group">
+                        <label for="alterEgo">Alter Ego</label>
+                        <input type="text" name="alterEgo" id="alterEgo" [ngModel]="hero.alterEgo" class="form-control" required #alterEgo="ngModel">
+                        <p *ngIf="alterEgo.invalid && alterEgo.touched" class="p-3 bg-danger bg-opacity-25"><strong class="text-danger">Questo campo è obbligatorio</strong></p>
+                     </div>
+                     <div class="form-group">
+                        <label for="potere">Super Potere</label>
+                        <select name="potere" id="potere" class="form-select" [ngModel]="hero.potere" required #potere="ngModel">
+                           <option value="Piede puzzone">Piede puzzone</option>
+                           <option value="Occhio di falce">Occhio di falce</option>
+                           <option value="Mano di rame">Mano di melma</option>
+                           <option value="Sedere sonoro">Sedere sonoro</option>
+                           <option value="Testa di masso">Testa di masso</option>
+                        </select>
+                        <p *ngIf="potere.invalid && potere.touched" class="p-3 bg-danger bg-opacity-25"><strong class="text-danger">Questo campo è obbligatorio</strong></p>
+                     </div>
+                     <div class="form-group">
+                        <label for="nemico">Nemico</label>
+                        <input type="text" name="nemico" id="nemico" [ngModel]="hero.nemico" class="form-control" maxlength="10" #nemico="ngModel">
+                     </div>
+                     <div class="form-group">
+                        <label for="pianeta">Pianeta</label>
+                        <input type="text" required name="pianeta" id="pianeta" [ngModel]="hero.pianeta" [(ngModel)]="contaLettere" class="form-control" #pianeta="ngModel" minlength="5">
+                        <p *ngIf="pianeta.invalid && pianeta.touched" class="p-3 bg-danger bg-opacity-25"><strong class="text-danger">Questo campo deve avere almeno 5 caratteri. Ne hai inseriti {{contaLettere.length}} </strong></p>
+                     </div>
+                     <div class="form-group">
+                        <label for="debolezza">Debolezza</label>
+                        <input type="text" name="debolezza" id="debolezza" [ngModel]="hero.debolezza" class="form-control" #debolezza="ngModel">
+                     </div>
+                 <!-- <div class="radio" *ngFor="let potere of listaPoteri">
+                   <label>
+                     <input type="radio" name="sesso" ngModel [value]="genere.value" required> {{genere.label}}
+                   </label>
+                 </div> -->
+                     <button type="submit" class="btn btn-info mt-3" [disabled]="form.invalid">Invia</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   <hr>
+   <div class="container">
+      <div class="row">
+         <div class="col" *ngIf="stampa">
+            <h2>I tuoi dati</h2>
+            <p>Nome: {{hero.nome}} </p>
+            <p>Alter Ego: {{hero.alterEgo}} </p>
+            <p>Super Potere: {{hero.potere}} </p>
+            <p>Nemico: {{hero.nemico}} </p>
+            <p>Pianeta: {{hero.pianeta}} </p>
+            <p>Debolezza: {{hero.debolezza}} </p>
+         </div>
+      </div>
+   </div>
+</div>

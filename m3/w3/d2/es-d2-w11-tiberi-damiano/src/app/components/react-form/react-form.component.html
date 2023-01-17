@@ -1,0 +1,68 @@
+<div class="container mt-3">
+   <h1 class="text-center">Reactive Form</h1>
+   <div class="container">
+      <div class="row">
+         <div class="col">
+            <form [formGroup]="form">
+
+               <div class="form-group">
+                  <label for="nome">Nome</label>
+                  <input type="text" class="form-control" formControlName="nome">
+                  <span *ngIf="getFormC('nome')?.invalid && getFormC('nome')?.touched">
+                     <ng-container *ngIf="getErrorsC('nome', 'required')">Campo NOME obbligatorio</ng-container>
+                  </span>
+               </div>
+               <div class="form-group">
+                  <label for="alterEgo">Alter Ego</label>
+                  <input type="text" class="form-control" formControlName="alterEgo">
+                  <span *ngIf="getFormC('alterEgo')?.invalid && getFormC('alterEgo')?.touched">
+                     <ng-container *ngIf="getErrorsC('alterEgo', 'required')">Campo ALTER EGO obbligatorio</ng-container>
+                  </span>
+               </div>
+
+               <div formArrayName="poteri" class="mb-3">
+                  <h3>Super Poteri:</h3>
+                  <button type="button" class="btn btn-outline-success" (click)="aggiungiSuperPotere()">Aggiungi Super Potere</button>
+                  <div class="form-group mb-2" *ngFor="let potere of getSuperPotereF(); let i = index">
+                    <input type="text" class="form-control" [formControlName]="i">
+                  </div>
+                  <span *ngIf="getFormC('i')?.invalid && getFormC('i')?.touched">
+                     <ng-container *ngIf="getErrorsC('i', 'required')">Campo POTERI obbligatorio</ng-container>
+                  </span>
+               </div>
+
+               <div class="form-group">
+                  <label for="nemico">Nemico</label>
+                  <input type="nemico" class="form-control" formControlName="nemico">
+                  <span *ngIf="getFormC('nemico')?.invalid">
+                     <ng-container *ngIf="getErrorsC('nemico', 'maxlength')">Campo NEMICO MAX 10 caratteri</ng-container>
+                  </span>
+               </div>
+               <div class="form-group">
+                  <label for="pianeta">Pianeta</label>
+                  <input type="pianeta" class="form-control" formControlName="pianeta">
+                  <span *ngIf="getFormC('pianeta')?.invalid && getFormC('pianeta')?.touched">
+                     <ng-container *ngIf="getErrorsC('pianeta', 'required')">Campo PIANETA obbligatorio</ng-container>
+                     <ng-container *ngIf="getErrorsC('pianeta', 'minlength')">Inserire ALMENO 5 caratteri</ng-container>
+                  </span>
+               </div>
+               <div formArrayName="debolezze" class="mb-3">
+                  <h3>Debolezze:</h3>
+                  <button type="button" class="btn btn-outline-danger" (click)="aggiungiDebolezza()">Aggiungi Super Potere</button>
+                  <div class="form-group mb-2" *ngFor="let debolezza of getDebolezzaF(); let i = index">
+                    <input type="text" class="form-control" [formControlName]="i">
+                  </div>
+               </div>
+
+               <!-- <div class="radio" *ngFor="let genere of generi">
+                  <label>
+                     <input type="radio" id="" formControlName="genere" [value]="genere"/>{{ genere }}
+                  </label>
+               </div> -->
+
+               <button type="submit" (click)="submit()" class="btn btn-info mt-3" [disabled]="form.invalid">Invia</button>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>

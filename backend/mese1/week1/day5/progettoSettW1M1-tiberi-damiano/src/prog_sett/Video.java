@@ -2,6 +2,12 @@ package prog_sett;
 
 public class Video extends Audio implements IVideoImg {
 	
+	/**
+	 * Ho creato la classe Video come classe derivata da Audio (anche se non è concettualmente esatto)
+	 * per complicare un po la gestione dell'ereditarietà. Ho voluto fare finta che un Video sia un Audio con delle immagini.
+	 * Il modo più corretto, forse, è quello di fare extends dalla classe astratta come fatto per le altre due classi.
+	 */
+	
 	private int luminosita;
 	private String asterisco = "";
 //	private String esclamativo = "";

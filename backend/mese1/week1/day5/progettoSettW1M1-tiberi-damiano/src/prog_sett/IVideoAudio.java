@@ -6,5 +6,9 @@ public interface IVideoAudio {
 	public int alzaVolume();
 	public int abbassaVolume();
 	public String calcolaEsclamativi();
+	
+	/**
+	 * Interfaccia con le funzionalità in comune tra le classi Audio e Video, che vengono poi implementate
+	 */
 
 }

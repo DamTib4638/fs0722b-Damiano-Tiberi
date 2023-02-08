@@ -1,0 +1,100 @@
+14:46:37.584 [Thread-0] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo * numero 0 !
+14:46:37.584 [Thread-1] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo # numero 0 !
+14:46:38.587 [Thread-0] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo * numero 1 !
+14:46:38.587 [Thread-1] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo # numero 1 !
+14:46:39.598 [Thread-0] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo * numero 2 !
+14:46:39.598 [Thread-1] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo # numero 2 !
+14:46:40.606 [Thread-1] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo # numero 3 !
+14:46:40.606 [Thread-0] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo * numero 3 !
+14:46:41.616 [Thread-1] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo # numero 4 !
+14:46:41.616 [Thread-0] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo * numero 4 !
+14:46:42.626 [Thread-1] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo # numero 5 !
+14:46:42.626 [Thread-0] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo * numero 5 !
+14:46:43.635 [Thread-0] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo * numero 6 !
+14:46:43.635 [Thread-1] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo # numero 6 !
+14:46:44.646 [Thread-0] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo * numero 7 !
+14:46:44.646 [Thread-1] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo # numero 7 !
+14:46:45.658 [Thread-1] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo # numero 8 !
+14:46:45.658 [Thread-0] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo * numero 8 !
+14:46:46.665 [Thread-0] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo * numero 9 !
+14:46:46.665 [Thread-1] INFO  esercizio_1.Esercizio1Thread -%PARSER_ERROR[kvp]- Simbolo # numero 9 !
+14:48:12.022 [Thread-0] INFO  esercizio_1.Esercizio1Thread -Thread-0- Simbolo * numero 0 !
+14:48:12.022 [Thread-1] INFO  esercizio_1.Esercizio1Thread -Thread-1- Simbolo # numero 0 !
+14:48:13.029 [Thread-0] INFO  esercizio_1.Esercizio1Thread -Thread-0- Simbolo * numero 1 !
+14:48:13.029 [Thread-1] INFO  esercizio_1.Esercizio1Thread -Thread-1- Simbolo # numero 1 !
+14:48:14.036 [Thread-1] INFO  esercizio_1.Esercizio1Thread -Thread-1- Simbolo # numero 2 !
+14:48:14.036 [Thread-0] INFO  esercizio_1.Esercizio1Thread -Thread-0- Simbolo * numero 2 !
+14:48:15.050 [Thread-1] INFO  esercizio_1.Esercizio1Thread -Thread-1- Simbolo # numero 3 !
+14:48:15.050 [Thread-0] INFO  esercizio_1.Esercizio1Thread -Thread-0- Simbolo * numero 3 !
+14:48:16.058 [Thread-1] INFO  esercizio_1.Esercizio1Thread -Thread-1- Simbolo # numero 4 !
+14:48:16.058 [Thread-0] INFO  esercizio_1.Esercizio1Thread -Thread-0- Simbolo * numero 4 !
+14:48:17.066 [Thread-0] INFO  esercizio_1.Esercizio1Thread -Thread-0- Simbolo * numero 5 !
+14:48:17.065 [Thread-1] INFO  esercizio_1.Esercizio1Thread -Thread-1- Simbolo # numero 5 !
+14:48:18.072 [Thread-1] INFO  esercizio_1.Esercizio1Thread -Thread-1- Simbolo # numero 6 !
+14:48:18.072 [Thread-0] INFO  esercizio_1.Esercizio1Thread -Thread-0- Simbolo * numero 6 !
+14:48:19.081 [Thread-0] INFO  esercizio_1.Esercizio1Thread -Thread-0- Simbolo * numero 7 !
+14:48:19.081 [Thread-1] INFO  esercizio_1.Esercizio1Thread -Thread-1- Simbolo # numero 7 !
+14:48:20.092 [Thread-0] INFO  esercizio_1.Esercizio1Thread -Thread-0- Simbolo * numero 8 !
+14:48:20.092 [Thread-1] INFO  esercizio_1.Esercizio1Thread -Thread-1- Simbolo # numero 8 !
+14:48:21.101 [Thread-1] INFO  esercizio_1.Esercizio1Thread -Thread-1- Simbolo # numero 9 !
+14:48:21.101 [Thread-0] INFO  esercizio_1.Esercizio1Thread -Thread-0- Simbolo * numero 9 !
+14:49:17.740 [Thread-0] INFO  esercizio_1.Esercizio1Thread  Simbolo * numero 0 !
+14:49:17.740 [Thread-1] INFO  esercizio_1.Esercizio1Thread  Simbolo # numero 0 !
+14:49:18.749 [Thread-0] INFO  esercizio_1.Esercizio1Thread  Simbolo * numero 1 !
+14:49:18.749 [Thread-1] INFO  esercizio_1.Esercizio1Thread  Simbolo # numero 1 !
+14:49:19.757 [Thread-1] INFO  esercizio_1.Esercizio1Thread  Simbolo # numero 2 !
+14:49:19.757 [Thread-0] INFO  esercizio_1.Esercizio1Thread  Simbolo * numero 2 !
+14:49:20.767 [Thread-0] INFO  esercizio_1.Esercizio1Thread  Simbolo * numero 3 !
+14:49:20.767 [Thread-1] INFO  esercizio_1.Esercizio1Thread  Simbolo # numero 3 !
+14:49:21.772 [Thread-1] INFO  esercizio_1.Esercizio1Thread  Simbolo # numero 4 !
+14:49:21.772 [Thread-0] INFO  esercizio_1.Esercizio1Thread  Simbolo * numero 4 !
+14:49:22.775 [Thread-0] INFO  esercizio_1.Esercizio1Thread  Simbolo * numero 5 !
+14:49:22.775 [Thread-1] INFO  esercizio_1.Esercizio1Thread  Simbolo # numero 5 !
+14:49:23.783 [Thread-0] INFO  esercizio_1.Esercizio1Thread  Simbolo * numero 6 !
+14:49:23.783 [Thread-1] INFO  esercizio_1.Esercizio1Thread  Simbolo # numero 6 !
+14:49:24.792 [Thread-1] INFO  esercizio_1.Esercizio1Thread  Simbolo # numero 7 !
+14:49:24.792 [Thread-0] INFO  esercizio_1.Esercizio1Thread  Simbolo * numero 7 !
+14:49:25.800 [Thread-1] INFO  esercizio_1.Esercizio1Thread  Simbolo # numero 8 !
+14:49:25.800 [Thread-0] INFO  esercizio_1.Esercizio1Thread  Simbolo * numero 8 !
+14:49:26.812 [Thread-0] INFO  esercizio_1.Esercizio1Thread  Simbolo * numero 9 !
+14:49:26.812 [Thread-1] INFO  esercizio_1.Esercizio1Thread  Simbolo # numero 9 !
+14:50:23.188 [Thread-1] INFO   Simbolo # numero 01 !
+14:50:23.188 [Thread-0] INFO   Simbolo * numero 01 !
+14:50:24.206 [Thread-0] INFO   Simbolo * numero 11 !
+14:50:24.206 [Thread-1] INFO   Simbolo # numero 11 !
+14:50:25.216 [Thread-0] INFO   Simbolo * numero 21 !
+14:50:25.216 [Thread-1] INFO   Simbolo # numero 21 !
+14:50:26.228 [Thread-1] INFO   Simbolo # numero 31 !
+14:50:26.228 [Thread-0] INFO   Simbolo * numero 31 !
+14:50:27.235 [Thread-0] INFO   Simbolo * numero 41 !
+14:50:27.235 [Thread-1] INFO   Simbolo # numero 41 !
+14:50:28.245 [Thread-1] INFO   Simbolo # numero 51 !
+14:50:28.245 [Thread-0] INFO   Simbolo * numero 51 !
+14:50:29.257 [Thread-0] INFO   Simbolo * numero 61 !
+14:50:29.257 [Thread-1] INFO   Simbolo # numero 61 !
+14:50:30.267 [Thread-0] INFO   Simbolo * numero 71 !
+14:50:30.267 [Thread-1] INFO   Simbolo # numero 71 !
+14:50:31.273 [Thread-0] INFO   Simbolo * numero 81 !
+14:50:31.273 [Thread-1] INFO   Simbolo # numero 81 !
+14:50:32.285 [Thread-0] INFO   Simbolo * numero 91 !
+14:50:32.285 [Thread-1] INFO   Simbolo # numero 91 !
+14:50:58.176 [Thread-1] INFO   Simbolo # numero 1 !
+14:50:58.176 [Thread-0] INFO   Simbolo * numero 1 !
+14:50:59.186 [Thread-0] INFO   Simbolo * numero 2 !
+14:50:59.186 [Thread-1] INFO   Simbolo # numero 2 !
+14:51:00.189 [Thread-1] INFO   Simbolo # numero 3 !
+14:51:00.189 [Thread-0] INFO   Simbolo * numero 3 !
+14:51:01.197 [Thread-1] INFO   Simbolo # numero 4 !
+14:51:01.197 [Thread-0] INFO   Simbolo * numero 4 !
+14:51:02.207 [Thread-1] INFO   Simbolo # numero 5 !
+14:51:02.207 [Thread-0] INFO   Simbolo * numero 5 !
+14:51:03.215 [Thread-0] INFO   Simbolo * numero 6 !
+14:51:03.215 [Thread-1] INFO   Simbolo # numero 6 !
+14:51:04.224 [Thread-1] INFO   Simbolo # numero 7 !
+14:51:04.224 [Thread-0] INFO   Simbolo * numero 7 !
+14:51:05.232 [Thread-1] INFO   Simbolo # numero 8 !
+14:51:05.232 [Thread-0] INFO   Simbolo * numero 8 !
+14:51:06.240 [Thread-0] INFO   Simbolo * numero 9 !
+14:51:06.240 [Thread-1] INFO   Simbolo # numero 9 !
+14:51:07.249 [Thread-0] INFO   Simbolo * numero 10 !
+14:51:07.249 [Thread-1] INFO   Simbolo # numero 10 !

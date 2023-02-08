@@ -83,12 +83,22 @@ public class RegistroPresenze {
 	}
 	
 	public static void leggiFile() throws IOException {
+		List<String> nomi = new ArrayList<String>();
+		List<Integer> ore = new ArrayList<Integer>();
 		String txtFile = FileUtils.readFileToString(file, "UTF-8");
 		System.out.println("Testo del file: " + txtFile);
 		txtFile = txtFile.replaceAll("#", "@");
 		String[] arrayStringhe = txtFile.split("@");
 		System.out.println(Arrays.toString(arrayStringhe));
-		
+		for (int i=0; i<arrayStringhe.length; i++) {
+			if (i%2==0) {
+				nomi.add(arrayStringhe[i]);
+			} else {
+				ore.add(Integer.parseInt(arrayStringhe[i]));
+			}
+		}
+		System.out.println("Nomi dei dipendenti letti dal file: " + nomi);
+		System.out.println("Ore dei dipendenti letti dal file: " + ore);
 	}
 
 }

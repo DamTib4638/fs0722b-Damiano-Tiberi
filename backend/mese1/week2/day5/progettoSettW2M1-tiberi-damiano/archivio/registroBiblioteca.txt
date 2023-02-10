@@ -1,0 +1,1 @@
+LIBRO: codiceISBN=1, titolo=qqq, annoPubblicazione=1111, numeroPagine=111, autore=qqq, genere=qqq, RIVISTA: codiceISBN=2, titolo=www, annoPubblicazione=2222, numeroPagine=222, Periodicita=MENSILE, 

@@ -12,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -19,6 +20,7 @@ import javax.persistence.Table;
 @Table(name = "lettura")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "Tipo_Lettura", discriminatorType = DiscriminatorType.STRING)
+@NamedQuery(name = "ElementoDaLeggere.findAll", query = "SELECT e FROM ElementoDaLeggere e ORDER BY e.idElemento ASC")
 public abstract class ElementoDaLeggere {
 	
 	@Id
@@ -44,9 +46,9 @@ public abstract class ElementoDaLeggere {
 	public Integer getIdElemento() {
 		return idElemento;
 	}
-	public void setIdElemento(Integer idElemento) {
-		this.idElemento = idElemento;
-	}
+//	public void setIdElemento(Integer idElemento) {
+//		this.idElemento = idElemento;
+//	}
 	public String getCodiceISBN() {
 		return codiceISBN;
 	}

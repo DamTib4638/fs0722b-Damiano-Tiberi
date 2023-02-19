@@ -10,6 +10,9 @@ public class Libro extends ElementoDaLeggere {
 	private String autore;
 	private String genere;
 	
+	public Libro() {
+		super();
+	}
 	public String getAutore() {
 		return autore;
 	}
@@ -24,7 +27,8 @@ public class Libro extends ElementoDaLeggere {
 	}
 	@Override
 	public String toString() {
-		return 	"LIBRO: codiceISBN=" + super.getCodiceISBN() + 
+		return 	"LIBRO: idElemento=" + super.getIdElemento() +
+				", codiceISBN=" + super.getCodiceISBN() + 
 				", titolo=" + super.getTitolo() + 
 				", annoPubblicazione=" + super.getAnnoPubblicazione() + 
 				", numeroPagine=" + super.getNumeroPagine() + 

@@ -26,7 +26,8 @@ public class Rivista extends ElementoDaLeggere {
 
 	@Override
 	public String toString() {
-		return 	"RIVISTA: codiceISBN=" + super.getCodiceISBN() + 
+		return 	"RIVISTA: idElemento=" + super.getIdElemento() +
+				", codiceISBN=" + super.getCodiceISBN() + 
 				", titolo=" + super.getTitolo() + 
 				", annoPubblicazione=" + super.getAnnoPubblicazione() + 
 				", numeroPagine=" + super.getNumeroPagine() + 

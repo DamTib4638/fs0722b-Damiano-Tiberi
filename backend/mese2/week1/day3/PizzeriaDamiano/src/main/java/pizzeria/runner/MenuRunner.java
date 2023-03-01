@@ -80,8 +80,9 @@ public class MenuRunner implements CommandLineRunner {
 	}
 	
 	public Ordine creaOrdine(Tavolo tavolo, Integer numCoperti) {
-		appCtx = new AnnotationConfigApplicationContext(PizzeriaConfiguration.class);
-		Ordine o = (Ordine) appCtx.getBean("ordine");
+		//appCtx = new AnnotationConfigApplicationContext(PizzeriaConfiguration.class);
+//		Ordine o = (Ordine) appCtx.getBean("ordine");
+		Ordine o = new Ordine();
 		if (tavolo.getNumMaxCop() >= numCoperti && tavolo.getTavoloLibero()) {
 			o.setIdOrdine(1);
 			o.setStatoOrdine(StatoOrdine.PRONTO);
@@ -90,7 +91,7 @@ public class MenuRunner implements CommandLineRunner {
 		} else {
 			System.out.println("Numero ospiti maggiore della disponibilità del tavolo. Andare in un altro tavolo.");
 		}
-		((AnnotationConfigApplicationContext) appCtx).close();
+		//((AnnotationConfigApplicationContext) appCtx).close();
 		return o;
 	}
 	

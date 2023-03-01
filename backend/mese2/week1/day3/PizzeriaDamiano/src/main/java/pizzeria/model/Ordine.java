@@ -15,7 +15,6 @@ import pizzeria.util.StatoOrdine;
 @Getter
 @Setter
 @ToString
-@PropertySource("classpath:application.properties")
 public class Ordine {
 	
 	private Tavolo tavolo;
@@ -26,7 +25,8 @@ public class Ordine {
 	private LocalDateTime orarioAcquisizione;
 	private Double importo = 0.0;
 	
-	
+//	@Value("${Ordine.costoCoperto}")
+//	private Double costoCoperto;
 	private final Double COSTO_COPERTO = 1.5;
 	
 	public void aggiungiProdotto(Prodotto pr) {

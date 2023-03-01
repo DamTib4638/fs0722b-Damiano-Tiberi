@@ -2,6 +2,7 @@ package pizzeria.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Scope;
 
 import pizzeria.model.Drink;
@@ -14,6 +15,7 @@ import pizzeria.model.Prodotto;
 import pizzeria.model.Tavolo;
 
 @Configuration
+//@PropertySource("classpath:application.properties")
 public class PizzeriaConfiguration {
 	
 	@Bean

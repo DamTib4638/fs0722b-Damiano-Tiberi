@@ -1,7 +1,9 @@
 package prenotazioni.model;
 
+import java.io.Serializable;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -21,8 +23,13 @@ import prenotazioni.util.TipoPostazione;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Postazione {
+public class Postazione implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_postazione")
@@ -32,7 +39,7 @@ public class Postazione {
 	
 	@Enumerated(EnumType.STRING)
 	@Column(name = "tipo_postazione", nullable = false)
-	private TipoPostazione TipoPostazione;
+	private TipoPostazione tipoPostazione;
 	
 	@Column(nullable = false)
 	private Integer numMax;
@@ -41,7 +48,13 @@ public class Postazione {
 	@JoinColumn(name = "id_edificio")
 	private Edificio edificio;
 	
-	@OneToMany(mappedBy = "postazione")
+	@OneToMany(mappedBy = "postazione", cascade = CascadeType.REMOVE)
 	private List<Prenotazione> prenotaziones;
+
+	@Override
+	public String toString() {
+		return "Postazione [idPostazione=" + idPostazione + ", descrizione=" + descrizione + ", TipoPostazione="
+				+ tipoPostazione + ", numMax=" + numMax + ", idEdificio=" + edificio.getIdEdificio() + "]";
+	}
 
 }

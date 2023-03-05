@@ -3,6 +3,7 @@ package prenotazioni.model;
 import java.io.Serializable;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -37,7 +38,13 @@ public class Utente implements Serializable {
 	@Column(nullable = false, unique = true)
 	private String email;
 	
-	@OneToMany(mappedBy = "utente")
+	@OneToMany(mappedBy = "utente", cascade = CascadeType.REMOVE)
 	private List<Prenotazione> prenotaziones;
+
+	@Override
+	public String toString() {
+		return "Utente [idUtente=" + idUtente + ", nominativo=" + nominativo + ", username=" + username + ", email="
+				+ email + "]";
+	}
 
 }

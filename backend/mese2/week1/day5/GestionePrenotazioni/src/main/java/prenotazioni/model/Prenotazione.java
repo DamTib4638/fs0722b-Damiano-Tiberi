@@ -29,15 +29,21 @@ public class Prenotazione implements Serializable {
 	private PrenotazionePK id;
 	
 	@Temporal(TemporalType.DATE)
-	@Column(name = "data_prenotazione", nullable = false)
+	@Column(name = "data_prenotazione", insertable=false, updatable=false)
 	private Date dataPrenotazione;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_postazione", nullable = false)
+	@JoinColumn(name = "id_postazione", insertable=false, updatable=false)
 	private Postazione postazione;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_utente", nullable = false)
+	@JoinColumn(name = "id_utente")
 	private Utente utente;
+
+	@Override
+	public String toString() {
+		return "Prenotazione [dataPrenotazione=" + dataPrenotazione + ", idPostazione=" + postazione.getIdPostazione()
+				+ ", idUtente=" + utente.getIdUtente() + "]";
+	}
 
 }

@@ -1,7 +1,9 @@
 package prenotazioni.model;
 
+import java.io.Serializable;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,8 +18,13 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Edificio {
+public class Edificio implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_edificio")
@@ -31,7 +38,13 @@ public class Edificio {
 	@Column(nullable = false)
 	private String citta;
 	
-	@OneToMany(mappedBy = "edificio")
+	@OneToMany(mappedBy = "edificio", cascade = CascadeType.REMOVE)
 	private List<Postazione> postaziones;
+
+	@Override
+	public String toString() {
+		return "Edificio [idEdificio=" + idEdificio + ", nome=" + nome + ", indirizzo=" + indirizzo + ", citta=" + citta
+				+ "]";
+	}
 
 }

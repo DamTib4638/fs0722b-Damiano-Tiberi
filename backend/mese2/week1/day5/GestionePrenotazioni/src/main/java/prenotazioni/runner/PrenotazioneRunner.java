@@ -36,7 +36,7 @@ public class PrenotazioneRunner implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		System.out.println("------------------------------");
+	/*	System.out.println("------------------------------");
 		System.out.println("SEZIONE PRENOTAZIONE RUNNER");
 		System.out.println("------------------------------");
 		
@@ -354,6 +354,6 @@ public class PrenotazioneRunner implements ApplicationRunner {
 		System.out.println("------------------------------");
 		System.out.println("FINE SEZIONE PRENOTAZIONE RUNNER");
 		System.out.println("USCITA DALL'APPLICAZIONE");
-		System.out.println("------------------------------");
+		System.out.println("------------------------------"); */
 	} 
 }

@@ -70,7 +70,7 @@ public class PostazioneService {
 		return null;
 	}
 	
-	@Query("SELECT p FROM Postazione p, Edificio e WHERE p.edificio = e.idEdificio AND p.tipoPostazione = :#{#tipoPostazione} AND e.citta = :#{#citta}")
+	
 	public List<Postazione> findPostazioniByTipoPostazioneAndCitta(@Param("tipoPostazione") TipoPostazione tipoPostazione, @Param("citta") String citta) {
 		try {
 			List<Postazione> listaPostazioniPerCittaTipoPost = postDaoRepo.findPostazioniByTipoPostazioneAndEdificioCitta(tipoPostazione, citta);
@@ -81,7 +81,7 @@ public class PostazioneService {
 		return null;
 	}
 	
-	@Query("SELECT p FROM Postazione p, Edificio e WHERE p.edificio = e.idEdificio AND e.citta = :#{#citta}")
+	
 	public List<Postazione> findPostazioneByCitta(@Param("citta") String citta) {
 		try {
 			List<Postazione> listaPostazioniPerCitta = postDaoRepo.findPostazioniByEdificioCitta(citta);

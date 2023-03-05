@@ -23,7 +23,7 @@ public class EdificioRunner implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		System.out.println("------------------------------");
+	/*	System.out.println("------------------------------");
 		System.out.println("SEZIONE EDIFICIO RUNNER");
 		System.out.println("------------------------------");
 		
@@ -144,6 +144,6 @@ public class EdificioRunner implements ApplicationRunner {
 		
 		System.out.println("------------------------------");
 		System.out.println("FINE SEZIONE EDIFICIO RUNNER");
-		System.out.println("------------------------------");
+		System.out.println("------------------------------"); */
 	}
 }

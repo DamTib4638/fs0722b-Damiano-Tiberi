@@ -35,7 +35,7 @@ public class PostazioneRunner implements ApplicationRunner {
 		
 		
 		
-		System.out.println("------------------------------");
+	/*	System.out.println("------------------------------");
 		System.out.println("OPERAZIONE DI INSERIMENTO POSTAZIONE NEL DB");
 		System.out.println("------------------------------");
 		System.out.println("------------------------------");
@@ -179,11 +179,11 @@ public class PostazioneRunner implements ApplicationRunner {
 			System.out.println("Postazione non presente nel DB. Inserire nuovo idPostazione da ricercare per eliminazione.");
 		System.out.println("------------------------------");
 		System.out.println("FINE OPERAZIONE DI RIMOZIONE POSTAZIONE");
-		System.out.println("------------------------------");
+		System.out.println("------------------------------"); */
 		
 		
 		
-		System.out.println("------------------------------");
+	/*	System.out.println("------------------------------");
 		System.out.println("OPERAZIONE DI RICERCA POSTAZIONE TRAMITE CITTà E TIPO POSTAZIONE");
 		System.out.println("------------------------------");
 		System.out.println("------------------------------");
@@ -224,7 +224,7 @@ public class PostazioneRunner implements ApplicationRunner {
 		}
 		System.out.println("------------------------------");
 		System.out.println("FINE OPERAZIONE DI RICERCA POSTAZIONE TRAMITE CITTà E TIPO POSTAZIONE");
-		System.out.println("------------------------------");
+		System.out.println("------------------------------"); */
 		
 		
 		
@@ -284,7 +284,7 @@ public class PostazioneRunner implements ApplicationRunner {
 		}
 		System.out.println("------------------------------");
 		System.out.println("FINE OPERAZIONE DI RICERCA POSTAZIONE TRAMITE TIPO POSTAZIONE");
-		System.out.println("------------------------------");
+		System.out.println("------------------------------"); 
 		
 		
 		

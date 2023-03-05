@@ -23,7 +23,7 @@ public class UtenteRunner implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		System.out.println("------------------------------");
+	/*	System.out.println("------------------------------");
 		System.out.println("SEZIONE UTENTE RUNNER");
 		System.out.println("------------------------------");
 		
@@ -144,6 +144,6 @@ public class UtenteRunner implements ApplicationRunner {
 		
 		System.out.println("------------------------------");
 		System.out.println("FINE SEZIONE UTENTE RUNNER");
-		System.out.println("------------------------------");
+		System.out.println("------------------------------"); */
 	}
 }

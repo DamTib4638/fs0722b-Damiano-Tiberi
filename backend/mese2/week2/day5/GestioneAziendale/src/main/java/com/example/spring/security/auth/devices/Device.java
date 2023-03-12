@@ -34,7 +34,7 @@ public class Device {
 	private StatoDevice statoDevice;
 	
 	@ManyToOne
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "id", nullable = true)
 	private User user;
 
 }
